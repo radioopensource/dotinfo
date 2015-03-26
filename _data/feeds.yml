@@ -1,0 +1,11 @@
+news:
+  - source: NPR
+    link: http://www.npr.org/rss/podcast.php?id=500005
+  - source: BBC
+    link: http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3
+
+analysis:
+  - source: Newshour from BBC's World Service
+    link: http://downloads.bbc.co.uk/podcasts/worldservice/newshour/rss.xml
+  - source: PRI's The World
+    link: http://feeds.feedburner.com/pri/theworld?format=xml

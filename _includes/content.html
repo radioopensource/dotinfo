@@ -1,0 +1,52 @@
+<div id="main">
+  {% assign main = site.data.main[0] %}
+  <h1>1. Main Program: "{{ main.title }}" ({{ main.genre }}) from {{ main.series }}</h1>
+  <img src="{{ main.image }}">
+  <audio src="{{ main.audio }}" controls></audio>
+  <p><a href="{{ main.link }}">Listen</a> | <a href="{{ main.website }}">Visit website</a> | <a href="{{ main.feed }}">Subscribe</a></p>
+</div>
+
+<div id="news">
+  <h4>2. Latest News</h4>
+  <p>a. This hour's headlines from<br />
+    {% for news in site.data.feeds.news %}
+    <a href="{{ news.link }}">{{ news.source }}</a> {% unless forloop.last %} | {% endunless %}
+    {% endfor %}
+  </p>
+  <p>b. Analysis from<br />
+    {% for news in site.data.feeds.analysis %}
+    <a href="{{ news.link }}">{{ news.source }}</a> {% unless forloop.last %} | {% endunless %}
+    {% endfor %}
+  </p>
+</div>
+
+<div id="selected_audio">
+  <h4>3. Featured Audio</h4>
+  {% for pick in site.data.picks %}
+    <p>{% cycle 'a', 'b', 'c', "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" %}. "{{ pick.title }}" from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == "true" %} (explicit) {% endif %}
+      <br />
+    <a href="{{ pick.link }}">Listen</a> {% if pick.website %} | <a href="{{ pick.website }}">Visit website</a> {% endif %} {% if pick.feed %} | <a href="{{ pick.feed }}">Subscribe</a> {% endif %} </p>
+  {% endfor %}
+</div>
+
+<div id="archives">
+  <h4>4. From the Archives</h4>
+  {% for piece in site.data.archives %}
+  <p>"{{ piece.title }}" from {{ piece.series }} ({{ piece.year }}) ({{ piece.genre }})
+  <br />
+  <a href="{{ piece.link }}">Download</a> | <a href="{{ piece.website }}">Visite website</a>
+  </p>
+  {% endfor %}
+</div>
+
+<div id="about">
+  <h4>5. About</h4>
+  {% assign meta = site.data.meta %}
+  <p>{{ meta.description }}</p>
+  <p>Updated monthly<br />
+    Last update: {{ meta.last_update }}
+  </p>
+
+  <p>We are a collaboration between...</p>
+  <p>edited by...</p>
+</div>
