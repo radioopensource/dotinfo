@@ -5,7 +5,7 @@ news:
     link: http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3
 
 analysis:
-  - source: Newshour from BBC's World Service
+  - source: BBC's Newshour
     link: http://downloads.bbc.co.uk/podcasts/worldservice/newshour/rss.xml
   - source: PRI's The World
     link: http://feeds.feedburner.com/pri/theworld?format=xml
