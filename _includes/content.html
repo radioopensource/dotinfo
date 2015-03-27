@@ -1,8 +1,8 @@
 <div id="main">
   {% assign main = site.data.main[0] %}
-  <h1>1. Main Program: "{{ main.title }}" ({{ main.genre }}) from {{ main.series }}</h1>
   <img src="{{ main.image }}">
   <audio src="{{ main.audio }}" controls></audio>
+  <h4>1. Main Program: "{{ main.title }}" from {{ main.series }} ({{ main.genre }})</h1>
   <p><a href="{{ main.link }}">Listen</a> | <a href="{{ main.website }}">Visit website</a> | <a href="{{ main.feed }}">Subscribe</a></p>
 </div>
 
