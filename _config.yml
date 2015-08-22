@@ -6,3 +6,14 @@ description: >
   are not-for-profit and ad-free; spread the love by supporting
   your local community radio station!
 url: "http://www.publicradio.info"
+
+collections:
+- c201509
+- c201510
+- c201511
+- c201512
+- c201601
+- c201602
+- c201603
+
+exclude: ['vendor']
