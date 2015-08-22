@@ -1,0 +1,12 @@
+<div id="collection">
+  {% for item in site.c201509 %}
+    <div class="collection-item">
+      <h1>{{ item.title }}</h1>
+      <p>{{ item.description }}</p>
+      <p>{{ item.author }}</p>
+      <audio>
+        <source src="{{ item.audio }}" type="audio/mpeg">
+      </audio>
+    </div>
+  {% endfor %}
+</div>
