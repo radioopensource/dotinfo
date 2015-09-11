@@ -5,7 +5,7 @@ description: >
   producers around the world. All these radio shows and podcasts
   are not-for-profit and ad-free; spread the love by supporting
   your local community radio station!
-url: "http://www.publicradio.info"
+baseurl: /dotinfo
 
 collections:
 - c201509
