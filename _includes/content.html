@@ -1,3 +1,15 @@
+<script>
+soundManager.setup({
+  url: '../soundmanager2/swf/swf-files/',
+  flashVersion: 9, // optional: shiny features (default = 8)
+  // optional: ignore Flash where possible, use 100% HTML5 mode
+  // preferFlash: false,
+  onready: function() {
+    // Ready to use; soundManager.createSound() etc. can now be called.
+  }
+});
+</script>
+
 <div id="main1">
 
   <div id="main2">
@@ -69,7 +81,7 @@
 
 <p>Our software is open source, licensed under [license]. Find the code for this webpage and its constituent widgets on github.</p>
 
-<p>This webpage is currently edited by Conor Gillies, Annie McEwen, and Audrey Mardavich in collaboration with PRX, Radio Open Source, and 18F. Software development by Eve Asher, Chris Farski, Melody Kramer, and the programming community on <a href="https://github.com/radioopensource/dotinfo">Github</a>a>.</p>
+<p>This webpage is currently edited by Conor Gillies, Annie McEwen, and Audrey Mardavich in collaboration with PRX, Radio Open Source, and 18F. Software development by Eve Asher, Chris Farski, Melody Kramer, and the programming community on <a href="https://github.com/radioopensource/dotinfo">Github</a>.</p>
   <p>Updated monthly |  Last update: {{ meta.last_update }}</p>
   <p>Podcast available [RSS]</p>
 </div>
