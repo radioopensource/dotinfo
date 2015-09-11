@@ -19,6 +19,7 @@ header img {
   max-width: 525px;
   margin-bottom: 5%;
   margin-top: 5%;
+  border: 1px solid #000;
 }
 
 div {
@@ -85,6 +86,10 @@ div#news {
 div#about {
   border: 1px solid black;
 
+}
+
+footer img {
+  border: 1px solid #000;
 }
 
 @media (max-width: 18000px) {
