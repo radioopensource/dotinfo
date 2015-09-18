@@ -19,8 +19,13 @@ header img {
   max-width: 525px;
   margin-bottom: 5%;
   margin-top: 5%;
-  border: 1px solid #000;
 }
+
+
+.shadowfilter { 
+    -webkit-filter: drop-shadow(12px 12px 10px rgba(0,0,0,1));
+  }
+
 
 div {
   text-align: left;
