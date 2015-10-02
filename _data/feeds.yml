@@ -1,11 +1,19 @@
-news:
-  - source: NPR
-    link: http://www.npr.org/rss/podcast.php?id=500005
-  - source: BBC
-    link: http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3
+- source: BBC Headlines
+  frequency: updated hourly (3 min)
+  link: http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3
 
-analysis:
-  - source: Newshour from BBC's World Service
-    link: http://downloads.bbc.co.uk/podcasts/worldservice/newshour/rss.xml
-  - source: PRI's The World
-    link: http://feeds.feedburner.com/pri/theworld?format=xml
+- source: NPR Headlines
+  frequency: updated hourly (5 min)
+  link: http://www.npr.org/rss/podcast.php?id=500005
+
+- source: Newshour from BBC's World Service
+  frequency: updated twice daily (45 min)
+  link: http://downloads.bbc.co.uk/podcasts/worldservice/newshour/rss.xml
+
+- source: PRI's The World
+  frequency: updated twice daily (45 min)
+  link: http://feeds.feedburner.com/pri/theworld?format=xml
+
+- source: UnFictional from KCRW
+  frequency: updated weekly (30 min)
+  link: 
