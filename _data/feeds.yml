@@ -1,7 +1,3 @@
 - source: BBC Headlines
   frequency: updated hourly (3 min)
   link: http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3
-
-- source: Newshour from BBC's World Service
-  frequency: updated twice daily (45 min)
-  link: http://downloads.bbc.co.uk/podcasts/worldservice/newshour/rss.xml
