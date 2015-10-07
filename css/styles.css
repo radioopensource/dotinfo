@@ -36,10 +36,27 @@ div {
   background-color: #fff;
 }
 
-.main_program{
-  clear:left;
-  overflow:hidden;
+
+.main_program {
+  clear: left;
+  overflow: hidden;
   border: 1px solid black;
+}
+
+.main_image {
+  width: 46%;
+  float: left;
+  margin: 0;
+  padding: 0;
+
+}
+
+.main_right {
+  width: 48%;
+  float: left;
+  padding: 10px 0 10px 25px;
+
+
 }
 
 .main2{
@@ -52,7 +69,8 @@ div {
   right:55%;
 }
 
-.main_image {
+
+.main_image1 {
   float: left;
   margin: 0;
   padding: 0;
@@ -66,7 +84,7 @@ div {
   width:100%;
 }
 
-.main_right {
+.main_right1 {
   float:left;
   width:46%;
   padding: 0;
@@ -97,16 +115,17 @@ footer img {
   border: 1px solid #000;
 }
 
-@media (max-width: 18000px) {
+@media all and (min-width: 800px) and (max-width: 1024px) {  
 
-  .main2_media { display: none; }
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
 
-@media (max-width: 768px) {
+   .main_image { 
+    width: 100%; 
+  }
 
-  .main2 { display: none;
-    margin: 0;
-    padding: 0; }
-  .main2_media { display: inherit;
-    padding: 0;
-    margin: 0; }
+  .main_right { 
+    width: 100%; 
+    padding: 15px 0 0 0;
+  }
 }

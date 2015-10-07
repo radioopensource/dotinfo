@@ -1,34 +1,25 @@
 <div class="main_program">
 
-    <div class="main2">
+
       {% assign main = site.data.main[0] %}
 
-      <div class="main_image">
-        <img src="{{ main.image }}" width="100%">
-        <!-- audio src="{{ main.audio }}" controls></audio -->
-      </div>
-      
-      <div class="main_right">
-        <h1>1. Main Program:</h1>
+  <div class="main_image">
 
-        <p><h1>"{{ main.title }}" ({{ main.genre }}) from {{ main.series }}</h1></p>
+          <img src="{{ main.image }}" width="100%" >
+  </div>
 
-        <p><a href="{{ main.link }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
-      </div>
 
-    </div>
+  <div class="main_right">
+          <h1>1. Main Program:</h1>
 
-    <div class="main2_media">
-        <h1>1. Main Program:</h1>
+          <p><h1>"{{ main.title }}" ({{ main.genre }}) from {{ main.series }}</h1></p>
 
-        <p><h1>"{{ main.title }}" ({{ main.genre }}) from {{ main.series }}</h1></p>
+          <p><a href="{{ main.link }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
 
-        <p><a href="{{ main.link }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
-
-        <p><img src="{{ main.image }}" width="100%"></p>
-    </div>
+  </div>
 
 </div>
+
 
 <div id="selected">
 
