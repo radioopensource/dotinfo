@@ -36,13 +36,13 @@ div {
   background-color: #fff;
 }
 
-div#main1{
+.main_program{
   clear:left;
   overflow:hidden;
   border: 1px solid black;
 }
 
-div#main2{
+.main2{
   margin-bottom: 0;
   padding-bottom: 0;
   padding-top: 0;
@@ -52,7 +52,7 @@ div#main2{
   right:55%;
 }
 
-div#main_image {
+.main_image {
   float: left;
   margin: 0;
   padding: 0;
@@ -62,11 +62,11 @@ div#main_image {
   overflow:hidden;
 }
 
-div#main2_media {
+.main2_media {
   width:100%;
 }
 
-div#main_right {
+.main_right {
   float:left;
   width:46%;
   padding: 0;
@@ -99,14 +99,14 @@ footer img {
 
 @media (max-width: 18000px) {
 
-  #main2_media { display: none; }
+  .main2_media { display: none; }
 
-@media only screen (max-width: 768px) {
+@media (max-width: 768px) {
 
-  #main2 { display: none;
+  .main2 { display: none;
     margin: 0;
     padding: 0; }
-  #main2_media { display: inherit;
+  .main2_media { display: inherit;
     padding: 0;
     margin: 0; }
 }

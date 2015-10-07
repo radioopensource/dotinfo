@@ -1,32 +1,32 @@
-<div id="main1">
+<div class="main_program">
 
-  <div id="main2">
-    {% assign main = site.data.main[0] %}
+    <div class="main2">
+      {% assign main = site.data.main[0] %}
 
-    <div id="main_image">
-      <img src="{{ main.image }}" width="100%">
-      <!-- audio src="{{ main.audio }}" controls></audio -->
+      <div class="main_image">
+        <img src="{{ main.image }}" width="100%">
+        <!-- audio src="{{ main.audio }}" controls></audio -->
+      </div>
+      
+      <div class="main_right">
+        <h1>1. Main Program:</h1>
+
+        <p><h1>"{{ main.title }}" ({{ main.genre }}) from {{ main.series }}</h1></p>
+
+        <p><a href="{{ main.link }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
+      </div>
+
     </div>
-    
-    <div id="main_right">
-      <h1>1. Main Program:</h1>
 
-      <p><h1>"{{ main.title }}" ({{ main.genre }}) from {{ main.series }}</h1></p>
+    <div class="main2_media">
+        <h1>1. Main Program:</h1>
 
-      <p><a href="{{ main.link }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
+        <p><h1>"{{ main.title }}" ({{ main.genre }}) from {{ main.series }}</h1></p>
+
+        <p><a href="{{ main.link }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
+
+        <p><img src="{{ main.image }}" width="100%"></p>
     </div>
-
-  </div>
-
-  <div id="main2_media">
-      <h1>1. Main Program:</h1>
-
-      <p><h1>"{{ main.title }}" ({{ main.genre }}) from {{ main.series }}</h1></p>
-
-      <p><a href="{{ main.link }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
-
-      <p><img src="{{ main.image }}" width="100%"></p>
-  </div>
 
 </div>
 
