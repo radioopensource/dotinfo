@@ -119,7 +119,7 @@ footer img {
 
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
    .main_image { 
     width: 100%; 
