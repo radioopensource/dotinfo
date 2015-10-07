@@ -101,7 +101,7 @@ footer img {
 
   #main2_media { display: none; }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
 
   #main2 { display: none;
     margin: 0;
