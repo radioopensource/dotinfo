@@ -15,8 +15,9 @@ h1 {
 }
 
 header h1 {
-  font-size: 4em;
-  margin-top: 4%;
+  font-size: 6vw;
+  margin-top: 5%;
+  margin-bottom: 3%;
   text-align: center;
 }
 
