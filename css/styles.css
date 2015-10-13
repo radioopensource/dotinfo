@@ -1,7 +1,7 @@
 
 body {
-  background-color: white;
-  background-image: url("../assets/hH0upNX.jpg");
+  background-color: #DEDEDE;
+  /*background-image: url("../assets/hH0upNX.jpg");*/
 }
 
 html {
@@ -14,17 +14,27 @@ h1 {
   font-size: 1.2em;
 }
 
-header img {
-  width: 100%;
-  max-width: 525px;
-  margin-bottom: 5%;
-  margin-top: 5%;
+header h1 {
+  font-size: 4em;
+  margin-top: 4%;
+  text-align: center;
 }
 
+audio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+audio::-webkit-media-controls-enclosure {
+    max-width: 100%;
+}
 
 .shadowfilter {
-    -webkit-filter: drop-shadow(12px 12px 10px rgba(0,0,0,1));
-  }
+  -webkit-filter: drop-shadow(12px 12px 10px rgba(0,0,0,1));
+}
 
 
 div {

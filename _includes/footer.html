@@ -1,3 +1,29 @@
 <footer>
   <img src="https://ia802705.us.archive.org/29/items/publicradioinfo/pr-radio-footer.png">
+  <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+
+  <script>
+    var 
+      audioPlayer = $('audio'),
+      audioSource = $('audio').find('source'); 
+
+    loadAudio($('#default-audio')[0].href);
+    $('.listen').on('click', playAudioHandler);
+
+    function playAudioHandler (e) {
+      e.preventDefault();
+      playAudio(e.target.href);
+    }
+
+    function playAudio (audioUrl) {
+      loadAudio(audioUrl);
+      audioPlayer[0].oncanplaythrough = audioPlayer[0].play();
+    }
+
+    function loadAudio (audioUrl) {
+      audioSource.attr('src', audioUrl);
+      audioPlayer[0].pause();
+      audioPlayer[0].load();
+    }
+  </script>
 </footer>
