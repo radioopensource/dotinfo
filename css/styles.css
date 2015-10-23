@@ -1,11 +1,10 @@
 
 body {
   background: linear-gradient(45deg, #00FFFF, #4747D1);
-  /*background-image: url("../assets/hH0upNX.jpg");*/
+  background-color: inherit;
 }
 
 html {
-  /*border-bottom: 20px solid blue;*/
   text-align: center;
 }
 
