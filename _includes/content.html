@@ -1,6 +1,8 @@
+{% assign collection = site.c201510 %}
+
 <div class="main_program">
 
-  {% assign main = site.data.main[0] %}
+  {% assign main = collection[0] %}
 
   <div class="main_image">
       <img src="{{ main.image }}" width="100%" >
@@ -19,7 +21,7 @@
 <div id="selected">
    <h1>2. <strong>Selected Audio</strong></h1>
    <ol type="a">
-      {% for pick in site.data.picks %}
+      {% for pick in collection %}
         <li> "{{ pick.title }}" from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == "true" %} (explicit) {% endif %}
         <br />
         <a class="listen" href="{{ pick.link }}">Listen</a> {% if pick.website %} | <a href="{{ pick.website }}">Visit website</a> {% endif %} {% if pick.feed %} {% endif %} <p>
@@ -33,7 +35,7 @@
   <ol type="a">
     {% for feed in site.data.feeds %}
       <li>
-        {{ feed.source }}, {{ feed.frequency }} | 
+        {{ feed.source }}, {{ feed.frequency }} |
         <a id="default-audio" class="listen" href="{{ feed.link }}">Listen</a>
       </li>
     {% endfor %}
@@ -55,16 +57,16 @@
   {% assign meta = site.data.meta %}
   <p>This site is currently under construction.</p>
 
-  <p>Publicradio.info is a homepage for noncommercial news, culture, and arts. 
+  <p>Publicradio.info is a homepage for noncommercial news, culture, and arts.
     </br>
-    <a href="http://creativecommons.org/licenses/by-sa/4.0/">Licensed under CC</a>. 
-    <a href="http://www.npr.org/stations/">Find your nearest NPR (U.S.) station</a>. 
-    <a href="http://radio-locator.com/">Radio-locator</a>. 
+    <a href="http://creativecommons.org/licenses/by-sa/4.0/">Licensed under CC</a>.
+    <a href="http://www.npr.org/stations/">Find your nearest NPR (U.S.) station</a>.
+    <a href="http://radio-locator.com/">Radio-locator</a>.
     </br>
     </br>
-    Content edited by Conor Gillies, Annie McEwen, and Audrey Mardavich. 
+    Content edited by Conor Gillies, Annie McEwen, and Audrey Mardavich.
     </br>
-    Development by Eve Asher, Chris Farski, Kathy Tu, and Alex Silva on 
+    Development by Eve Asher, Chris Kalafarski, Kathy Tu, and Alex Silva on
     <a href="https://github.com/radioopensource/dotinfo">Github</a>.
   </p>
 

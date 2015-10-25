@@ -12,7 +12,9 @@ layout: null
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
 
-    {% for item in site.c201508 %}
+    {% assign collection = site.c201510 %}
+
+    {% for item in collection %}
       <item>
         {{ item.rss }}
         <pubDate>{{ item.date | date_to_rfc822 }}</pubDate>

@@ -4,7 +4,7 @@ description: >
   and culture. These radio shows and podcasts are
   not-for-profit and ad-free; spread the love by
   supporting your local community radio station.
-baseurl: /dotinfo
+baseurl: 
 
 collections:
 - c201509
