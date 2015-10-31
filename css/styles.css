@@ -1,7 +1,6 @@
 
 body {
   background: linear-gradient(45deg, #00FFFF, #4747D1);
-  background-color: inherit;
 }
 
 html {
@@ -53,6 +52,9 @@ div {
   background-color: #fff;
 }
 
+.description {
+  color: gray
+}
 
 .main_program {
   clear: left;
