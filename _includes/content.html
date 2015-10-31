@@ -25,6 +25,8 @@
       {% for pick in collection %}
         <li> "{{ pick.title }}" from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == "true" %} (explicit) {% endif %}
         <br />
+        <p class="description"> {{ pick.description }} </p>
+        <br />
         <a class="listen" href="{{ pick.audio }}">Listen</a> {% if pick.website %} | <a href="{{ pick.website }}">Visit website</a> {% endif %} {% if pick.feed %} {% endif %} <p>
         </li>
       {% endfor %}
