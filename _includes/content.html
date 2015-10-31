@@ -13,7 +13,7 @@
 
     <p><h1>"{{ main.title }}" from {{ main.series }} ({{ main.genre }})</h1></p>
 
-    <p><a class="listen" href="{{ main.link }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
+    <p><a class="listen" href="{{ main.audio }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
   </div>
 
 </div>
@@ -24,7 +24,7 @@
       {% for pick in collection %}
         <li> "{{ pick.title }}" from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == "true" %} (explicit) {% endif %}
         <br />
-        <a class="listen" href="{{ pick.link }}">Listen</a> {% if pick.website %} | <a href="{{ pick.website }}">Visit website</a> {% endif %} {% if pick.feed %} {% endif %} <p>
+        <a class="listen" href="{{ pick.audio }}">Listen</a> {% if pick.website %} | <a href="{{ pick.website }}">Visit website</a> {% endif %} {% if pick.feed %} {% endif %} <p>
         </li>
       {% endfor %}
     </ol>
@@ -35,8 +35,8 @@
   <ol type="a">
     {% for feed in site.data.feeds %}
       <li>
-        {{ feed.source }}, {{ feed.frequency }} |
-        <a id="default-audio" class="listen" href="{{ feed.link }}">Listen</a>
+        {{ feed.title }}, {{ feed.frequency }} |
+        <a id="default-audio" class="listen" href="{{ feed.audio }}">Listen</a>
       </li>
     {% endfor %}
   </ol>
