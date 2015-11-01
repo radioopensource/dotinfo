@@ -4,26 +4,67 @@
 
   <script>
     var 
-      audioPlayer = $('audio'),
-      audioSource = $('audio').find('source'); 
+      audioPlayer = $('audio')[0],
+      audioSource = $('audio').find('source'),
+      play = false;
 
     loadAudio($('#default-audio')[0].href);
     $('.listen').on('click', playAudioHandler);
+    window.addEventListener("keydown", onKeyDown, false);
 
     function playAudioHandler (e) {
       e.preventDefault();
-      playAudio(e.target.href);
+      var clickedAudio = e.target.href;
+
+      if (clickedSameAudio(clickedAudio)) {
+        if (audioPlayer.paused) {
+          audioPlayer.play();
+        } else {
+          audioPlayer.pause();  
+        }
+        return;
+      }
+
+      playAudio(clickedAudio);
     }
 
     function playAudio (audioUrl) {
       loadAudio(audioUrl);
-      audioPlayer[0].oncanplaythrough = audioPlayer[0].play();
+      audioPlayer.oncanplaythrough = audioPlayer.play();
     }
 
     function loadAudio (audioUrl) {
       audioSource.attr('src', audioUrl);
-      audioPlayer[0].pause();
-      audioPlayer[0].load();
+      audioPlayer.pause();
+      audioPlayer.load();
     }
+
+    function clickedSameAudio(currentAudioSrc) {
+      return !audioPlayer.ended && (0 < audioPlayer.currentTime)
+      && currentAudioSrc === audioSource.attr('src');
+    }
+
+    function onKeyDown(e) {
+      switch (e.keyCode) {
+        case 32: //spacebar                    
+          e.preventDefault();
+          if (play) {            
+              audioPlayer.pause();
+              play = false;
+          } else {
+              audioPlayer.play();
+              play = true;
+          } 
+          break;
+        case 37: //back arrow
+          audioPlayer.currentTime -= 15
+          break;
+        case 39: //forward arrow
+          audioPlayer.currentTime += 15
+          break;
+      }
+      return false;
+    }
+
   </script>
 </footer>
