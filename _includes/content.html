@@ -1,6 +1,6 @@
 {% assign collection = site.c201510 %}
 
-<div class="main_program">
+<div class="main_program module">
 
   {% assign main = collection[0] %}
 
@@ -19,21 +19,24 @@
 
 </div>
 
-<div id="selected">
-   <h1>2. <strong>Selected Audio</strong></h1>
-   <ol type="a">
-      {% for pick in collection %}
-        <li> "{{ pick.title }}" from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == "true" %} (explicit) {% endif %}
-        <br />
-        <p class="description"> {{ pick.description }} </p>
-        <br />
-        <a class="listen" href="{{ pick.audio }}">Listen</a> {% if pick.website %} | <a href="{{ pick.website }}">Visit website</a> {% endif %} {% if pick.feed %} {% endif %} <p>
-        </li>
-      {% endfor %}
-    </ol>
+<div id="selected" class="module">
+  <div class="content">
+     <h1>2. <strong>Selected Audio</strong></h1>
+     <ol type="a">
+        {% for pick in collection %}
+          <li> "{{ pick.title }}" from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == "true" %} (explicit) {% endif %}
+            <div class="description"> {{ pick.description }} </div>
+            <div class="links">
+              <a class="listen" href="{{ pick.audio }}">Listen</a> {% if pick.website %} | 
+              <a href="{{ pick.website }}">Visit website</a> {% endif %} {% if pick.feed %} {% endif %}
+            </div> 
+          </li>
+        {% endfor %}
+      </ol>
+  </div>
 </div>
 
-<div id="news">
+<div id="news" class="module">
   <h1>3. Latest News</h1>
   <ol type="a">
     {% for feed in site.data.feeds %}
@@ -55,25 +58,28 @@
   {% endfor %}
 </div -->
 
-<div id="about">
-  <h1>4. About</h1>
-  {% assign meta = site.data.meta %}
-  <p>This site is currently under construction.</p>
+<div id="about" class="module">
+  <div class="content">
+    <h1>4. About</h1>
+    {% assign meta = site.data.meta %}
+    <p>This site is currently under construction.</p>
 
-  <p>Publicradio.info is a homepage for noncommercial news, culture, and arts.</p>
+    <p>Publicradio.info is a homepage for noncommercial news, culture, and arts.</p>
 
-  <p>This website is volunteer-run. Content edited by Conor Gillies, Annie McEwen, and Audrey Mardavich. Development by Eve Asher, Chris Kalafarski, Kathy Tu, and Alex Silva on
-    <a href="https://github.com/radioopensource/dotinfo">Github</a>. Say hello: <a href="mailto:contact@publicradio.info">contact@publicradio.info</a>.
-  </p>
+    <p>This website is volunteer-run. Content edited by Conor Gillies, Annie McEwen, and Audrey Mardavich. Development by Eve Asher, Chris Kalafarski, Kathy Tu, and Alex Silva on
+      <a href="https://github.com/radioopensource/dotinfo">Github</a>. 
+      Say hello: <a href="mailto:contact@publicradio.info">contact@publicradio.info</a>.
+    </p>
 
-  <p>
-    Design and graphics <a href="http://creativecommons.org/licenses/by-sa/4.0/">licensed under CC</a>; software issued under <a href="LINK TO GITHUB FILE">The MIT License</a>.
-  </p>
+    <p>
+      Design and graphics <a href="http://creativecommons.org/licenses/by-sa/4.0/">licensed under CC</a>; software issued under <a href="LINK TO GITHUB FILE">The MIT License</a>.
+    </p>
 
-  <p>
-    Support local and public media! <a href="http://www.npr.org/stations/">Find your nearest NPR (U.S.) station</a>.
-  </p>
+    <p>
+      Support local and public media! <a href="http://www.npr.org/stations/">Find your nearest NPR (U.S.) station</a>.
+    </p>
 
-  <p>Updated monthly |  Last update: {{ meta.last_update }}</p>
-  <p>Each issue available via podcast: [iTunes] | [RSS]</p>
+    <p>Updated monthly |  Last update: {{ meta.last_update }}</p>
+    <p>Each issue available via podcast: [iTunes] | [RSS]</p>
+  </div>
 </div>
