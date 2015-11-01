@@ -42,6 +42,10 @@ audio::-webkit-media-controls-enclosure {
   -webkit-filter: drop-shadow(12px 12px 10px rgba(0,0,0,1));
 }
 
+ol li {
+  margin-bottom: 1em;
+}
+
 .module {
   text-align: left;
   margin: 0 auto;
@@ -61,8 +65,11 @@ audio::-webkit-media-controls-enclosure {
   margin-bottom: 0.5em;
 }
 
-.links {
-  margin-bottom: 1em;
+.explicit {
+  display: inline;
+  font-family: sans-serif;
+  color: #E04B72;
+  font-size: 0.7em;
 }
 
 .main_program {
@@ -84,7 +91,6 @@ audio::-webkit-media-controls-enclosure {
   float: left;
   padding: 10px 0 10px 25px;
 }
-
 
 div#selected {
   border: 1px solid black;

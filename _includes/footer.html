@@ -6,11 +6,11 @@
     var 
       audioPlayer = $('audio')[0],
       audioSource = $('audio').find('source'),
-      play = false;
+      nprURL = 'https://api.npr.org/query?id=500005&profileTypeId=15&meta=inherit&apiKey=MDIxMDY2MTYzMDE0NDY0MDQ5NzY4YWJlNg000&output=JSON&numResults=1&fields=audio';
 
-    loadAudio($('#default-audio')[0].href);
+    loadAudio($('#news').find('.bbc').attr('href')); // set default audio
     $('.listen').on('click', playAudioHandler);
-    window.addEventListener("keydown", onKeyDown, false);
+    window.addEventListener('keydown', onKeyDown, false);
 
     function playAudioHandler (e) {
       e.preventDefault();
@@ -39,21 +39,19 @@
       audioPlayer.load();
     }
 
-    function clickedSameAudio(currentAudioSrc) {
+    function clickedSameAudio (currentAudioSrc) {
       return !audioPlayer.ended && (0 < audioPlayer.currentTime)
       && currentAudioSrc === audioSource.attr('src');
     }
 
-    function onKeyDown(e) {
+    function onKeyDown (e) {
       switch (e.keyCode) {
         case 32: //spacebar                    
           e.preventDefault();
-          if (play) {            
-              audioPlayer.pause();
-              play = false;
-          } else {
+          if (audioPlayer.paused) {            
               audioPlayer.play();
-              play = true;
+          } else {
+              audioPlayer.pause();
           } 
           break;
         case 37: //back arrow
@@ -65,6 +63,16 @@
       }
       return false;
     }
+
+    $.ajax({
+      url: nprURL,
+      type: 'GET',
+      dataType: 'JSON',
+      success: function (data) {
+        var nprAudio = data.list.story[0].audio[0].format.mp3[0].$text
+        $('#news').find('.npr').attr('href', nprAudio);
+      }
+    });
 
   </script>
 </footer>

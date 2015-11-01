@@ -1,3 +1,8 @@
 - title: BBC Headlines [2:00]
   frequency: updated hourly
   audio: http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3
+  type: bbc
+- title: NPR Hourly News Summary  [5:00]
+  frequency: updated hourly
+  audio:
+  type: npr
