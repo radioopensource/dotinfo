@@ -2,3 +2,4 @@ _site
 .sass-cache
 vendor/bundle
 .bundle
+.DS_Store
