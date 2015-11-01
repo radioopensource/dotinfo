@@ -24,7 +24,8 @@
      <h1>2. <strong>Selected Audio</strong></h1>
      <ol type="a">
         {% for pick in collection %}
-          <li> "{{ pick.title }}" from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == "true" %} (explicit) {% endif %}
+          <li> "{{ pick.title }}" from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == true %} 
+            <div class="explicit">&#x1f174;</div> {% endif %}
             <div class="description"> {{ pick.description }} </div>
             <div class="links">
               <a class="listen" href="{{ pick.audio }}">Listen</a> {% if pick.website %} | 
@@ -42,7 +43,7 @@
     {% for feed in site.data.feeds %}
       <li>
         {{ feed.title }}, {{ feed.frequency }} |
-        <a id="default-audio" class="listen" href="{{ feed.audio }}">Listen</a>
+        <a class="listen {{ feed.type }}" href="{{ feed.audio }}">Listen</a>
       </li>
     {% endfor %}
   </ol>
@@ -66,7 +67,9 @@
 
     <p>Publicradio.info is a homepage for noncommercial news, culture, and arts.</p>
 
-    <p>This website is volunteer-run. Content edited by Conor Gillies, Annie McEwen, and Audrey Mardavich. Development by Eve Asher, Chris Kalafarski, Kathy Tu, and Alex Silva on
+    <p>
+      This website is volunteer-run. Content edited by Conor Gillies, Annie McEwen, and Audrey Mardavich. 
+      Development by Alex Silva, Eve Asher, Chris Kalafarski, Kathy Tu on
       <a href="https://github.com/radioopensource/dotinfo">Github</a>. 
       Say hello: <a href="mailto:contact@publicradio.info">contact@publicradio.info</a>.
     </p>
