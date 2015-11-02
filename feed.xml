@@ -4,15 +4,30 @@ layout: null
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
-    <title>{{ site.title | xml_escape }}</title>
+    <title>feed.xml</title>
     <description>{{ site.description | xml_escape }}</description>
     <link>http://www.publicradio.info</link>
     <atom:link href="http://www.publicradio.info" rel="self" type="application/rss+xml"/>
+
+    <itunes:keywords>public, radio, podcast, media, culture, noncommercial, experimental</itunes:keywords>
+    <itunes:owner>
+      <itunes:email>contact@publicradio.info</itunes:email>
+    </itunes:owner>
+    <itunes:image href="http://archive.org/download/xmlfeed-image/xmlfeed-image.png" />
+    <itunes:category text="Government &amp; Organizations">
+      <itunes:category text="Non-Profit" />
+      </itunes:category>
+      <itunes:category text="News &amp; Politics">
+      <itunes:category text="Society &amp; Culture" />
+      </itunes:category>
+    <itunes:subtitle>Automated audio content from public radio sources and other places.</itunes:subtitle>
+    <itunes:summary>{{ site.description | xml_escape }}</itunes:summary>
+
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
 
-    {% assign collection = site.c201510 %}
+    {% assign collection = site.c201500 %}
 
     {% for item in collection %}
       <item>
