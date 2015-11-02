@@ -1,12 +1,13 @@
 title: publicradio.info
 description: >
-  publicradio.info is a home for noncommercial news
-  and culture. These radio shows and podcasts are
+  This is a home for noncommercial news, culture,
+  and art. Our selected radio shows and podcasts are
   not-for-profit and ad-free; spread the love by
   supporting your local community radio station.
 baseurl: 
 
 collections:
+- c201500
 - c201509
 - c201510
 - c201511
