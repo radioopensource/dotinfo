@@ -83,7 +83,6 @@ ol li {
   float: left;
   margin: 0;
   padding: 0;
-
 }
 
 .main_right {
@@ -93,7 +92,7 @@ ol li {
 }
 
 div#selected {
-  border: 1px solid black;
+  /* border: 1px solid black; */
 }
 
 div#selected ol li:first-child {
@@ -101,15 +100,15 @@ div#selected ol li:first-child {
 }
 
 div#news {
-  border: 1px solid black;
+ /* border: 1px solid black; */
 }
 
 div#about {
-  border: 1px solid black;
+ /* border: 1px solid black; */
 }
 
 footer img {
-  border: 1px solid #000;
+ /* border: 1px solid #000; */
 }
 
 @media (max-width: 540px) {
