@@ -9,9 +9,9 @@
   </div>
 
   <div class="main_right">
-    <h1>1. Main Program:</h1>
+    <h1>1. Main Program</h1>
 
-    <p><h1>"{{ main.title }}" from {{ main.series }} ({{ main.genre }})</h1></p>
+    <p><h1>"{{ main.title }}" [{{ main.duration }}] from {{ main.series }} ({{ main.genre }})</h1></p>
     <p class="description">{{ main.description }}</p>
 
     <p><a class="listen" href="{{ main.audio }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
@@ -24,7 +24,7 @@
      <h1>2. <strong>Selected Audio</strong></h1>
      <ol type="a">
         {% for pick in collection %}
-          <li> "{{ pick.title }}" from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == true %} 
+          <li> "{{ pick.title }}" [{{ pick.duration }}] from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == true %} 
             <div class="explicit">&#x1f174;</div> {% endif %}
             <div class="description"> {{ pick.description }} </div>
             <div class="links">
@@ -68,8 +68,8 @@
     <p>Publicradio.info is a homepage for noncommercial news, culture, and arts.</p>
 
     <p>
-      This website is volunteer-run. Content edited by Conor Gillies, Annie McEwen, and Audrey Mardavich. 
-      Development by Alex Silva, Eve Asher, Chris Kalafarski, Kathy Tu on
+      Our website is volunteer-run. Content edited by Conor Gillies, Annie McEwen, and Audrey Mardavich. 
+      Development by Alex Silva, Eve Asher, Chris Kalafarski, and Kathy Tu on
       <a href="https://github.com/radioopensource/dotinfo">Github</a>. 
       Say hello: <a href="mailto:contact@publicradio.info">contact@publicradio.info</a>.
     </p>
