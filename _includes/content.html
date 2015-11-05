@@ -16,7 +16,19 @@
 
     <p><a class="listen" href="{{ main.audio }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
   </div>
+  
+</div>
 
+<div id="news" class="module">
+  <h1>3. Latest News</h1>
+  <ol type="a">
+    {% for feed in site.data.feeds %}
+      <li>
+        {{ feed.title }}, {{ feed.frequency }} |
+        <a class="listen {{ feed.type }}" href="{{ feed.audio }}">Listen</a>
+      </li>
+    {% endfor %}
+  </ol>
 </div>
 
 <div id="selected" class="module">
@@ -35,18 +47,6 @@
         {% endfor %}
       </ol>
   </div>
-</div>
-
-<div id="news" class="module">
-  <h1>3. Latest News</h1>
-  <ol type="a">
-    {% for feed in site.data.feeds %}
-      <li>
-        {{ feed.title }}, {{ feed.frequency }} |
-        <a class="listen {{ feed.type }}" href="{{ feed.audio }}">Listen</a>
-      </li>
-    {% endfor %}
-  </ol>
 </div>
 
 <!-- div id="archives">
