@@ -6,15 +6,15 @@
     var 
       audioPlayer = $('audio')[0],
       audioSource = $('audio').find('source'),
-      nprURL = 'https://api.npr.org/query?id=500005&profileTypeId=15&meta=inherit&apiKey=MDIxMDY2MTYzMDE0NDY0MDQ5NzY4YWJlNg000&output=JSON&numResults=1&fields=audio';
+      feedsURL = 'https://uj4e5o7uf1.execute-api.us-west-2.amazonaws.com/prod/feeds';
 
-    loadAudio($('#news').find('.bbc').attr('href')); // set default audio
+    loadAudio($('#news').find('.bbc-headlines').attr('href')); // set default audio
     $('.listen').on('click', playAudioHandler);
     window.addEventListener('keydown', onKeyDown, false);
 
     function playAudioHandler (e) {
       e.preventDefault();
-      var clickedAudio = e.target.href;
+      var clickedAudio = e.target.href; 
 
       if (clickedSameAudio(clickedAudio)) {
         if (audioPlayer.paused) {
@@ -65,12 +65,14 @@
     }
 
     $.ajax({
-      url: nprURL,
+      url: feedsURL,
       type: 'GET',
       dataType: 'JSON',
       success: function (data) {
-        var nprAudio = data.list.story[0].audio[0].format.mp3[0].$text
-        $('#news').find('.npr').attr('href', nprAudio);
+        var news = $('#news');
+        news.find('.npr').attr('href', data['npr']);
+        news.find('.bbc-global').attr('href', data['bbc-global']);
+        news.find('.pri').attr('href', data['pri']);
       }
     });
 
