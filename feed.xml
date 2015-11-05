@@ -5,7 +5,7 @@ layout: null
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
     <title>Playlist</title>
-    <description>Automated audio content from public radio sources and other places. Our selected radio shows and podcasts are not-for-profit and ad-free; spread the love by supporting your local community radio station.</description>
+    <description>Hanpicked audio content from public radio sources and other places. Our selected radio shows and podcasts are not-for-profit and ad-free; spread the love by supporting your local community radio station.</description>
     <link>http://www.publicradio.info</link>
     <atom:link href="http://www.publicradio.info" rel="self" type="application/rss+xml"/>
 
@@ -13,6 +13,7 @@ layout: null
     <itunes:owner>
       <itunes:email>contact@publicradio.info</itunes:email>
     </itunes:owner>
+    <itunes:author>publicradio.info</itunes:author>
     <itunes:image href="http://archive.org/download/xmlfeed-image/xmlfeed-image.png" />
     <itunes:category text="Government &amp; Organizations">
       <itunes:category text="Non-Profit" />
@@ -20,8 +21,8 @@ layout: null
       <itunes:category text="News &amp; Politics">
       <itunes:category text="Society &amp; Culture" />
       </itunes:category>
-    <itunes:subtitle>Automated audio content from public radio sources and other places.</itunes:subtitle>
-    <itunes:summary>Automated audio content from public radio sources and other places. Our selected radio shows and podcasts are not-for-profit and ad-free; spread the love by supporting your local community radio station.</itunes:summary>
+    <itunes:subtitle>Handpicked audio content from public radio sources and other places.</itunes:subtitle>
+    <itunes:summary>Handpicked audio content from public radio sources and other places. Our selected radio shows and podcasts are not-for-profit and ad-free; spread the love by supporting your local community radio station.</itunes:summary>
 
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
