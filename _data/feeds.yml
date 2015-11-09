@@ -2,7 +2,7 @@
   frequency: updated hourly
   audio: http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3
   type: bbc-headlines
-- title: NPR Hourly News Summary [5:00]
+- title: NPR News Summary [5:00]
   frequency: updated hourly
   audio:
   type: npr
@@ -10,7 +10,7 @@
   frequency: updated daily
   audio:
   type: pri
-- title: BBC Global News [30:00]
+- title: BBC Global News Podcast [30:00]
   frequency: updated twice daily (once at weekends)
   audio:
   type: bbc-global
