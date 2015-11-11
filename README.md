@@ -1,4 +1,4 @@
-# dotinfo
+# Summary
 Publicradio.info is a home for noncommercial news, culture, and art. The project includes (1) a static webpage exhibiting noncommercial educational audio—(a) a monthly updated, handpicked, ephemeral list of podcast items and (b) a list of leading news and analysis podcasts, updated to the most recent episode—and (2) a supplementary, aggregator podcast playlist (publicradio.info/feed.xml) that updates concurrently with homepage features (compiling enclosure URLs and other relevant metadata from the selected podcast item list each month).
 
 # Purpose
@@ -29,6 +29,7 @@ Main program image must be Creative Commons.
 # RSS Feed Syntax
 Feed.xml RSS channel items (aka selected audio) follow this syntax:
 
+```
   <title>TITLE [GENRE]</title>
   <link>http://.../</link>
   <guid isPermaLink="true">http://…/</guid> (FALSE IF NON-LINK)
@@ -42,3 +43,4 @@ Feed.xml RSS channel items (aka selected audio) follow this syntax:
   <itunes:summary>DESCRIPTION (longer if you want)</itunes:summary>
   <itunes:author>SERIES</itunes:author>
   <itunes:explicit>yes/no</itunes:explicit>
+```
