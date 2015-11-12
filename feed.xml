@@ -23,6 +23,7 @@ layout: null
       </itunes:category>
     <itunes:subtitle>Handpicked audio content from public radio sources and other places. Updated monthly.</itunes:subtitle>
     <itunes:summary>Handpicked audio content from public radio sources and other places. Discover new shows by subscribing to a monthly mix of great podcasts. Our selected radio shows and podcasts are not-for-profit and ad-free; spread the love by supporting your local community radio station.</itunes:summary>
+    <language>en-us</language>
 
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
