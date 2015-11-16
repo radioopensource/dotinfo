@@ -59,7 +59,7 @@ ol li {
   max-width: 40em;
 }
 
-.description {
+.description, .last-update {
   color: gray;
   margin-bottom: 0.5em;
 }
