@@ -7,10 +7,10 @@
   audio:
   type: npr
 - title: PRI's The World [48:00]
-  frequency: updated daily
+  frequency: updated daily (weekdays only)
   audio:
   type: pri
 - title: BBC Global News Podcast [30:00]
-  frequency: updated twice daily (once at weekends)
+  frequency: updated twice daily (once on weekends)
   audio:
   type: bbc-global
