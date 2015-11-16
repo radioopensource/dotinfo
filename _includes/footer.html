@@ -6,9 +6,10 @@
     var 
       audioPlayer = $('audio')[0],
       audioSource = $('audio').find('source'),
-      feedsURL = 'https://uj4e5o7uf1.execute-api.us-west-2.amazonaws.com/prod/feeds';
+      feedsURL = 'https://uj4e5o7uf1.execute-api.us-west-2.amazonaws.com/prod/feeds',
+      newsModule = $('#news');
 
-    loadAudio($('#news').find('.bbc-headlines').attr('href')); // set default audio
+    loadAudio($('#news').find('.bbc-headlines a').attr('href')); // set default audio
     $('.listen').on('click', playAudioHandler);
     window.addEventListener('keydown', onKeyDown, false);
 
@@ -69,12 +70,37 @@
       type: 'GET',
       dataType: 'JSON',
       success: function (data) {
-        var news = $('#news');
-        news.find('.npr').attr('href', data['npr']);
-        news.find('.bbc-global').attr('href', data['bbc-global']);
-        news.find('.pri').attr('href', data['pri']);
+        refreshNewsFor(data);
       }
     });
+
+    function refreshNewsFor (data) {
+      Object.keys(data).forEach( function(newsType) { 
+        var newsTypeSection = newsModule.find('.' + newsType);
+        newsTypeSection.find('.listen').attr('href', data[newsType].url);
+        newsTypeSection.find('.last-update-time').text(formatDateTime(data[newsType].pubDate));
+      })
+    }
+
+    function formatDateTime (rawDateTimeString) {
+      function getFormattedTime (fourDigitTime) {
+          var hours24 = parseInt(fourDigitTime.substring(0, 2),10);
+          var hours = ((hours24 + 11) % 12) + 1;
+          var amPm = hours24 > 11 ? 'pm' : 'am';
+          var minutes = fourDigitTime.substring(3, 5);
+
+          return hours + ':' + minutes + amPm;
+      }
+
+      var dateTimeTokens = new Date(rawDateTimeString).toString().split(' ');
+      var formattedDateTime =
+        dateTimeTokens[1] + 
+        " " + dateTimeTokens[2] + 
+        ", " + getFormattedTime(dateTimeTokens[4]) + 
+        " " + dateTimeTokens[6].replace(/[{()}]/g, '');
+
+      return formattedDateTime;
+    };  
 
   </script>
 </footer>

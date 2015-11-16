@@ -14,7 +14,7 @@
     <p><h1>"{{ main.title }}" [{{ main.duration }}] from {{ main.series }} ({{ main.genre }})</h1></p>
     <p class="description">{{ main.description }}</p>
 
-    <p><a class="listen" href="{{ main.audio }}">Listen</a> | <a href="{{ main.website }}">Visit website</a></p>
+    <p><a class="listen" href="{{ main.audio }}">Listen</a> | <a href="{{ main.website }}" target="_blank">Visit website</a></p>
   </div>
   
 </div>
@@ -23,9 +23,12 @@
   <h1>2. News &amp; Analysis</h1>
   <ol type="a">
     {% for feed in site.data.feeds %}
-      <li>
+      <li class="{{ feed.type }}">
         {{ feed.title }}, {{ feed.frequency }} |
-        <a class="listen {{ feed.type }}" href="{{ feed.audio }}">Listen</a>
+        <a class="listen" href="{{ feed.audio }}">Listen</a>
+        <div class="last-update">
+          Last update: <span class="last-update-time">?</span>
+        </div>
       </li>
     {% endfor %}
   </ol>
@@ -41,7 +44,7 @@
             <div class="description"> {{ pick.description }} </div>
             <div class="links">
               <a class="listen" href="{{ pick.audio }}">Listen</a> {% if pick.website %} | 
-              <a href="{{ pick.website }}">Visit website</a> {% endif %} {% if pick.feed %} {% endif %}
+              <a href="{{ pick.website }}" target="_blank">Visit website</a> {% endif %} {% if pick.feed %} {% endif %}
             </div> 
           </li>
         {% endfor %}
@@ -67,22 +70,25 @@
 
     <p>Publicradio.info is a home page for noncommercial news, culture, and arts.</p>
     <p>Updated monthly |  Last update: October 27, 2015</p>
-    <p>Each issue available via podcast: [<a href="http://itunes.apple.com/us/podcast/playlist/id1055233656?mt=2">iTunes</a>] | [<a href="http://www.publicradio.info/feed.xml">RSS</a>]</p>
+    <p>Each issue available via podcast: 
+      [<a href="http://itunes.apple.com/us/podcast/playlist/id1055233656?mt=2" target="_blank">iTunes</a>] | 
+      [<a href="http://www.publicradio.info/feed.xml" target="_blank">RSS</a>]</p>
 
     <p>
       Our website is volunteer-run. Content edited by Conor Gillies, Annie McEwen, and Audrey Mardavich. 
       Development by Alex Silva, Eve Asher, Chris Kalafarski, and Kathy Tu on
-      <a href="https://github.com/radioopensource/dotinfo">Github</a>. 
+      <a href="https://github.com/radioopensource/dotinfo" target="_blank">Github</a>. 
     </p>
     
     <p>Say hello: <a href="mailto:contact@publicradio.info">contact@publicradio.info</a>.</p>
     
     <p>
-      Design and graphics <a href="http://creativecommons.org/licenses/by-sa/4.0/">licensed under CC</a>; software issued under <a href="http://github.com/radioopensource/dotinfo/blob/gh-pages/license.md">The MIT License</a>.
+      Design and graphics <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">licensed under CC</a>; 
+      software issued under <a href="http://github.com/radioopensource/dotinfo/blob/gh-pages/license.md" target="_blank">The MIT License</a>.
     </p>
     
     <p>
-      Support local and public media! <a href="http://www.npr.org/stations/">Find your nearest NPR (U.S.) station</a>.
+      Support local and public media! <a href="http://www.npr.org/stations/" target="_blank">Find your nearest NPR (U.S.) station</a>.
     </p>
   </div>
 </div>
