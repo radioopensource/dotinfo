@@ -9,7 +9,11 @@
       feedsURL = 'https://uj4e5o7uf1.execute-api.us-west-2.amazonaws.com/prod/feeds',
       newsModule = $('#news');
 
-    loadAudio($('#news').find('.bbc-headlines a').attr('href')); // set default audio
+    // load default audio
+    loadAudio(newsModule.find('.bbc-headlines .listen').attr('href'));
+    // set default audio last update
+    newsModule.find('.bbc-headlines .last-update-time').text(formatDateTime(getBBCHeadlinesLastUpdate())); 
+
     $('.listen').on('click', playAudioHandler);
     window.addEventListener('keydown', onKeyDown, false);
 
@@ -101,6 +105,19 @@
 
       return formattedDateTime;
     };  
+
+    function getBBCHeadlinesLastUpdate () {
+      var 
+        minsToChangeTo = 35,
+        now = new Date(),
+        nowMins = now.getMinutes();
+
+      now.setMinutes(minsToChangeTo);
+      var changeToLastHour = (nowMins - minsToChangeTo < 0);
+      if (changeToLastHour) { now.setHours(now.getHours()-1); }
+
+      return now.toString();
+    }
 
   </script>
 </footer>
