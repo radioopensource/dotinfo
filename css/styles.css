@@ -63,9 +63,15 @@ ol li {
   max-width: 40em;
 }
 
-.description, .last-update {
+.description {
   color: gray;
   margin-bottom: 0.5em;
+}
+
+.last-update {
+  color: gray;
+  margin-bottom: 0.5em;
+  display: inline;
 }
 
 .explicit {

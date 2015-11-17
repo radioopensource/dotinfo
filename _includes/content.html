@@ -24,8 +24,9 @@
   <ol type="a">
     {% for feed in site.data.feeds %}
       <li class="{{ feed.type }}">
-        {{ feed.title }}, {{ feed.frequency }} |
-        <a class="listen" href="{{ feed.audio }}">Listen</a>
+        {{ feed.title }}, {{ feed.frequency }}
+        </br>
+        <a class="listen" href="{{ feed.audio }}">Listen</a> |
         <div class="last-update">
           Last update: <span class="last-update-time">?</span>
         </div>
