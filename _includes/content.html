@@ -23,7 +23,7 @@
   <h1>2. News &amp; Analysis</h1>
   <ol type="a">
     {% for feed in site.data.feeds %}
-      <li class="{{ feed.type }}">
+      <li class="{{ feed.type }} spin">
         {{ feed.title }}, {{ feed.frequency }}
         </br>
         <a class="listen" href="{{ feed.audio }}">Listen</a> |

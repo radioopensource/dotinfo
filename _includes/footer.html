@@ -12,13 +12,17 @@
     // load default audio
     loadAudio(newsModule.find('.bbc-headlines .listen').attr('href'));
     // set default audio last update
-    newsModule.find('.bbc-headlines .last-update-time').text(formatDateTime(getBBCHeadlinesLastUpdate())); 
+    newsModule.find('.bbc-headlines .last-update-time').text(formatDateTime(getBBCHeadlinesLastUpdate()))
+    newsModule.find('.bbc-headlines').removeClass('spin');
 
     $('.listen').on('click', playAudioHandler);
     window.addEventListener('keydown', onKeyDown, false);
 
     function playAudioHandler (e) {
       e.preventDefault();
+      if ($(e.target).parent().hasClass('spin')) {
+        return;
+      }
       var clickedAudio = e.target.href; 
 
       if (clickedSameAudio(clickedAudio)) {
@@ -82,7 +86,8 @@
       Object.keys(data).forEach( function(newsType) { 
         var newsTypeSection = newsModule.find('.' + newsType);
         newsTypeSection.find('.listen').attr('href', data[newsType].url);
-        newsTypeSection.find('.last-update-time').text(formatDateTime(data[newsType].pubDate));
+        newsTypeSection.find('.last-update-time').text(formatDateTime(data[newsType].pubDate))
+        newsTypeSection.removeClass('spin');
       })
     }
 
