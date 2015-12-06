@@ -10,7 +10,9 @@ This is a place for people to discover and experience audio from around the worl
 
 # User keyboard controls
 `spacebar`: play and pause
+
 `left key`: skip back 15 seconds
+
 `right key`: skip forward 15 seconds
 
 # To-do
