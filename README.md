@@ -6,7 +6,7 @@
 3. An aggregator podcast playlist (publicradio.info/feed.xml) that updates concurrently with homepage features, compiling enclosure URLs and other relevant metadata from the selected podcast items each month.
 
 # Purpose
-This is a place for people to discover and experience audio from around the world. Contributors work to create a decent web experience of good and unusual sounds: news, analysis, music mixes, documentaries, comedies, investigative reports, stories, audio experiments, and all else. The project exists to highlight independent, noncommercial, listener-supported radio—and to encourage consumers to become active supporters of public media.
+Create a place for people to discover and experience good audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. The project exists to highlight independent, noncommercial, listener-supported radio—and to encourage consumers to become active supporters of public media.
 
 # User keyboard controls
 `spacebar`: play and pause
@@ -15,7 +15,7 @@ This is a place for people to discover and experience audio from around the worl
 
 `right key`: skip forward 15 seconds
 
-# To-do
+# To do
 
 1. Create "Internet Radio" module
   * try it out with KCRW or BCR streams
@@ -68,4 +68,4 @@ Feed.xml RSS channel items (aka selected audio) follow this syntax:
 ```
 
 # License
-Software issued under the MIT License. Graphics, design, intellectual property, etc. issued under Creative Commons (CC BY-SA 4.0). We claim no copyright to selected and automated audio, which should be assumed to fall under audio creators.
+Software issued under the MIT License. Graphics, design, intellectual property, etc. issued under Creative Commons (CC BY-SA 4.0). No copyright claimed for selected and automated audio, which should be assumed to fall under audio creators.
