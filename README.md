@@ -1,5 +1,5 @@
 # Summary
-Publicradio.info is a home page for noncommercial news, culture, and art. The project includes:
+[Publicradio.info](http://www.publicradio.info) is a home page for noncommercial news, culture, and art. The project includes:
 
 1. A handpicked, ephemeral list of podcast items, updated monthly.
 2. A list of leading news and analysis podcasts, updated automatically to the most recent episode.
@@ -36,7 +36,7 @@ A handful of producers and programmers in and around public radio at the moment.
 Email contact@publicradio.info, and your email will be answered by a contributing editor or programmer.
 
 # Homepage Syntax
-Selected audio on the web app follow this syntax:
+Text for selected audio on the web app follows this syntax:
 
   "TITLE OF EPISODE" [HH:MM:SS] from SERIES (GENRE)
 
@@ -46,7 +46,7 @@ Selected audio on the web app follow this syntax:
 
   [followed by relevant links]
 
-Main program image must be Creative Commons.
+Main program image is Creative Commons.
 
 # RSS Feed Syntax
 Feed.xml RSS channel items (aka selected audio) follow this syntax:
