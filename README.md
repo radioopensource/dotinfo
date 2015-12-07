@@ -1,5 +1,5 @@
 # Summary
-[Publicradio.info](http://www.publicradio.info) is a home page for noncommercial news, culture, and art. The project includes:
+[Publicradio.info](http://www.publicradio.info) is a homepage for noncommercial news, culture, and art. The project includes:
 
 1. A handpicked, ephemeral list of podcast items, updated monthly.
 2. A list of leading news and analysis podcasts, updated automatically to the most recent episode.
