@@ -7,7 +7,7 @@
   * `News & Analysis`
 3. A handpicked list of other podcast items, updates monthly.
   * `Selected Audio`
-4. An automated [RSS feed](publicradio.info/feed.xml), updates concurrently with all selected podcast items (no news).
+4. An automated [RSS feed](http://publicradio.info/feed.xml), updates concurrently with all selected podcast items (no news).
   * `Playlist`
 
 # Purpose
