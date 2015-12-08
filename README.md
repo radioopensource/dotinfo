@@ -7,8 +7,8 @@
   * `News & Analysis`
 3. A handpicked list of other podcast items, updates monthly.
   * `Selected Audio`
-4. An automated podcast playlist, updates concurrently with all selected podcast items (no news).
-  * `Podcast` [`publicradio.info/feed.xml`]
+4. An automated [RSS feed](publicradio.info/feed.xml), updates concurrently with all selected podcast items (no news).
+  * `Playlist`
 
 # Purpose
 Create a place for people to discover and experience good audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. The project exists to highlight independent, noncommercial, listener-supported radio—and to encourage consumers to become active supporters of public media.
@@ -28,10 +28,8 @@ Create a place for people to discover and experience good audio. Contributors wo
   * no cookies, tracking
 3. Update gradient background so it follows local time of day
 4. Design/implementation of Twitter bot @publicradio_bot
-5. Upload news feed code to new repo
-  * See if lambda service integrates with github
-6. Create a "donate" page, to support an "artist in residence" for 2016
-7. Think unusual ways for listeners to interact with the site...
+5. Create a "donate" page to support an "artist in residence" for 2016?
+6. Think unusual ways for listeners to interact with the site...
   * chat room/comments section? upvote/downvote system?
 
 # Contributors
