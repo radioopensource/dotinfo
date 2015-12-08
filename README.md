@@ -11,7 +11,7 @@
   * `Playlist`
 
 # Purpose
-Create a place for people to discover and experience good audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. The project exists to highlight independent, noncommercial, listener-supported radio—and to encourage consumers to become active supporters of public media.
+Create a place for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. The project exists to highlight independent, noncommercial, listener-supported radio—and to encourage consumers to become active supporters of public media.
 
 # User keyboard controls
 `spacebar`: play and pause
