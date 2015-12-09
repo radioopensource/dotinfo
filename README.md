@@ -33,21 +33,21 @@ Create a place for people to discover and experience audio. Contributors work to
   * chat room/comments section? upvote/downvote system?
 
 # Contributors
-A handful of producers and programmers in and around public radio at the moment. Looking for: publishing partners, and anyone with a good sound or software idea who wants to help. 
+A handful of producers and programmers in and around public radio at the moment. Looking for: publishing partners and anyone with a good sound or software idea who wants to help. 
 
 # Contact
-Email contact@publicradio.info, and your email will be answered by a contributing editor or programmer.
+Email contact@publicradio.info and your message will be answered by a contributing editor or programmer.
 
 # Homepage Syntax
 Text for selected audio on the web app follows this syntax:
 
-  "TITLE OF EPISODE" [HH:MM:SS] from SERIES (GENRE)
+  `"TITLE OF EPISODE" [HH:MM:SS] from SERIES (GENRE)`
 
-  [followed by]
+  followed by
 
-  DESCRIPTION (one or two sentences, longer if main program).
+  `DESCRIPTION (one or two sentences, longer if main program).`
 
-  [followed by relevant links]
+  followed by relevant links
 
 Main program image is Creative Commons.
 
