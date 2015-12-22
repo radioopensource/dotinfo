@@ -31,7 +31,8 @@ Create a place for people to discover and experience audio. Contributors work to
   * no cookies, tracking
 3. Update gradient background so it follows local time of day
 4. Design/implementation of Twitter bot @publicradio_bot
-5. Create a "donate" page to support an "artist in residence" for 2016?
+  *broadcasts homepage content plus @mentions? translates BBC headlines audio to text and broadcasts that?
+5. Create "donate" page to support an "artist in residence" for 2016
 6. Think unusual ways for listeners to interact with the site...
   * chat room/comments section? upvote/downvote system?
 
