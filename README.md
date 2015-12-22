@@ -1,14 +1,17 @@
 # Summary
 [Publicradio.info](http://www.publicradio.info) is a homepage for noncommercial news, culture, and art. The project includes:
 
-1. A handpicked 'podcast item of the month.' 
+* A handpicked collection of podcast items.
   * `Main Program`
-2. A list of leading news and analysis podcasts, updates automatically to most recent episode.
-  * `News & Analysis`
-3. A handpicked list of other podcast items, updates monthly.
   * `Selected Audio`
-4. An automated [RSS feed](http://publicradio.info/feed.xml), updates concurrently with all selected podcast items (no news).
+
+* An [RSS feed](http://publicradio.info/feed.xml) that updates with collections of podcast items (no news).
   * `Playlist`
+
+* A handpicked collection of leading news and analysis podcast feeds that updates with most recent episode.
+  * `News & Analysis`
+
+* misc. broadcast elements (URL(s), RSS image(s), titles and copy, sound, [homepage](http://publicradio.info) look and feel, etc.) 
 
 # Purpose
 Create a place for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. The project exists to highlight independent, noncommercial, listener-supported radio—and to encourage consumers to become active supporters of public media.
@@ -22,7 +25,7 @@ Create a place for people to discover and experience audio. Contributors work to
 
 # To do
 
-1. Create "Internet Radio" module
+1. Create "Internet Radio" (live stream) module
   * try it out with KCRW or BCR streams
 2. Add visitor counter at bottom?
   * no cookies, tracking
