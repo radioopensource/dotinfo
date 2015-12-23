@@ -50,8 +50,8 @@ A handful of producers and programmers in and around public radio at the moment.
 # Communication
 Email contact@publicradio.info and your message will be answered by a contributing editor or programmer. We also communicate internally via a Slack team (ask for an invite).
 
-# Podcast and homepage syntax (text)
-For feature content (`Main Program` and `Selected Audio`), follow this syntax:
+# Podcast and homepage syntax (SWE)
+Homepage feature and RSS feed content (`Main Program`, `Selected Audio`, `Playlist`) follows this syntax:
 > "TITLE OF EPISODE" [HH:MM:SS] from SERIES (GENRE)
 
  followed by
@@ -59,17 +59,17 @@ For feature content (`Main Program` and `Selected Audio`), follow this syntax:
 
  followed by a listen link plus other relevant information.
 
-For main program (**001.md** in current month's collection), select an accompanying [creative commons image](IMAGE SEARCH).
+*Note: main program (**001.md** in current month's collection) requires an accompanying [creative commons image](IMAGE SEARCH).*
 
-For news content (`News & Analysis`), follow this syntax:
+News content (`News & Analysis`) follows this syntax:
 > "TITLE OF PROGRAM" [HH:MM:SS], UPDATE RATE
  
  followed by a listen link plus other relevant information.
 
-# Internal syntax
-The homepage and podcast content is sourced from **dotinfo/_cYYMMDD/** and **dotinfo/_data/** folders.
+# Internal syntax (Markdown and YAML)
+Content is sourced from **dotinfo/_cYYMMDD/** and **dotinfo/_data/** folders.
 
-The podcast items (for `'Main Program'` and `'Selected Audio'`), come from Markdown files located in the *_cYYMMDD* folder, and they follow this syntax:
+Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from Markdown files located in the *_cYYMMDD* folder. They follow this syntax:
 
 ```Markdown
   <title>TITLE [GENRE]</title>
@@ -87,7 +87,7 @@ The podcast items (for `'Main Program'` and `'Selected Audio'`), come from Markd
   <itunes:explicit>yes/no</itunes:explicit>
 ```
 
-News items (for `News & Analysis`), come from a YAML file (**feeds.yml**) in the **_data** folder, and follow this syntax:
+News items (`News & Analysis`) come from a YAML file (**feeds.yml**) in the **_data** folder. They follow this syntax:
 
 ```YAML
 - title: TITLE OF PROGRAM [HH:MM:SS]
