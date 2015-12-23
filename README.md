@@ -115,7 +115,7 @@ News items (`News & Analysis`) come from a YAML file (**feeds.yml**) in the **_d
   type: LABEL
 ```
 
-# In summary, all 'publicradio.info' components, in table form
+# All 'publicradio.info' components, in table form
 
 | developer            | user              |
 | -------------------- | ----------------- |
