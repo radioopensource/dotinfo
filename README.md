@@ -14,7 +14,7 @@
 * misc. broadcast elements (URL(s), RSS image(s), titles and copy, sound, [homepage](http://publicradio.info) look and feel, etc.) 
 
 # Purpose
-Create a place for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. The project exists to highlight independent, noncommercial, listener-supported radio—and to encourage consumers to become active supporters of public media.
+Create a place for people to discover and experience audio. Contributors here work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. Content and other things change every month. Publicradio.info exists to highlight independent, noncommercial, listener-supported radio, plus encourage consumers to become active supporters of public media.
 
 # User keyboard controls
 `spacebar:` play and pause
@@ -44,7 +44,7 @@ A handful of producers and programmers in and around public radio at the moment.
 Email contact@publicradio.info and your message will be answered by a contributing editor or programmer.
 
 # Homepage Syntax
-Text for selected audio on the web app follows this syntax:
+Text for selected audio on the website follow this syntax:
 
   `"TITLE OF EPISODE" [HH:MM:SS] from SERIES (GENRE)`
 
@@ -52,9 +52,9 @@ Text for selected audio on the web app follows this syntax:
 
   `DESCRIPTION (one or two sentences, longer if main program).`
 
-  followed by relevant links
+  followed by `relevant links`
 
-Main program image is Creative Commons.
+For main program (001.md in that month's collection), select a creative commons image
 
 # RSS Feed Syntax
 Feed.xml RSS channel items (aka selected audio) follow this syntax:
