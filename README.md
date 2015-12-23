@@ -24,15 +24,16 @@ Create a place for people to discover and experience audio. Contributors work to
 `right key:` skip forward 15 seconds
 
 # To do
+In prep for the new year...
 
 1. Create "Internet Radio" (live stream) module
-  * try it out with KCRW or BCR streams
-2. Add visitor counter at bottom?
+  * try with KCRW or BCR or WMBR streams
+2. Add visitor counter
   * no cookies, tracking
 3. Update gradient background so it follows local time of day
-4. Design/implementation of Twitter bot @publicradio_bot
-  *broadcasts homepage content plus @mentions? translates BBC headlines audio to text and broadcasts that?
-5. Create "donate" page to support an "artist in residence" for 2016
+4. Design/implementation of Twitter bot @publicradio_bot (who is it for?)
+  * broadcasts homepage content plus @mentions? translates BBC headlines audio to text and broadcasts that?
+5. Create "donate" page to support one person/thing for 2016
 6. Think unusual ways for listeners to interact with the site...
   * chat room/comments section? upvote/downvote system?
 
