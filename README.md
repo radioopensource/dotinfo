@@ -47,8 +47,8 @@ In prep for the new year...
 # Contributors
 A handful of producers and programmers in and around public radio at the moment. Looking for: publishing partners and anyone with a good sound or software idea who wants to help.
 
-# Communication
-Email contact@publicradio.info and your message will be answered by a contributing editor or programmer. We also communicate internally via a Slack team (ask for an invite).
+# Contact
+Email contact@publicradio.info and your message will be answered by a contributing editor or programmer. Also, we communicate internally via a Slack team (ask for an invite).
 
 # Podcast and homepage syntax (SWE)
 
@@ -62,7 +62,7 @@ Homepage and RSS feed content (`Main Program`, `Selected Audio`, `Playlist`) adh
 
  followed by listen link and other relevant information.
 
-*Note: main program—000.md in current month's collection—requires an accompanying [creative commons image](IMAGE SEARCH).*
+*Note: main program—000.md in current month's collection—requires an accompanying [creative commons image](http://search.creativecommons.org/).*
 
 News content (`News & Analysis`) follows this syntax:
 > "TITLE OF PROGRAM" [HH:MM:SS], UPDATE RATE
