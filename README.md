@@ -11,7 +11,7 @@
 - A handpicked list of leading news and analysis podcasts.
   - `News & Analysis`
 
-- Misc. broadcast elements 
+- Broadcast elements 
   - name and URL, 
   - RSS items,
   - titles and description copy,
@@ -21,7 +21,7 @@
   - etc.
 
 # Purpose
-Create a place for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. Publicradio.info exists to highlight independent, noncommercial, listener-supported radio, plus encourage consumers to become active supporters of public media. Content and other things for the homepage and podcast come monthly, as in a small audio magazine or mixtape.
+Create a place for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. Publicradio.info exists to highlight independent, noncommercial, listener-supported radio, and also to encourage consumers to become active supporters of public media. Content and other things for the homepage and podcast come monthly, as in a small audio magazine or mixtape.
 
 # User keyboard controls
 `spacebar:` play and pause
@@ -51,43 +51,62 @@ A handful of producers and programmers in and around public radio at the moment.
 Email contact@publicradio.info and your message will be answered by a contributing editor or programmer. We also communicate internally via a Slack team (ask for an invite).
 
 # Podcast and homepage syntax (SWE)
-Homepage feature and RSS feed content (`Main Program`, `Selected Audio`, `Playlist`) follows this syntax:
+
+Homepage and RSS feed content (`Main Program`, `Selected Audio`, `Playlist`) adheres to this syntax:
+
 > "TITLE OF EPISODE" [HH:MM:SS] from SERIES (GENRE)
 
  followed by
-> DESCRIPTION. (one or two sentences, longer if main program)
+ 
+> DESCRIPTION (one or two sentences, longer if main program)
 
- followed by a listen link plus other relevant information.
+ followed by listen link and other relevant information.
 
-*Note: main program (**001.md** in current month's collection) requires an accompanying [creative commons image](IMAGE SEARCH).*
+*Note: main program—000.md in current month's collection—requires an accompanying [creative commons image](IMAGE SEARCH).*
 
 News content (`News & Analysis`) follows this syntax:
 > "TITLE OF PROGRAM" [HH:MM:SS], UPDATE RATE
  
- followed by a listen link plus other relevant information.
+ followed by listen link and other relevant information.
 
 # Internal syntax (Markdown and YAML)
 Content is sourced from **dotinfo/_cYYMMDD/** and **dotinfo/_data/** folders.
 
-Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from Markdown files located in the *_cYYMMDD* folder. They follow this syntax:
+Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from Markdown files located in the **_cYYMMDD** folder. They adhere to this syntax:
 
 ```Markdown
-  <title>TITLE [GENRE]</title>
-  <link>http://.../</link>
-  <guid isPermaLink="true">http://…/</guid> (FALSE IF NON-LINK)
-  <dc:creator>PRODUCER/SERIES</dc:creator>
-  <description>DESCRIPTION</description>
+---
+  date: YYYY-MM-DD HH:MM:SS (our own publishing date)
+  image: http://….png (only necessary if main program)
   
-  <enclosure url="http://….mp3" length="0 (LENGTH IN BYTES)" type="audio/mpeg" />
+  audio: http://….mp3
+  title: TITLE OF EPISODE
+  description: DESCRIPTION.
+  series: SERIES
+  genre: GENRE
+  duration: 'HH:MM'
+  explicit: true/false
+  website: http://…
+  feed: http://….xml
+  rss: >
+    <title>TITLE [GENRE]</title>
+    <link>http://.../</link>
+    <guid isPermaLink="true">http://…/</guid> (FALSE IF NON-LINK)
+    <dc:creator>PRODUCER/SERIES</dc:creator>
+    <description>DESCRIPTION</description>
   
-  <itunes:duration>HH:MM:SS</itunes:duration>
-  <itunes:subtitle>DESCRIPTION</itunes:subtitle>
-  <itunes:summary>DESCRIPTION (longer if you want)</itunes:summary>
-  <itunes:author>SERIES</itunes:author>
-  <itunes:explicit>yes/no</itunes:explicit>
+    <enclosure url="http://….mp3" length="0 (LENGTH IN BYTES)" type="audio/mpeg" />
+  
+    <itunes:duration>HH:MM:SS</itunes:duration>
+    <itunes:subtitle>DESCRIPTION</itunes:subtitle>
+    <itunes:summary>DESCRIPTION (longer if you want)</itunes:summary>
+    <itunes:author>SERIES</itunes:author>
+    <itunes:explicit>yes/no</itunes:explicit>
+
+---
 ```
 
-News items (`News & Analysis`) come from a YAML file (**feeds.yml**) in the **_data** folder. They follow this syntax:
+News items (`News & Analysis`) come from a YAML file (**feeds.yml**) in the **_data** folder. They adhere to this syntax:
 
 ```YAML
 - title: TITLE OF PROGRAM [HH:MM:SS]
@@ -98,11 +117,12 @@ News items (`News & Analysis`) come from a YAML file (**feeds.yml**) in the **_d
 
 # In summary, all 'publicradio.info' components, in table form
 
-| user          | developer            |
-| ------------- | -------------------- |
-| podcast       | RSS feed             |
-| news homepage | UX design, pod items |
-| twitter       | robot                |
+| developer            | user              |
+| -------------------- | ----------------- |
+| RSS feed             | podcast           |
+| UX design            | homepage          |
+| content              | homepage, podcast |             
+| twitter bot          | twitter           |
 
 :radio:
 
