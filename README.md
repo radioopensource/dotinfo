@@ -2,7 +2,7 @@
 [Publicradio.info](http://www.publicradio.info) is a homepage for noncommercial news, culture, and art. The project includes:
 
 * A handpicked collection of podcast items.
-  * `Main Program`
+  * `Main Program`,
   * `Selected Audio`
 
 * An [RSS feed](http://publicradio.info/feed.xml) that updates with collections of podcast items (no news).
@@ -11,10 +11,17 @@
 * A handpicked collection of leading news and analysis podcast feeds that updates with most recent episode.
   * `News & Analysis`
 
-* misc. broadcast elements (URL(s), RSS image(s), titles and copy, sound, [homepage](http://publicradio.info) look and feel, etc.) 
+* Misc. broadcast elements 
+  * name and URL, 
+  * RSS items,
+  * titles and description copy,
+  * user controls,
+  * sound,
+  * overall [homepage](http://publicradio.info) look and feel,
+  * etc.
 
 # Purpose
-Create a place for people to discover and experience audio. Contributors here work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. Content and other things change every month. Publicradio.info exists to highlight independent, noncommercial, listener-supported radio, plus encourage consumers to become active supporters of public media.
+Create a place for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. Releases of content and other things come every month. Publicradio.info exists to highlight independent, noncommercial, listener-supported radio, plus encourage consumers to become active supporters of public media.
 
 # User keyboard controls
 `spacebar:` play and pause
@@ -43,8 +50,8 @@ A handful of producers and programmers in and around public radio at the moment.
 # Contact
 Email contact@publicradio.info and your message will be answered by a contributing editor or programmer.
 
-# Homepage Syntax
-Text for selected audio on the website follow this syntax:
+# Homepage Syntax (USER-FACING)
+Text for podcast collections on the website follow this syntax:
 
   `"TITLE OF EPISODE" [HH:MM:SS] from SERIES (GENRE)`
 
@@ -54,10 +61,12 @@ Text for selected audio on the website follow this syntax:
 
   followed by `relevant links`
 
-For main program (001.md in that month's collection), select a creative commons image
+For main program (001.md in current month's collection), select an accompanying creative commons image
 
-# RSS Feed Syntax
-Feed.xml RSS channel items (aka selected audio) follow this syntax:
+For `N
+
+# RSS Feed Syntax (DEVELOPER-FACING)
+Our podcast items (for `Main Program` and `Selected Audio`) follow this syntax:
 
 ```
   <title>TITLE [GENRE]</title>
