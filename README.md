@@ -55,22 +55,21 @@ For feature content (`Main Program` and `Selected Audio`), follow this syntax:
 > "TITLE OF EPISODE" [HH:MM:SS] from SERIES (GENRE)
 
  followed by
-> DESCRIPTION (one or two sentences, longer if main program).
+> DESCRIPTION. (one or two sentences, longer if main program)
 
  followed by a listen link plus other relevant information.
 
 For main program (**001.md** in current month's collection), select an accompanying [creative commons image](IMAGE SEARCH).
 
 For news content (`News & Analysis`), follow this syntax:
-
-  *"TITLE OF PROGRAM" [HH:MM:SS], UPDATE RATE*
+> "TITLE OF PROGRAM" [HH:MM:SS], UPDATE RATE
  
  followed by a listen link plus other relevant information.
 
 # Internal syntax
-The homepage and podcast content is sourced from **dotinfo/_cYYMMDD** and **dotinfo/_data/** folders.
+The homepage and podcast content is sourced from **dotinfo/_cYYMMDD/** and **dotinfo/_data/** folders.
 
-The podcast items (for `'Main Program'` and `'Selected Audio'`), come from Markdown files located in *_cYYMMDD* folder, and they follow this syntax:
+The podcast items (for `'Main Program'` and `'Selected Audio'`), come from Markdown files located in the *_cYYMMDD* folder, and they follow this syntax:
 
 ```Markdown
   <title>TITLE [GENRE]</title>
@@ -88,7 +87,7 @@ The podcast items (for `'Main Program'` and `'Selected Audio'`), come from Markd
   <itunes:explicit>yes/no</itunes:explicit>
 ```
 
-News items (for `News & Analysis`), come from a YAML file (**feeds.yml**) in the **/_data/** folder, and follow this syntax:
+News items (for `News & Analysis`), come from a YAML file (**feeds.yml**) in the **_data** folder, and follow this syntax:
 
 ```YAML
 - title: TITLE OF PROGRAM [HH:MM:SS]
@@ -97,13 +96,13 @@ News items (for `News & Analysis`), come from a YAML file (**feeds.yml**) in the
   type: LABEL
 ```
 
-# All 'publicradio.info' components, in table form
+# In summary, all 'publicradio.info' components, in table form
 
-| User          | Developer             |
-| ------------- | --------------------: |
-| Podcast       | RSS Feed              |
-| News homepage | UX Design, items      |
-| Twitter       | Robot                 |
+| user          | developer            |
+| ------------- | -------------------- |
+| podcast       | RSS feed             |
+| news homepage | UX design, pod items |
+| twitter       | robot                |
 
 :radio:
 
