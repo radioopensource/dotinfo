@@ -1,27 +1,24 @@
 # Summary
-[Publicradio.info](http://www.publicradio.info) is a homepage for listening to noncommercial news, culture, and art. The project includes:
+Publicradio.info is a place for listening to noncommercial news, culture, and art. Components include:
 
-- A monthly, handpicked collection of podcast items.
-  - `Main Program`,
-  - `Selected Audio`
+1. A monthly, handpicked collection of podcast items, playable on the [homepage](http://www.publicradio.info) and through an [RSS feed](http://publicradio.info/feed.xml).
+  - `Main Program` (homepage module), 
+  - `Selected Audio` (homepage module),
+  - `Playlist` (RSS feed)
 
-- An [RSS feed](http://publicradio.info/feed.xml) that updates with the current month's collection (no news).
-  - `Playlist`
+2. A static list of leading news and analysis podcasts, of which the most recent episodes are playable on the [homepage](http://www.publicradio.info).
+  - `News & Analysis` (homepage module)
 
-- A handpicked list of leading news and analysis podcasts.
-  - `News & Analysis`
-
-- Broadcast elements 
-  - name and URL, 
-  - RSS items and metadata,
+And various broadcast, design elements, like:
+  - website and RSS feed metadata,
   - titles and description copy,
   - user controls,
   - sound,
-  - overall [website](http://publicradio.info) look and feel,
+  - overall website look and feel,
   - etc.
 
 # Purpose
-Create a place for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. Publicradio.info exists to highlight independent, noncommercial, listener-supported radio, and also to encourage consumers to become active supporters of public media. Content and other things for the homepage and podcast come monthly, as in a small audio magazine or mixtape.
+Create a space for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. Publicradio.info exists to highlight independent, noncommercial, listener-supported radio, and also to encourage consumers to become active supporters of public media. Content and other things for the homepage and podcast come monthly, as in a small audio magazine or mixtape.
 
 # User keyboard controls
 `spacebar:` play and pause
@@ -36,7 +33,7 @@ In prep for the new year...
 1. [ ] Create "Internet Radio" (live stream) module
   - try with KCRW or BCR or WMBR streams
 2. [ ] Add visitor counter
-  - no cookies, tracking
+  - no tracking of personal data
 3. [ ] Update gradient background so it follows local time of day
 4. [ ] Design/implementation of Twitter bot @publicradio_bot (who is it for?)
   - broadcasts homepage content plus @mentions? translates BBC headlines audio to text and broadcasts that?
@@ -45,7 +42,7 @@ In prep for the new year...
   - chat room/comments section? upvote/downvote system?
 
 # Contributors
-A handful of producers and programmers in and around public radio at the moment. Looking for: publishing partners and anyone with a good sound or software idea who wants to help.
+A handful of producers and programmers in and around public radio at the moment. Looking for: co-publisher and anyone with a good sound or software idea who wants to help.
 
 # Contact
 Email contact@publicradio.info and your message will be answered by a contributing editor or programmer.
@@ -70,7 +67,7 @@ Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from M
   website: http://…
   feed: http://….xml
   rss: >
-    <title>TITLE [GENRE]</title>
+    <title>C00 TITLE [GENRE] (where C00 = collection number)</title>
     <link>http://.../</link>
     <guid isPermaLink="true">http://…/</guid> (FALSE IF NON-LINK)
     <dc:creator>PRODUCER/SERIES</dc:creator>
@@ -96,13 +93,13 @@ News items (`News & Analysis`) come from a YAML file (**feeds.yml**) in the **_d
   type: LABEL
 ```
 
-# All 'publicradio.info' components, in table form
+# Overview of 'publicradio.info' components so far, in table form
 
 | developer            | user              |
 | -------------------- | ----------------- |
 | RSS feed             | podcast           |
 | UX design            | homepage          |
-| content              | homepage, podcast |             
+| content              | homepage, podcast |
 | twitter bot          | twitter           |
 
 :radio:
