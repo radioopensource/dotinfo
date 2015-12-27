@@ -1,5 +1,5 @@
 # Summary
-Publicradio.info is a place for listening to noncommercial news, culture, and art. Components include:
+Publicradio.info is a place for listening to noncommercial news, culture, and art. It includes:
 
 1. A monthly, handpicked collection of podcast items, playable on the [homepage](http://www.publicradio.info) and through an [RSS feed](http://publicradio.info/feed.xml).
   - `Main Program` (homepage module), 
