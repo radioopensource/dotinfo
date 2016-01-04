@@ -72,7 +72,7 @@ Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from M
 ---
 ```
 
-News items (`News & Analysis`) are served by a separate aggregating service. The code for the service lives in the [public-radio-services](https://github.com/ags2121/public-radio-services) github repo. News podcasts with static urls can bypass the service and be hardcoded in (**feeds.yml**) in the **_data** folder. They adhere to this syntax:
+News items (`News & Analysis`) are served by a separate aggregating service. The code for the service lives in the [public-radio-services](https://github.com/ags2121/public-radio-services) github repo. News podcasts with static urls can bypass the service and be hardcoded in **feeds.yml** in the **_data** folder. They adhere to this syntax:
 
 ```YAML
 - title: TITLE OF PROGRAM [HH:MM:SS]
