@@ -2,12 +2,8 @@
 Publicradio.info is a place for listening to noncommercial news, culture, and art. It includes:
 
 1. A monthly, handpicked collection of podcast items, playable on the [homepage](http://www.publicradio.info) and through an [RSS feed](http://publicradio.info/feed.xml).
-  - `Main Program` (homepage module), 
-  - `Selected Audio` (homepage module),
-  - `Playlist` (RSS feed)
 
 2. A list of leading news and analysis podcasts, of which the most recent episodes are playable on the [homepage](http://www.publicradio.info).
-  - `News & Analysis` (homepage module)
 
 # Purpose
 Create a space for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. Publicradio.info exists to highlight independent, noncommercial, listener-supported radio, and also to encourage consumers to become active supporters of public media. Content and other things for the homepage and podcast come monthly, as in a small audio magazine or mixtape.
