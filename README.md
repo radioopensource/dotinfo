@@ -6,7 +6,7 @@ Publicradio.info is a place for listening to noncommercial news, culture, and ar
   - `Selected Audio` (homepage module),
   - `Playlist` (RSS feed)
 
-2. A static list of leading news and analysis podcasts, of which the most recent episodes are playable on the [homepage](http://www.publicradio.info).
+2. A list of leading news and analysis podcasts, of which the most recent episodes are playable on the [homepage](http://www.publicradio.info).
   - `News & Analysis` (homepage module)
 
 And various broadcast, design elements, like:
