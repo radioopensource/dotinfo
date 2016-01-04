@@ -9,14 +9,6 @@ Publicradio.info is a place for listening to noncommercial news, culture, and ar
 2. A list of leading news and analysis podcasts, of which the most recent episodes are playable on the [homepage](http://www.publicradio.info).
   - `News & Analysis` (homepage module)
 
-And various broadcast, design elements, like:
-  - website and RSS feed metadata,
-  - titles and description copy,
-  - user controls,
-  - sound,
-  - overall website look and feel,
-  - etc.
-
 # Purpose
 Create a space for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. Publicradio.info exists to highlight independent, noncommercial, listener-supported radio, and also to encourage consumers to become active supporters of public media. Content and other things for the homepage and podcast come monthly, as in a small audio magazine or mixtape.
 
@@ -47,7 +39,7 @@ A handful of producers and programmers in and around public radio at the moment.
 # Contact
 Email contact@publicradio.info and your message will be answered by a contributing editor or programmer.
 
-# Internal syntax (Markdown and YAML)
+# Content
 Content is sourced from **dotinfo/_cYYMMDD/** and **dotinfo/_data/** folders.
 
 Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from Markdown files located in the **_cYYMMDD** folder. They adhere to this syntax:
@@ -84,23 +76,14 @@ Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from M
 ---
 ```
 
-News items (`News & Analysis`) come from a YAML file (**feeds.yml**) in the **_data** folder. They adhere to this syntax:
+News items (`News & Analysis`) are served by a separate aggregating service. The code for the service lives in the [public-radio-services](https://github.com/ags2121/public-radio-services) github repo. News podcasts with static urls can bypass the service and be hardcoded in (**feeds.yml**) in the **_data** folder. They adhere to this syntax:
 
 ```YAML
 - title: TITLE OF PROGRAM [HH:MM:SS]
   frequency: UPDATE RATE
-  audio: http://….mp3 (leave blank if auto-updating)
-  type: LABEL
+  audio: http://….mp3 (leave blank if news resource is served by the public-radio-services)
+  type: TYPE
 ```
-
-# Overview of 'publicradio.info' components so far, in table form
-
-| developer            | user              |
-| -------------------- | ----------------- |
-| RSS feed             | podcast           |
-| UX design            | homepage          |
-| content              | homepage, podcast |
-| twitter bot          | twitter           |
 
 :radio:
 
