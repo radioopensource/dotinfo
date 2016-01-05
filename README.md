@@ -36,7 +36,7 @@ A handful of producers and programmers in and around public radio at the moment.
 Email contact@publicradio.info and your message will be answered by a contributing editor or programmer.
 
 # Content
-Content is sourced from **dotinfo/_cYYMMDD/** and **dotinfo/_data/** folders.
+Content is sourced from **dotinfo/_cYYYYMM/** and **dotinfo/_data/** folders.
 
 Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from Markdown files located in the **_cYYMMDD** folder. They adhere to this syntax:
 
@@ -81,7 +81,7 @@ News items (`News & Analysis`) are served by a separate aggregating service. The
   type: TYPE
 ```
 
-:radio:
-
 # License
 Software issued under the MIT License. Graphics, design, intellectual property, etc. issued under Creative Commons (CC BY-SA 4.0). No copyright claimed for selected and automated audio, which should be assumed to fall under audio creators.
+
+:radio:
