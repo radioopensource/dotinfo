@@ -6,7 +6,7 @@
     var 
       audioPlayer = $('audio')[0],
       audioSource = $('audio').find('source'),
-      feedsURL = 'https://uj4e5o7uf1.execute-api.us-west-2.amazonaws.com/prod/feeds',
+      feedsURL = 'http://public-radio-services.herokuapp.com/news',
       newsModule = $('#news');
 
     // load default audio
@@ -78,7 +78,7 @@
       type: 'GET',
       dataType: 'JSON',
       success: function (data) {
-        refreshNewsFor(data);
+        refreshNewsFor(data.news);
       }
     });
 
