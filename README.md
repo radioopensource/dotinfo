@@ -38,7 +38,7 @@ Email contact@publicradio.info and your message will be answered by a contributi
 # Content
 Content is sourced from **dotinfo/_cYYYYMM/** and **dotinfo/_data/** folders.
 
-Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from Markdown files located in the **_cYYYYDD** folder. They adhere to this syntax:
+Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from Markdown files located in the **_cYYYYMM** folder. They adhere to this syntax:
 
 ```Markdown
 ---
