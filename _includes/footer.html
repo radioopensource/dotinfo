@@ -6,7 +6,7 @@
     var 
       audioPlayer = $('audio')[0],
       audioSource = $('audio').find('source'),
-      feedsURL = 'http://public-radio-services.herokuapp.com/news',
+      servicesURL = 'http://public-radio-services.herokuapp.com',
       newsModule = $('#news');
 
     // load default audio
@@ -74,7 +74,7 @@
     }
 
     $.ajax({
-      url: feedsURL,
+      url: servicesURL + '/news',
       type: 'GET',
       dataType: 'JSON',
       success: function (data) {
@@ -82,11 +82,24 @@
       }
     });
 
-    function refreshNewsFor (data) {
-      Object.keys(data).forEach( function(newsType) { 
+    $.ajax({
+      url: servicesURL + '/visitor-count',
+      type: 'GET',
+      dataType: 'JSON',
+      success: function (data) {
+        refreshVisitorCounter(data.count);
+      }
+    });
+
+    function refreshVisitorCounter (count) {
+      console.log(count);
+    }
+
+    function refreshNewsFor (news) {
+      Object.keys(news).forEach( function(newsType) { 
         var newsTypeSection = newsModule.find('.' + newsType);
-        newsTypeSection.find('.listen').attr('href', data[newsType].url);
-        newsTypeSection.find('.last-update-time').text(formatDateTime(data[newsType].pubDate))
+        newsTypeSection.find('.listen').attr('href', news[newsType].url);
+        newsTypeSection.find('.last-update-time').text(formatDateTime(news[newsType].pubDate))
         newsTypeSection.removeClass('spin');
       })
     }
