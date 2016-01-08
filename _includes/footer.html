@@ -86,6 +86,9 @@
       url: servicesURL + '/visitor-count',
       type: 'GET',
       dataType: 'JSON',
+      xhrFields: {
+        withCredentials: true
+      },
       success: function (data) {
         refreshVisitorCounter(data.count);
       }
