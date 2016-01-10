@@ -1,0 +1,29 @@
+---
+  date: 2016-01-11 00:00:00
+  image: http://ia601506.us.archive.org/6/items/139437284Cb43006277O/139437284_cb43006277_o.jpg
+
+  audio: http://serve.castfire.com/audio/2641096/uf_2015-12-18-202636.6929.mp3
+  title: Skylarking
+  description: Producer Cathy FitzGerald meets a prisoner and a paraglider in an airy daydream about the delights of looking up at a big blue sky. Includes cameos from levitating yogis, labradors with wings, and freewheeling angels. Production help from Matt Thompson. Original music and sound design by Joe Acheson (Hidden Orchestra), featuring clarinettist Tomas Dvorak and cellist Su-a Lee. Made in 2014 for BBC Radio 3.
+  series: UnFictional
+  genre: experimental/documentary
+  duration: '28:30'
+  explicit: false
+  website: http://www.kcrw.com/news-culture/shows/unfictional/skylarking
+  feed: http://feeds.kcrw.com/kcrw/uf
+  rss: >
+    <title>C01 Skylarking [documentary]</title>
+    <link>http://feeds.kcrw.com/~r/kcrw/uf/~3/3APcl0w0Ha4/skylarking</link>
+    <guid isPermaLink="false">http://serve.castfire.com/audio/2641096/uf_2015-12-18-202636.6929.mp3</guid>
+    <dc:creator>UnFictional</dc:creator>
+    <description>A meditation on the joys of laying back and looking up at a big blue sky.</description>
+
+    <enclosure url="http://serve.castfire.com/audio/2641096/uf_2015-12-18-202636.6929.mp3" length="27401989" type="audio/mpeg" />
+
+    <itunes:duration>28:30</itunes:duration>
+    <itunes:subtitle>A meditation on the joys of laying back and looking up at a big blue sky.</itunes:subtitle>
+    <itunes:summary>A meditation on the joys of laying back and looking up at a big blue sky.</itunes:summary>
+    <itunes:author>UnFictional</itunes:author>
+    <itunes:explicit>no</itunes:explicit>
+
+---
