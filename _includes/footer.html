@@ -90,13 +90,9 @@
         withCredentials: true
       },
       success: function (data) {
-        refreshVisitorCounter(data.count);
+        $('.visitor-count').text(data.count);
       }
     });
-
-    function refreshVisitorCounter (count) {
-      console.log(count);
-    }
 
     function refreshNewsFor (news) {
       Object.keys(news).forEach( function(newsType) { 
