@@ -1,4 +1,4 @@
-{% assign collection = site.c201510 %}
+{% assign collection = site.c201601 %}
 
 <div class="split module">
 
@@ -56,34 +56,27 @@
 <div class="split module">
 
   <div class="split_left">
-    <img src="assets/Side-Bar_KCRW.jpg" class="live-stream-icon" width="100%"></img>
-  </div>
-
-  <div class="split_right">
     <h1>4. Internet Radio</h1>
     <p></p>
     <div class="description">A live stream of one of our favorite community radio stations.</div>
     <a class="listen" href="http://kcrw.ic.llnwd.net/stream/kcrw_live">Listen</a> | 
-    <a href="http://www.kcrw.com" target="_blank">Visit website</a>
+    <a href="http://www.kcrw.com" target="_blank">Visit website</a> | 
+    <a href="http://www.kcrw.com/join" target="_blank">Donate</a>
+  </div>
+
+  <div class="split_right">
+    <img src="assets/Side-Bar_KCRW.jpg" class="live-stream-icon" width="100%"></img>
   </div>
   
 </div>
-
-<!-- div id="archives">
-  <h1>4. From the Archives</h1>
-  {% for piece in site.data.archives %}
-  <p>"{{ piece.title }}" from {{ piece.series }} ({{ piece.year }}) ({{ piece.genre }})
-  <br />
-  <a href="{{ piece.link }}">Download</a> | <a href="{{ piece.website }}">Visit website</a>
-  </p>
-  {% endfor %}
-</div -->
 
 <div id="about" class="module">
   <div class="content">
     <h1>5. About</h1>
     {% assign meta = site.data.meta %}
-    <p>Publicradio.info is a homepage for noncommercial news, culture, and arts. Podcast collections updated monthly. This is collection No. 1, published January 11, 2015.</p>
+    <p>Publicradio.info is a homepage for noncommercial news, culture, and arts. Podcast collections updated monthly 
+      [<a href="http://itunes.apple.com/us/podcast/playlist/id1055233656?mt=2" target="_blank">iTunes</a>] | 
+      [<a href="http://www.publicradio.info/feed.xml" target="_blank">RSS</a>]. This is collection no. 1, published January 11, 2015.</p>
 
     <p>
       Listeners here: <span class="visitor-count">?</span>
@@ -95,9 +88,8 @@
       software issued under <a href="http://github.com/radioopensource/dotinfo/blob/gh-pages/license.md" target="_blank">The MIT License</a>.
       Our website is volunteer-run. Content edited by Conor Gillies, Annie McEwen, and Ellie McDowall. 
       Development by Alex Silva, Eve Asher, Chris Kalafarski, and Kathy Tu on
-      <a href="https://github.com/radioopensource/dotinfo" target="_blank">Github</a>. Each issue available via podcast: 
-      [<a href="http://itunes.apple.com/us/podcast/playlist/id1055233656?mt=2" target="_blank">iTunes</a>] | 
-      [<a href="http://www.publicradio.info/feed.xml" target="_blank">RSS</a>] 
+      <a href="https://github.com/radioopensource/dotinfo" target="_blank">Github</a>.
+
     </p>
     
     <p>Say hello: <a href="mailto:contact@publicradio.info">contact@publicradio.info</a>.</p>
