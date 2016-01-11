@@ -65,6 +65,6 @@ News items (`News & Analysis`) are served by a separate aggregating service. The
 ```
 
 # License
-Software issued under the MIT License. Graphics, design, intellectual property, etc. issued under Creative Commons (CC BY-SA 4.0). No copyright claimed for selected and automated audio, which should be assumed to fall under audio creators.
+Software issued under the MIT License. Graphics issued under Creative Commons (CC BY-SA 4.0). No copyright claimed for selected and automated audio, which should be assumed to fall under audio creators.
 
 :radio:
