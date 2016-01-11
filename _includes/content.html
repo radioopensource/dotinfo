@@ -1,14 +1,14 @@
 {% assign collection = site.c201601 %}
 
-<div class="split module">
+<div id="main" class="flex module">
 
   {% assign main = collection[0] %}
 
-  <div class="split_left">
+  <div class="flex_child">
       <img src="{{ main.image }}" width="100%" >
   </div>
 
-  <div class="split_right">
+  <div class="flex_child">
     <h1>1. Main Program</h1>
 
     <p><h1>"{{ main.title }}" [{{ main.duration }}] from {{ main.series }} ({{ main.genre }})</h1></p>
@@ -53,9 +53,9 @@
   </div>
 </div>
 
-<div class="flex module">
+<div id="internet-radio" class="flex module">
 
-  <div>
+  <div class="flex_child">
     <h1>4. Internet Radio</h1>
     <p></p>
     <div class="description">A live stream of one of our favorite community radio stations. This month: KCRW (Los Angeles). An early FM broadcaster founded in 1945, KCRW creates and curates "a unique mix of content centered around music discovery, NPR news, cultural exploration and informed public affairs." CRW stands for "College Radio Workshop."</div>
@@ -64,8 +64,8 @@
     <a href="http://www.kcrw.com/join" target="_blank">Donate</a>
   </div>
 
-  <div>
-    <img src="assets/Side-Bar_KCRW.jpg" class="live-stream-icon" width="100%"></img>
+  <div class="flex_child">
+    <img src="assets/Side-Bar_KCRW.jpg" class="live-stream-icon"></img>
   </div>
   
 </div>

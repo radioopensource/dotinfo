@@ -116,17 +116,28 @@ ol li {
 .flex {
   display: flex;
   flex-direction: row;
-  flex: 1;
-  -webkit-flex: 1; /* Safari 6.1+ */
-  -ms-flex: 1; /* IE 10 */ 
-  -moz-flex: 1; /* FF */ 
+  flex-wrap: wrap;
+  -webkit-flex: 1 0 12.5em;; /* Safari 6.1+ */
+  -ms-flex: 1 0 12.5em;; /* IE 10 */ 
+  -moz-flex: 1 0 12.5em;; /* FF */ 
   align-items: center;
 }
 
-.flex > div {
-  flex: 1;
+.flex, .flex_child {
+  flex: 1 0 15em;
+}
+
+.flex_child {
   margin: 0;
   padding: 0;
+}
+
+#internet-radio .flex_child:first-child {
+  margin-bottom: 2em;
+}
+
+#main .flex_child:nth-child(2) {
+  padding: 10px 0 10px 25px;
 }
 
 div#selected ol li:first-child {
@@ -135,8 +146,10 @@ div#selected ol li:first-child {
 
 .live-stream-icon {
   width: 8em;
-  margin-left: 28%;
   height: 8em; 
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
 
 footer img {
