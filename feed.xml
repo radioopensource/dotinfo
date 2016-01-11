@@ -5,11 +5,11 @@ layout: null
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd">
   <channel>
     <title>Playlist</title>
-    <description>Handpicked audio content from public radio sources and other places. Updated monthly. Our selected radio shows and podcasts are not-for-profit and ad-free; spread the love by supporting your local community radio station.</description>
+    <description>Favorite podcast episodes from public radio sources and other places. Collections update monthly.</description>
     <link>http://www.publicradio.info</link>
     <atom:link href="http://www.publicradio.info" rel="self" type="application/rss+xml"/>
 
-    <itunes:keywords>public, radio, podcast, media, culture, noncommercial, experimental</itunes:keywords>
+    <itunes:keywords>public, radio, podcast, culture, noncommercial, experimental, moon</itunes:keywords>
     <itunes:owner>
       <itunes:email>contact@publicradio.info</itunes:email>
     </itunes:owner>
@@ -21,15 +21,15 @@ layout: null
       <itunes:category text="News &amp; Politics">
       <itunes:category text="Society &amp; Culture" />
       </itunes:category>
-    <itunes:subtitle>Handpicked audio content from public radio sources and other places. Updated monthly.</itunes:subtitle>
-    <itunes:summary>Handpicked audio content from public radio sources and other places. Discover new shows by subscribing to a monthly mix of great podcasts. Our selected radio shows and podcasts are not-for-profit and ad-free; spread the love by supporting your local community radio station.</itunes:summary>
+    <itunes:subtitle>Favorite podcast episodes from public radio sources and other places. Updated monthly.</itunes:subtitle>
+    <itunes:summary>A collection of podcast episodes from public radio sources and other places. Changes monthly. Support producers of public media! Become a member of your local community radio station.</itunes:summary>
     <language>en-us</language>
 
     <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
     <generator>Jekyll v{{ jekyll.version }}</generator>
 
-    {% assign collection = site.c201510 %}
+    {% assign collection = site.c201601 %}
 
     {% for item in collection %}
       <item>
