@@ -1,14 +1,14 @@
 {% assign collection = site.c201510 %}
 
-<div class="main_program module">
+<div class="split module">
 
   {% assign main = collection[0] %}
 
-  <div class="main_image">
+  <div class="split_left">
       <img src="{{ main.image }}" width="100%" >
   </div>
 
-  <div class="main_right">
+  <div class="split_right">
     <h1>1. Main Program</h1>
 
     <p><h1>"{{ main.title }}" [{{ main.duration }}] from {{ main.series }} ({{ main.genre }})</h1></p>
@@ -48,18 +48,25 @@
               <a href="{{ pick.website }}" target="_blank">Visit website</a> {% endif %} {% if pick.feed %} {% endif %}
             </div> 
           </li>
-        {% endfor %}
+        {% endfor %}  
       </ol>
   </div>
 </div>
 
-<div id="selected" class="module">
-  <div class="content">
-     <h1>4. Live Stream <img src="assets/Side-Bar_KCRW.jpg" class="live-stream-icon"></img></h1>
-     <a class="listen" href="http://kcrw.ic.llnwd.net/stream/kcrw_live">Listen</a> | 
-     <a href="http://www.kcrw.com" target="_blank">Visit website</a></p>
-     <div class="description">A live stream of one of our favorite community radio stations.</div>
+<div class="split module">
+
+  <div class="split_left">
+    <img src="assets/Side-Bar_KCRW.jpg" class="live-stream-icon" width="100%"></img>
   </div>
+
+  <div class="split_right">
+    <h1>4. Internet Radio</h1>
+    <p></p>
+    <div class="description">A live stream of one of our favorite community radio stations.</div>
+    <a class="listen" href="http://kcrw.ic.llnwd.net/stream/kcrw_live">Listen</a> | 
+    <a href="http://www.kcrw.com" target="_blank">Visit website</a>
+  </div>
+  
 </div>
 
 <!-- div id="archives">
@@ -83,7 +90,8 @@
     </p>
 
     <p>
-      Design and graphics <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">licensed under CC</a>; 
+      Design and graphics
+      <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank"> licensed under CC</a>; 
       software issued under <a href="http://github.com/radioopensource/dotinfo/blob/gh-pages/license.md" target="_blank">The MIT License</a>.
       Our website is volunteer-run. Content edited by Conor Gillies, Annie McEwen, and Ellie McDowall. 
       Development by Alex Silva, Eve Asher, Chris Kalafarski, and Kathy Tu on
