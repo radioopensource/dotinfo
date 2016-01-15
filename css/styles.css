@@ -152,10 +152,6 @@ div#selected ol li:first-child {
   display: block;
 }
 
-footer img {
- border: 1px solid black;
-}
-
 footer {
   margin-bottom: 5%;
 }
