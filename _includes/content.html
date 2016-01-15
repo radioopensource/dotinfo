@@ -14,7 +14,7 @@
     <p><h1>"{{ main.title }}" [{{ main.duration }}] from {{ main.series }} ({{ main.genre }})</h1></p>
     <p class="description">{{ main.description }}</p>
 
-    <p><a class="listen" href="{{ main.audio }}">Listen</a> | <a href="{{ main.website }}" target="_blank">Visit website</a></p>
+    <p><a class="listen" href="{{ main.audio }}">Listen</a> | <a href="{{ main.website }}" target="_blank">Visit website</a> | <a href="{{ main.feed }}" target="_blank">RSS</a></p>
   </div>
   
 </div>
@@ -45,7 +45,8 @@
             <div class="description"> {{ pick.description }} </div>
             <div class="links">
               <a class="listen" href="{{ pick.audio }}">Listen</a> {% if pick.website %} | 
-              <a href="{{ pick.website }}" target="_blank">Visit website</a> {% endif %} {% if pick.feed %} {% endif %}
+              <a href="{{ pick.website }}" target="_blank">Visit website</a> {% endif %} {% if pick.feed %} {% endif %} | 
+              <a href="{{ pick.feed }}" target="_blank">RSS</a> {% endif %} {% if pick.feed %} {% endif %}
             </div> 
           </li>
         {% endfor %}  
@@ -74,7 +75,7 @@
   <div class="content">
     <h1>5. About</h1>
     {% assign meta = site.data.meta %}
-    <p>Publicradio.info is a homepage for noncommercial news, culture, and arts. Podcast collections updated monthly 
+    <p>Publicradio.info is a homepage for listening to noncommercial news, culture, and arts. Podcast collections updated monthly 
       [<a href="http://itunes.apple.com/us/podcast/playlist/id1055233656?mt=2" target="_blank">iTunes</a>] | 
       [<a href="http://www.publicradio.info/feed.xml" target="_blank">RSS</a>]. This is collection no. 1, published January 11, 2015.</p>
 
@@ -89,10 +90,8 @@
       Our website is volunteer-run. Content edited by Conor Gillies, Annie McEwen, and Ellie McDowall. 
       Development by Alex Silva, Eve Asher, Chris Kalafarski, and Kathy Tu on
       <a href="https://github.com/radioopensource/dotinfo" target="_blank">Github</a>.
-
+      Say hello: <a href="mailto:contact@publicradio.info">contact@publicradio.info</a>.
     </p>
-    
-    <p>Say hello: <a href="mailto:contact@publicradio.info">contact@publicradio.info</a>.</p>
     
     <p>
       Support local and public media! <a href="http://www.npr.org/stations/" target="_blank">Find your nearest NPR (U.S.) station</a>.
