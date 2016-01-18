@@ -54,7 +54,7 @@ ol li {
   text-align: left;
   margin: 0 auto;
   margin-bottom: 5%;
-  padding: 2em;
+  padding: 1em;
   width: 80%;
   max-width: 42em;
   background-color: #fff;
@@ -63,6 +63,7 @@ ol li {
 
 .content {
   max-width: 40em;
+  padding: 1em;
 }
 
 .description {
@@ -129,15 +130,7 @@ ol li {
 
 .flex_child {
   margin: 0;
-  padding: 0;
-}
-
-#internet-radio .flex_child:first-child {
-  margin-bottom: 2em;
-}
-
-#main .flex_child:nth-child(2) {
-  padding: 10px 0 10px 25px;
+  padding: 1em;
 }
 
 div#selected ol li:first-child {

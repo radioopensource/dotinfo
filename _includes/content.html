@@ -20,24 +20,26 @@
 </div>
 
 <div id="news" class="module">
-  <h1>2. News &amp; Analysis</h1>
-  <ol type="a">
-    {% for feed in site.data.feeds %}
-      <li class="{{ feed.type }} spin">
-        {{ feed.title }}, {{ feed.frequency }}
-        </br>
-        <a class="listen" href="{{ feed.audio }}">Listen</a> |
-        <div class="last-update">
-          Last update: <span class="last-update-time">?</span>
-        </div>
-      </li>
-    {% endfor %}
-  </ol>
+  <div class="content">
+    <h1>2. News &amp; Analysis</h1>
+    <ol type="a">
+      {% for feed in site.data.feeds %}
+        <li class="{{ feed.type }} spin">
+          {{ feed.title }}, {{ feed.frequency }}
+          </br>
+          <a class="listen" href="{{ feed.audio }}">Listen</a> |
+          <div class="last-update">
+            Last update: <span class="last-update-time">?</span>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </div>
 </div>
 
 <div id="selected" class="module">
   <div class="content">
-     <h1>3. <strong>Selected Audio</strong></h1>
+     <h1>3. Selected Audio</h1>
      <ol type="a">
         {% for pick in collection %}
           <li> "{{ pick.title }}" [{{ pick.duration }}] from {{ pick.series }} ({{ pick.genre }}) {% if pick.explicit == true %} 
@@ -45,8 +47,8 @@
             <div class="description"> {{ pick.description }} </div>
             <div class="links">
               <a class="listen" href="{{ pick.audio }}">Listen</a> {% if pick.website %} | 
-              <a href="{{ pick.website }}" target="_blank">Visit website</a> {% endif %} {% if pick.feed %} {% endif %} | 
-              <a href="{{ pick.feed }}" target="_blank">RSS</a> {% endif %} {% if pick.feed %} {% endif %}
+              <a href="{{ pick.website }}" target="_blank">Visit website</a> {% endif %} {% if pick.feed %} | 
+              <a href="{{ pick.feed }}" target="_blank">RSS</a> {% endif %}
             </div> 
           </li>
         {% endfor %}  
@@ -55,7 +57,6 @@
 </div>
 
 <div id="internet-radio" class="flex module">
-
   <div class="flex_child">
     <h1>4. Internet Radio</h1>
     <p></p>
