@@ -1,6 +1,22 @@
 body {
   background: linear-gradient(45deg, #00FFFF, #4747D1);
-  cursor: url(/assets/green-cursor.cur) 6 6, auto;
+  cursor: url(/assets/cursor-default.cur), auto;
+}
+
+body:active {
+  cursor: url(/assets/cursor-clickreg.cur), auto; 
+}
+
+a {
+  cursor: url(/assets/cursor-hover.cur), auto;
+}
+
+a, a:link, a:visited {
+    color: blue;
+}
+
+a:active {
+  cursor: url(/assets/cursor-clicklink.cur), auto;
 }
 
 html {
@@ -32,10 +48,6 @@ audio {
   left: 0;
   z-index: 1;
   width: 100%;
-}
-
-a, a:visited, a:link {
-    color: blue;
 }
 
 audio::-webkit-media-controls-enclosure {
