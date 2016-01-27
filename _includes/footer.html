@@ -7,6 +7,7 @@
       audioPlayer = $('audio')[0],
       audioSource = $('audio').find('source'),
       servicesURL = 'http://www.publicradioservices.info',
+      // servicesURL = 'http://localhost:3000',
       newsModule = $('#news');
 
     // load default audio
@@ -16,7 +17,6 @@
     newsModule.find('.bbc-headlines').removeClass('spin');
 
     $('.listen').on('click', playAudioHandler);
-    $(window).on('beforeunload', pageCloseHandler);
     window.addEventListener('keydown', onKeyDown, false);
 
     function playAudioHandler (e) {
@@ -83,18 +83,6 @@
       }
     });
 
-    $.ajax({
-      url: servicesURL + '/visitor-count',
-      type: 'GET',
-      dataType: 'JSON',
-      xhrFields: {
-        withCredentials: true
-      },
-      success: function (data) {
-        $('.visitor-count').text(data.count);
-      }
-    });
-
     function refreshNewsFor (news) {
       Object.keys(news).forEach( function(newsType) { 
         var newsTypeSection = newsModule.find('.' + newsType);
@@ -117,7 +105,7 @@
       var dateTimeTokens = new Date(rawDateTimeString).toString().split(' ');
       var formattedDateTime =
         dateTimeTokens[1] + 
-        " " + dateTimeTokens[2] + 
+        " " + dateTimeTokens[2] +   
         ", " + getFormattedTime(dateTimeTokens[4]) + 
         " " + dateTimeTokens[6].replace(/[{()}]/g, '');
 
@@ -137,19 +125,33 @@
       return now.toString();
     }
 
-    function pageCloseHandler () {
-      $.ajax({
-        url: servicesURL + '/visitor-count',
-        type: 'POST',
-        dataType: 'JSON',
-        xhrFields: {
-          withCredentials: true
-        },
-        success: function (data) {
-          // no op
-        }
-      });
+    function areCookiesEnabled () {
+      var cookieEnabled = (navigator.cookieEnabled) ? true : false;
+      if (typeof navigator.cookieEnabled == "undefined" && !cookieEnabled) { 
+          document.cookie = "testcookie";
+          cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
+      }
+      return cookieEnabled;
     }
+
+    function getVisitorCount () {
+      if (areCookiesEnabled()) {
+        $.ajax({
+          url: servicesURL + '/visitor-count',
+          type: 'GET',
+          dataType: 'JSON',
+          xhrFields: {
+            withCredentials: true
+          },
+          success: function (data) {
+            $('.visitor-count').text(data.count);
+          }
+        });
+      }
+    }
+
+    getVisitorCount();
+    setInterval(getVisitorCount, 60000); // 1 minute
 
   </script>
   
