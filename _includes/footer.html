@@ -16,6 +16,7 @@
     newsModule.find('.bbc-headlines').removeClass('spin');
 
     $('.listen').on('click', playAudioHandler);
+    $(window).on('beforeunload', pageCloseHandler);
     window.addEventListener('keydown', onKeyDown, false);
 
     function playAudioHandler (e) {
@@ -134,6 +135,20 @@
       if (changeToLastHour) { now.setHours(now.getHours()-1); }
 
       return now.toString();
+    }
+
+    function pageCloseHandler () {
+      $.ajax({
+        url: servicesURL + '/visitor-count',
+        type: 'POST',
+        dataType: 'JSON',
+        xhrFields: {
+          withCredentials: true
+        },
+        success: function (data) {
+          // no op
+        }
+      });
     }
 
   </script>

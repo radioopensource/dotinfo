@@ -16,7 +16,7 @@ Create a space for people to discover and experience audio. Contributors work to
 `right key:` skip forward 15 seconds
 
 # Contact
-Email contact@publicradio.info and your message will be answered by a contributing editor or programmer.
+contact@publicradio.info
 
 # Content
 Content is sourced from **dotinfo/_cYYYYMM/** and **dotinfo/_data/** folders.
