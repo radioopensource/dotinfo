@@ -33,13 +33,29 @@ header h1 {
   text-align: center;
 }
 
-header div {
+div.header {
   margin: 0 0 0 0;
   width: 100%;
   background-color: transparent;
   padding: 0;
   height: 1em;
   top: 0;
+}
+
+div.banner {
+    background-color: black;
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-family: monospace;
+    padding: 0.5em;
+    font-size: 2em;
+    color: #00FF00;
+    display: none;
+}
+
+.black {
+  color: black;
 }
 
 audio {
@@ -59,6 +75,35 @@ audio::-webkit-media-controls-enclosure {
 }
 
 ol li {
+  margin-bottom: 1em;
+}
+
+label, button {
+  display: block;
+}
+
+.emoticon {
+  margin-bottom: 0.5em;
+  margin-left: 3px;
+}
+
+.submit {
+  width: 7em;
+  height: 3em;
+}
+
+#info {
+  max-width: 25em;
+  min-width: 25em;
+  max-height: 4em;
+  min-height: 4em;
+}
+
+#url, #requestor {
+  width: 25em;
+}
+
+.field {
   margin-bottom: 1em;
 }
 

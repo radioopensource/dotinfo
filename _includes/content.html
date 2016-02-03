@@ -61,7 +61,7 @@
     <h1>4. Internet Radio</h1>
     <p></p>
     <div class="description">A live stream of one of our favorite community radio stations. This month: KCRW (Los Angeles). An early FM broadcaster founded in 1945, KCRW creates and curates "a unique mix of content centered around music discovery, NPR news, cultural exploration and informed public affairs." CRW stands for "College Radio Workshop."</div>
-    <a class="listen" href="http://kcrw.ic.llnwd.net/stream/kcrw_live">Listen</a> | 
+    <a class="listen radio" href="http://kcrw.ic.llnwd.net/stream/kcrw_live">Listen</a> | 
     <a href="http://www.kcrw.com" target="_blank">Visit website</a> | 
     <a href="http://www.kcrw.com/join" target="_blank">Donate</a>
   </div>
@@ -72,9 +72,35 @@
   
 </div>
 
+<div id="request" class="module">
+  <div class="content">
+    <h1>5. Submit a Request</h1>
+    <p></p>
+    <div class="field">
+      <label for="info" class="description">Got a podcast you want to hear on this website? Let us know here.</label>
+      <textarea id="info" placeholder="You should feature something from This American Life! They tell stories about this American life."></textarea>
+    </div>
+
+    <div class="field">
+      <label for="url" class="description">Podcast URL (optional)</label>
+      <input id="url" placeholder="http://feed.thisamericanlife.org/talpodcast"></input>
+    </div>
+
+    <div class="field">
+      <label for="requestor" class="description">Your name (optional)</label>
+      <input id="requestor" placeholder="Ira Glass"></input>
+    </div>
+
+    <div class="emoticon">( &#x361;&#xB0; &#x35C;&#x296; &#x361;&#xB0;)</div>
+    <button type="submit" class="submit">Submit</button>
+
+  </div>  
+  
+</div>
+
 <div id="about" class="module">
   <div class="content">
-    <h1>5. About</h1>
+    <h1>6. About</h1>
     {% assign meta = site.data.meta %}
     <p>Publicradio.info is a homepage for listening to noncommercial news, culture, and arts. Podcast collections updated monthly 
       [<a href="http://itunes.apple.com/us/podcast/playlist/id1055233656?mt=2" target="_blank">iTunes</a>] | 
