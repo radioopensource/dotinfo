@@ -15,10 +15,10 @@
     newsModule.find('.bbc-headlines .last-update-time').text(formatDateTime(getBBCHeadlinesLastUpdate()))
     newsModule.find('.bbc-headlines').removeClass('spin');
 
-    // banner stuff
-    setInterval(function() { $('.banner .text').toggleClass('black') }, 400); // 1/2 second     
+    // loading stuff
+    setInterval(function() { $('.loading .text').toggleClass('black') }, 400); // 1/2 second     
     audioPlayer.oncanplay = function () {
-      $('.banner').hide();
+      $('.loading').hide();
     }
 
     $('.listen').on('click', playAudioHandler);
@@ -26,12 +26,11 @@
 
     function playAudioHandler (e) {
       e.preventDefault();
-      if ($(e.target).hasClass('radio')) {
-        $('.banner').show();
-      }
+
       if ($(e.target).parent().hasClass('spin')) {
         return;
       }
+
       var clickedAudio = e.target.href; 
 
       if (clickedSameAudio(clickedAudio)) {
@@ -41,6 +40,10 @@
           audioPlayer.pause();  
         }
         return;
+      }
+
+      if ($(e.target).hasClass('radio')) {
+        $('.loading').show();
       }
 
       playAudio(clickedAudio);
@@ -133,24 +136,55 @@
       return now.toString();
     }
 
+    $('.submit').on('click', submitRequest);
+
     function submitRequest () {
       $.ajax({
-          url: servicesURL + '/request',
+          url: servicesURL + '/requests',
           type: 'POST',
           dataType: 'JSON',
+          data: { info : $('#info').val(), url : $('#url').val(), requestor : $('#requestor').val() },
           xhrFields: {
             withCredentials: true
           },
-          success: function (data) {
-            $('.visitor-count').text(data.count);
+          success: function (response) {
+            showMessage('THANKS')
+          },
+          error: function (response) {
+            showMessage(mapErrorCodesToMessages(response.responseJSON.errors));
           }
       });
+    }
+
+    function showMessage (message) {
+      $('.banner').show().find('.text').text(message);
+      setTimeout(function() {  $('.banner').hide(); }, 5000);
+    }
+
+    function mapErrorCodesToMessages (codes) {
+      var messages = [];
+
+      if (codes.info) {
+        if (codes.info === 'not-present') {
+          messages.push('Comment is a required field.')
+        }
+        if (codes.info === 'too-long') {
+          messages.push('Comment can\'t exceed 200 characters.');
+        }
+      }
+      if (codes.url) {
+        if (codes.url === 'not-valid') {
+          messages.push('That url doesn\'t exist! Try again?');
+        }
+      }
+
+      return messages.reduce(function(p, b) { return p += b += '\n'; });
     }
 
     function areCookiesEnabled () {
       var cookieEnabled = (navigator.cookieEnabled) ? true : false;
       if (typeof navigator.cookieEnabled == "undefined" && !cookieEnabled) { 
-          document.cookie = "testcookie";
+          document.cookie = 'testcookie';
           cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
       }
       return cookieEnabled;

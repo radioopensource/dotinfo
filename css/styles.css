@@ -42,16 +42,18 @@ div.header {
   top: 0;
 }
 
-div.banner {
-    background-color: black;
-    position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-    font-family: monospace;
-    padding: 0.5em;
-    font-size: 2em;
-    color: #00FF00;
-    display: none;
+div.loading, div.banner {
+  background-color: black;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-family: monospace;
+  padding: 1em;
+  font-size: 10vmin;
+  text-align: center;
+  color: #00FF00;
+  display: none;
 }
 
 .black {
