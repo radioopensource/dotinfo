@@ -226,6 +226,13 @@
 
     getVisitorCount();
     setInterval(getVisitorCount, 60000); // 1 minute
+
+    window.onload = function () {
+      var podToAutoplay = parseInt(window.location.search.replace('?pod=', ''));
+      if (!Number.isNaN(podToAutoplay)) {
+        playAudio($('.listen').get(podToAutoplay).href)
+      }
+    };
   </script>
   
 </footer>
