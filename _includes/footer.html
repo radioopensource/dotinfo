@@ -69,6 +69,11 @@
     function onKeyDown (e) {
       switch (e.keyCode) {
         case 32: //spacebar                    
+
+          if ($('textarea, input').is(':focus')) {
+            return;
+          }
+
           e.preventDefault();
           if (audioPlayer.paused) {            
               audioPlayer.play();
