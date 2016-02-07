@@ -50,7 +50,7 @@ div.loading, div.banner {
   transform: translate(-50%, -50%);
   font-family: monospace;
   padding: 1em;
-  font-size: 10vmin;
+  font-size: 6vmin;
   text-align: center;
   color: #00FF00;
   display: none;
