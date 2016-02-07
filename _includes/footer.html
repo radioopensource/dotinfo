@@ -148,6 +148,7 @@
     $('.submit').on('click', submitRequest);
 
     function submitRequest () {
+      showMessage('Submitting request...');
       $.ajax({
           url: servicesURL + '/requests',
           type: 'POST',
@@ -157,7 +158,8 @@
             withCredentials: true
           },
           success: function (response) {
-            showMessage('THANKS');
+            showMessage('   THANKS!   ');
+            $('textarea, input').val('');
           },
           error: function (response) {
             showMessage(mapErrorCodesToMessages(response.responseJSON.errors));
