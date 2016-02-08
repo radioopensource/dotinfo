@@ -1,14 +1,14 @@
-- description: An early FM broadcaster founded in 1945, KCRW (Los Angeles) creates and curates "a unique mix of content centered around music discovery, NPR news, cultural exploration and informed public affairs." CRW stands for "College Radio Workshop."
+- description: An early FM broadcaster founded in 1945, KCRW (Los Angeles) creates and curates "content centered around music discovery, NPR news, cultural exploration and informed public affairs." CRW stands for "College Radio Workshop."
   url: http://www.kcrw.com
   donateurl: http://www.kcrw.com/join
   streamurl: http://kcrw.ic.llnwd.net/stream/kcrw_live
   icon:  KCRW.jpg
-- description: Berlin Community Radio presents everything that is coming from, passing through or influencing the creative scene in Berlin. BCR is home to over 100 shows covering a variety of topics&#58; arts, music across genres, culture, relationships, queer politics, literature readings, feminism discussions, gender and internet phenomenons.
+- description: Berlin Community Radio is home to over 100 shows covering a variety of topics&#58; arts, music across genres, culture, relationships, queer politics, literature readings, feminism discussions, gender and internet phenomenons.
   url: http://www.berlincommunityradio.com
   donateurl: http://www.berlincommunityradio.com/donate-berlin-community-radio
   streamurl: http://berlincommunityradio.out.airtime.pro:8000/berlincommunityradio_a
   icon:  BCR.png
-- description: BBC Radio 3 is a British radio network operated by the BBC. Its output centers on classical music and opera, but jazz, world music, drama, culture and the arts also feature. The station is one of the world's most significant commissioners of new music.
+- description: BBC Radio 3 centers on classical music and opera, but jazz, world music, drama, culture and the arts also feature. The station is one of the world's most significant commissioners of new music.
   url: http://www.bbc.co.uk/radio3
   donateurl:
   streamurl: http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p?s=1454876177&e=1454890577&h=e1f6b6a5fcb3ca60b131bbdfcb02f980
