@@ -5,16 +5,16 @@
   {% assign main = collection[0] %}
 
   <div class="flex_child">
-      <img src="{{ main.image }}" width="100%" >
+    <img src="{{ main.image }}" width="100%" >
   </div>
 
   <div class="flex_child">
     <h1>1. Main Program</h1>
-
-    <p><h1>"{{ main.title }}" [{{ main.duration }}] from {{ main.series }} ({{ main.genre }})</h1></p>
+    <h1>"{{ main.title }}" [{{ main.duration }}] from {{ main.series }} ({{ main.genre }})</h1>
     <p class="description">{{ main.description }}</p>
-
-    <p><a class="listen" href="{{ main.audio }}">Listen</a> | <a href="{{ main.website }}" target="_blank">Visit website</a> | <a href="{{ main.feed }}" target="_blank">RSS</a></p>
+    <a class="listen" href="{{ main.audio }}">Listen</a> | 
+    <a href="{{ main.website }}" target="_blank">Visit website</a> | 
+    <a href="{{ main.feed }}" target="_blank">RSS</a>
   </div>
   
 </div>
@@ -23,11 +23,11 @@
   <div class="content">
     <h1>2. Newscasts</h1>
     <ol type="a">
-      {% for feed in site.data.feeds %}
-        <li class="{{ feed.type }} spin">
-          {{ feed.title }}, {{ feed.frequency }}
+      {% for news in site.data.news %}
+        <li class="{{ news.type }} spin">
+          {{ news.title }}, {{ news.frequency }}
           </br>
-          <a class="listen" href="{{ feed.audio }}">Listen</a> |
+          <a class="listen" href="{{ news.audio }}">Listen</a> |
           <div class="last-update">
             Last update: <span class="last-update-time">?</span>
           </div>
@@ -56,26 +56,33 @@
   </div>
 </div>
 
-<div id="internet-radio" class="flex module">
-  <div class="flex_child">
-    <h1>4. Internet Radio</h1>
-    <p></p>
-    <div class="description">A live stream of one of our favorite community radio stations. This month: KCRW (Los Angeles). An early FM broadcaster founded in 1945, KCRW creates and curates "a unique mix of content centered around music discovery, NPR news, cultural exploration and informed public affairs." CRW stands for "College Radio Workshop."</div>
-    <a class="listen radio" href="http://kcrw.ic.llnwd.net/stream/kcrw_live">Listen</a> | 
-    <a href="http://www.kcrw.com" target="_blank">Visit website</a> | 
-    <a href="http://www.kcrw.com/join" target="_blank">Donate</a>
-  </div>
+<div id="internet-radio" class="module">
 
-  <div class="flex_child">
-    <img src="assets/Side-Bar_KCRW.jpg" class="live-stream-icon"></img>
-  </div>
+  <h1>4. Internet Radio</h1>
+
+  {% for stream in site.data.streams %}
+  <div class="flex">
+      <div class="flex_child">
+        <div class="description">
+        {{ stream.description }}
+        </div>
+        <a class="listen radio" href="{{ stream.streamurl }}">Listen</a> | 
+        <a href="{{ stream.url }}" target="_blank">Visit website</a> {% if stream.donateurl %} | 
+        <a href="{{ stream.donateurl }}" target="_blank">Donate</a> {% endif %}
+      </div>
+
+      <div class="flex_child">
+        <img src="assets/{{ stream.icon }}" class="live-stream-icon"></img>
+      </div>
+  </div> 
+  {% endfor %}
   
 </div>
 
 <div id="request" class="module">
   <div class="content">
     <h1>5. Submit a Request</h1>
-    <p></p>
+  
     <div class="field">
       <label for="info" class="description">Got a podcast you want to hear on this website? Let us know here.</label>
       <textarea id="info" placeholder="You should feature something from This American Life! They tell stories about this American life."></textarea>
