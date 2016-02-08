@@ -63,9 +63,7 @@
   {% for stream in site.data.streams %}
   <div class="flex">
       <div class="flex_child">
-        <div class="description">
-        {{ stream.description }}
-        </div>
+        <div class="description">{{ stream.description }}</div>
         <a class="listen radio" href="{{ stream.streamurl }}">Listen</a> | 
         <a href="{{ stream.url }}" target="_blank">Visit website</a> {% if stream.donateurl %} | 
         <a href="{{ stream.donateurl }}" target="_blank">Donate</a> {% endif %}
@@ -85,7 +83,7 @@
   
     <div class="field">
       <label for="info" class="description">Got a podcast you want to hear on this website? Let us know here.</label>
-      <textarea id="info" placeholder="This is a great pod!"></textarea>
+      <input id="info" placeholder="This is a great pod! (200 character max)"></input>
     </div>
 
     <div class="field">

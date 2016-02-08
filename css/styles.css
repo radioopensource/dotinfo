@@ -114,15 +114,9 @@ label, button {
   height: 3em;
 }
 
-#info {
-  max-width: 25em;
-  min-width: 25em;
-  max-height: 4em;
-  min-height: 4em;
-}
-
-#url, #requestor {
-  width: 25em;
+#info, #url, #requestor {
+  width: 100%;
+  height: 1.5em;
 }
 
 .field {

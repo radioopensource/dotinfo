@@ -148,7 +148,9 @@
     $('.submit').on('click', submitRequest);
 
     function submitRequest () {
+      $('.submit').attr('disabled','disabled');
       showMessage('Submitting request...');
+
       $.ajax({
           url: servicesURL + '/requests',
           type: 'POST',
@@ -156,15 +158,15 @@
           data: { info : $('#info').val(), url : $('#url').val(), requestor : $('#requestor').val() },
           xhrFields: {
             withCredentials: true
-          },
-          success: function (response) {
-            showMessage('   THANKS!   ');
-            $('textarea, input').val('');
-          },
-          error: function (response) {
-            showMessage(mapErrorCodesToMessages(response.responseJSON.errors));
           }
-      });
+      }).fail(function(response) {
+        showMessage(mapErrorCodesToMessages(response.responseJSON.errors));
+      }).done(function() {
+        showMessage('   THANKS!   ');
+        $('input').val('');
+      }).always(function() {
+        $('.submit').removeAttr('disabled');
+      })
     }
 
     function showMessage (message) {
