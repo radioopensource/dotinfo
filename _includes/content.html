@@ -59,22 +59,23 @@
 <div id="internet-radio" class="module">
 
   <h1>4. Internet Radio</h1>
-
+  <ol type="a">
   {% for stream in site.data.streams %}
   <div class="flex">
+    <li> "{{ stream.title }}"
       <div class="flex_child">
         <div class="description">{{ stream.description }}</div>
         <a class="listen radio" href="{{ stream.streamurl }}">Listen</a> | 
         <a href="{{ stream.url }}" target="_blank">Visit website</a> {% if stream.donateurl %} | 
         <a href="{{ stream.donateurl }}" target="_blank">Donate</a> {% endif %}
       </div>
-
       <div class="flex_child">
         <img src="assets/{{ stream.icon }}" class="live-stream-icon"></img>
       </div>
+    </li>
   </div> 
   {% endfor %}
-  
+  </ol>
 </div>
 
 <div id="request" class="module">
