@@ -1,5 +1,5 @@
-- title: KCRW (music and news)
-  description: An early FM broadcaster founded in 1945, KCRW (Los Angeles) creates and curates "content centered around music discovery, NPR news, cultural exploration and informed public affairs." CRW stands for "College Radio Workshop."
+- title: KCRW (news/music)
+  description: An early FM broadcaster founded in 1945, KCRW in Los Angeles creates and curates "content centered around music discovery, NPR news, cultural exploration and informed public affairs." CRW stands for "College Radio Workshop."
   url: http://www.kcrw.com
   donateurl: http://www.kcrw.com/join
   streamurl: http://kcrw.ic.llnwd.net/stream/kcrw_live
@@ -21,5 +21,5 @@
   url: http://www.terryradio.biz/
   donateurl:
   streamurl: http://terryradio.dyndns.org:8000/terry1
-  icon: TK
+  icon: terry.png
   
