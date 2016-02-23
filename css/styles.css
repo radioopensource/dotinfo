@@ -29,10 +29,25 @@ h1 {
   margin: 0em 0em 1em 0em;
 }
 
+#internet-radio {
+  counter-reset: section;
+}
+
 #internet-radio h1 {
   margin-top: 1em;
   margin-left: 1em;
   margin-bottom: 0em;
+}
+
+#internet-radio li {
+  margin-bottom: 0em;
+}
+
+#internet-radio .flex_child:first-child::before {
+  counter-increment: section;
+  content: counter(section, lower-alpha) ".";
+  position: absolute;
+  margin-left: -1em;
 }
 
 header h1 {
@@ -90,7 +105,7 @@ ol {
 }
 
 ol li:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
 }
 
 p {

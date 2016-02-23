@@ -60,10 +60,10 @@
 
   <h1>4. Internet Radio</h1>
   <ol>
-  {% for stream in site.data.streams %}
-    <div class="flex">
-      <li> {{ stream.title }}
+    {% for stream in site.data.streams %}
+      <li class="flex">
         <div class="flex_child">
+        {{ stream.title }}
           <div class="description">{{ stream.description }}</div>
           <a class="listen radio" href="{{ stream.streamurl }}">Listen</a> | 
           <a href="{{ stream.url }}" target="_blank">Visit website</a> {% if stream.donateurl %} | 
@@ -73,8 +73,7 @@
           <img src="assets/{{ stream.icon }}" class="live-stream-icon"></img>
         </div>
       </li>
-    </div> 
-  {% endfor %}
+    {% endfor %}
   </ol>
 </div>
 
