@@ -230,6 +230,7 @@ div#selected ol li:first-child {
 }
 
 .live-stream-icon {
+  border: 1px solid red;
   width: 8em;
   height: 8em; 
   margin-left: auto;
