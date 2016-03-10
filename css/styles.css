@@ -1,6 +1,7 @@
 html {
   background: linear-gradient(45deg, #00FFFF, #4747D1);
   cursor: url(/assets/cursor-default.cur), auto; 
+  font-size: 125%;
 }
 
 html:active {
