@@ -37,6 +37,7 @@ h1 {
 #internet-radio h1 {
   margin-top: 1em;
   margin-left: 1em;
+  margin-right: 1em;
   margin-bottom: 0em;
 }
 
@@ -149,13 +150,13 @@ label, button {
   margin-bottom: 5%;
   padding: 1em;
   width: 80%;
-  max-width: 43em;
+  max-width: 40em;
   background-color: #fff;
   border: 1px solid black;
 }
 
 .content {
-  max-width: 43em;
+  max-width: 40em;
   padding: 1em;
 }
 
