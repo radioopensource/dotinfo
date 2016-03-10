@@ -1,7 +1,7 @@
 html {
   background: linear-gradient(45deg, #00FFFF, #4747D1);
   cursor: url(/assets/cursor-default.cur), auto; 
-  font-size: 117%;
+  font-size: 120%;
 }
 
 html:active {
@@ -150,13 +150,13 @@ label, button {
   margin-bottom: 5%;
   padding: 1em;
   width: 80%;
-  max-width: 40em;
+  max-width: 38em;
   background-color: #fff;
   border: 1px solid black;
 }
 
 .content {
-  max-width: 40em;
+  max-width: 38em;
   padding: 1em;
 }
 
