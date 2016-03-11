@@ -216,7 +216,6 @@ label, button {
   -ms-flex: 1 0 12.5em;; /* IE 10 */ 
   -moz-flex: 1 0 12.5em;; /* FF */ 
   align-items: center;
-  padding: 1em;
 }
 
 .flex, .flex_child {
