@@ -1,7 +1,7 @@
 html {
   background: linear-gradient(45deg, #00FFFF, #4747D1);
+  font-size: 118%;
   cursor: url(/assets/cursor-default.cur), auto; 
-  font-size: 120%;
 }
 
 html:active {
@@ -27,7 +27,7 @@ html {
 h1 {
   text-align: left;
   font-size: 1.2em;
-  margin: 0em 0em 1em 0em;
+  margin-bottom: 1em;
 }
 
 #internet-radio {
@@ -216,6 +216,7 @@ label, button {
   -ms-flex: 1 0 12.5em;; /* IE 10 */ 
   -moz-flex: 1 0 12.5em;; /* FF */ 
   align-items: center;
+  padding: 1em;
 }
 
 .flex, .flex_child {
