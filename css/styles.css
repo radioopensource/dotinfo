@@ -219,7 +219,7 @@ label, button {
 }
 
 .flex, .flex_child {
-  flex: 1 0 15em;
+  flex: 1 0 12em;
 }
 
 .flex_child {
