@@ -1,12 +1,5 @@
 # Summary
-Publicradio.info is a place for listening to noncommercial news, culture, and art. It includes:
-
-1. A monthly, handpicked collection of podcast items, playable on the [homepage](http://www.publicradio.info) and through an [RSS feed](http://publicradio.info/feed.xml).
-
-2. A list of leading news and analysis podcasts, of which the most recent episodes are playable on the [homepage](http://www.publicradio.info).
-
-# Purpose
-Create a space for people to discover and experience audio. Contributors work to develop a decent web experience of good and unusual sounds, incl. news, analysis, music mixes, documentaries, comedies, investigative reports, stories, and audio experiments. Publicradio.info exists to highlight independent, noncommercial, listener-supported radio, and also to encourage consumers to become active supporters of public media. Content and other things for the homepage and podcast come monthly, as in a small audio magazine or mixtape.
+Publicradio.info is a [homepage](http://www.publicradio.info) for listening to noncommercial news, culture, and art. The web app offers a variety of newscasts, internet radio stations, and podcasts. Podcasts are accessible by [RSS](http://publicradio.info/feed.xml).
 
 # User keyboard controls
 `spacebar:` play and pause
@@ -21,7 +14,7 @@ contact@publicradio.info
 # Content
 Content is sourced from **dotinfo/_cYYYYMM/** and **dotinfo/_data/** folders.
 
-Monthly podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from Markdown files located in the **_cYYYYMM** folder. They adhere to this syntax:
+Podcast items (`Main Program`, `Selected Audio`, `Playlist`) come from Markdown files located in the **_cYYYYMM** folder. They adhere to this syntax:
 
 ```Markdown
 ---
