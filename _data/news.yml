@@ -7,10 +7,26 @@
   audio:
   type: npr
 - title: PRI's The World [48:00]
-  frequency: updated daily (weekdays only)
+  frequency: updated weekdays
   audio:
   type: pri
 - title: BBC Global News Podcast [30:00]
   frequency: updated twice daily (once on weekends)
   audio:
   type: bbc-global
+  - title: Market Place from APM [30:00]
+  frequency: updated weekdays
+  audio:
+  type:
+  - title: Democracy Now! [59:00]
+  frequency: updated weekdays
+  audio:
+  type:
+  - title: PBS NewsHour [59:00]
+  frequency: updated daily
+  audio:
+  type:
+  - title: BBC Africa Today [25:00]
+  frequency: updated daily
+  audio:
+  type:
