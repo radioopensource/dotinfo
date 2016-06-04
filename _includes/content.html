@@ -1,6 +1,6 @@
 {% assign collection = site.c201602 %}
 
-<div id="main" class="flex module">
+/* <div id="main" class="flex module">
 
   {% assign main = collection[0] %}
 
@@ -15,13 +15,13 @@
     <a class="listen" href="{{ main.audio }}">Listen</a> | 
     <a href="{{ main.website }}" target="_blank">Visit website</a> | 
     <a href="{{ main.feed }}" target="_blank">RSS</a>
-  </div>
+  </div> */
   
 </div>
 
 <div id="news" class="module">
   <div class="content">
-    <h1>2. Newscasts</h1>
+    <h1>1. Newscasts</h1>
     <ol>
       {% for news in site.data.news %}
         <li class="{{ news.type }} spin">
@@ -35,6 +35,27 @@
       {% endfor %}
     </ol>
   </div>
+</div>
+
+<div id="internet-radio" class="module">
+
+  <h1>2. Internet Radio</h1>
+  <ol>
+    {% for stream in site.data.streams %}
+      <li class="flex">
+        <div class="flex_child">
+        {{ stream.title }}
+          <div class="description">{{ stream.description }}</div>
+          <a class="listen radio" href="{{ stream.streamurl }}">Listen</a> | 
+          <a href="{{ stream.url }}" target="_blank">Visit website</a> {% if stream.donateurl %} | 
+          <a href="{{ stream.donateurl }}" target="_blank">Donate</a> {% endif %}
+        </div>
+        <div class="flex_child">
+          <img src="assets/{{ stream.icon }}" class="live-stream-icon"></img>
+        </div>
+      </li>
+    {% endfor %}
+  </ol>
 </div>
 
 <div id="selected" class="module">
@@ -54,27 +75,6 @@
         {% endfor %}  
       </ol>
   </div>
-</div>
-
-<div id="internet-radio" class="module">
-
-  <h1>4. Internet Radio</h1>
-  <ol>
-    {% for stream in site.data.streams %}
-      <li class="flex">
-        <div class="flex_child">
-        {{ stream.title }}
-          <div class="description">{{ stream.description }}</div>
-          <a class="listen radio" href="{{ stream.streamurl }}">Listen</a> | 
-          <a href="{{ stream.url }}" target="_blank">Visit website</a> {% if stream.donateurl %} | 
-          <a href="{{ stream.donateurl }}" target="_blank">Donate</a> {% endif %}
-        </div>
-        <div class="flex_child">
-          <img src="assets/{{ stream.icon }}" class="live-stream-icon"></img>
-        </div>
-      </li>
-    {% endfor %}
-  </ol>
 </div>
 
 <div id="request" class="module">
