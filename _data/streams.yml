@@ -1,25 +1,101 @@
-- title: KCRW (news/music)
-  description: An early FM broadcaster founded in 1945, KCRW in Los Angeles creates and curates "content centered around music discovery, NPR news, cultural exploration and informed public affairs." CRW stands for "College Radio Workshop."
+- title: KCRW
+  description: Los Angeles's "College Radio Workshop." Since 1945.
   url: http://www.kcrw.com
   donateurl: http://www.kcrw.com/join
   streamurl: http://kcrw.ic.llnwd.net/stream/kcrw_live
-  icon:  KCRW.jpg
-- title: Berlin Community Radio (music)
-  description: BCR is home to over 100 shows covering a variety of topics&#58; arts, music across genres, culture, relationships, queer politics, literature readings, feminism discussions, gender and internet phenomenons.
+- title: Berlin Community Radio
+  description: Electronic music and lots more.
   url: http://www.berlincommunityradio.com
   donateurl: http://www.berlincommunityradio.com/donate-berlin-community-radio
   streamurl: http://berlincommunityradio.out.airtime.pro:8000/berlincommunityradio_a
-  icon:  BCR.png
-- title: BBC Radio 3 (music)
-  description: Radio 3 centers on classical music and opera, but jazz, world music, drama, culture and the arts also feature. The station is one of the world's most significant commissioners of new music.
+- title: BBC Radio 3
+  description: Radio 3 centers on classical music.
   url: http://www.bbc.co.uk/radio3
   donateurl:
   streamurl: http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p?s=1454876177&e=1454890577&h=e1f6b6a5fcb3ca60b131bbdfcb02f980
-  icon:  BBC3.png
-- title: Terry Radio (music)
-  description: 90.5 KGHI Terry Radio is an internet public radio station with segments broadcasting out of home studios in Kansas City, Chicago, New York, Philadelphia, Pittsburgh, Los Angeles and Austin.
+- title: Terry Radio
+  description: 90.5 KGHI's sounds are electronic and experimental.
   url: http://www.terryradio.biz/
   donateurl:
   streamurl: http://terryradio.dyndns.org:8000/terry1
-  icon: terry.png
+- title: WMBR
+  description: Music and public affairs out of MIT in Cambridge.
+  url: http://wmbr.org/
+  donateurl: https://wmbr.org/fundraising.php
+  streamurl: http://wmbr.org/WMBR_live_128.m3u
+- title: WFMU
+  description: New York's weirdest and best freeform station.
+  url: https://wfmu.org/
+  donateurl: https://wfmu.org/marathon-2016/
+  streamurl: http://wfmu.org/wfmu.pls
+- title: WWOZ
+  description: Jazz and more out of New Orleans.
+  url: http://www.wwoz.org/
+  donateurl: http://www.wwoz.org/donate.php
+  streamurl: http://wwoz-sc.streamguys.com:80/wwoz-hi.mp3
+- title: WOMR
+  description: Provincetown's Outermost Community Radio.
+  url: http://womr.org/
+  donateurl: http://womr.org/product-category/memberships-and-donations/
+  streamurl: http://cp10.shoutcheap.com:2199/tunein/womrlowe.pls
+- title: KUSF
+  description: Campus radio at the University of San Francisco.
+  url: https://www.usfca.edu/kusf
+  donateurl:
+  streamurl: http://kusf.creek.fm/listen.m3u
+- title: Resonance FM
+  description: London's groundbreaking art radio station.
+  url: https://resonancefm.com/
+  donateurl: https://resonancefm.com/donate
+  streamurl: TK TK TK
+- title: WERU
+  description: Midcoast Maine's finest community station.
+  url: https://weru.org/
+  donateurl: https://weru.org/donate
+  streamurl: http://stream.weru.org/weru-high.mp3.m3u
+- title: V89
+  description: WVFS in Tallahassee aka the voice of Florida State.
+  url: http://www.terryradio.biz/
+  donateurl: http://wvfs.fsu.edu/pledge/
+  streamurl: http://voice.wvfs.fsu.edu:8000/stream
+- title: WXYC
+  description: Student radio out of Chapel Hill, North Carolina.
+  url: http://www.wxyc.org/
+  donateurl: http://www.wxyc.org/merch
+  streamurl: http://audio-mp3.ibiblio.org:8000/wxyc.mp3
+- title: WZBC
+  description: Student radio out of Newton, MA.
+  url: http://wzbc.org/
+  donateurl: 
+  streamurl: http://amber.streamguys.com:4860/;stream/1.mp3
+- title: BBC Radio 4
+  description: England's finest spoken word programs.
+  url: http://www.bbc.co.uk/radio4
+  donateurl:
+  streamurl: TK TK
+- title: WMPG
+  description: Portland, Maine's community radio.
+  url: http://www.wmpg.org/
+  donateurl: http://www.wmpg.org/support-wmpg/listener-donations/
+  streamurl: http://war.str3am.com:7270/;stream.mp3
+- title: WUMB
+  description: Folk and more out of UMass Boston.
+  url: http://www.wumb.org/home/index.php
+  donateurl: http://www.wumb.org/members/donate/
+  streamurl: TK TK TK
+- title: KALX
+  description: UC Berkeley's freeform student radio.
+  url: https://kalx.berkeley.edu/
+  donateurl: https://kalx.berkeley.edu/how-make-monetary-donations
+  streamurl: http://icecast.media.berkeley.edu:8000/kalx-128.mp3.m3u
+- title: Wave Farm Radio
+  description: Transmission art out of Hudson, New York.
+  url: https://wavefarm.org/
+  donateurl: https://wavefarm.org/wgxc/donate
+  streamurl: http://comm.free103point9.org:8000/transmissionarts.mp3.m3u
+- title: WNUR
+  description: Chicago's sound experiment.
+  url: https://www.wnur.org/
+  donateurl: http://wewill.northwestern.edu/supportwnur
+  streamurl: http://sc1.spacialnet.com:32660/;wnur.mp3
   
