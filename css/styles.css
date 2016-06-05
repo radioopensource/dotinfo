@@ -1,24 +1,6 @@
 html {
-  background: linear-gradient(45deg, #FF0084, #00E1FF);
   font-size: 100%;
-  cursor: url(/assets/cursor-default.cur), auto; 
 }
-
-html:active {
-  cursor: url(/assets/cursor-clickreg.cur), auto;
-} 
-
-a {
-   cursor: url(/assets/cursor-hover.cur), auto;
-} 
-
-a, a:link, a:visited {
-    color: blue;
-}
-
-a:active {
-  cursor: url(/assets/cursor-clicklink.cur), auto;
-} 
 
 html {
   text-align: center;
@@ -147,12 +129,9 @@ label, button {
 .module {
   text-align: left;
   margin: 0 auto;
-  margin-bottom: 5%;
   padding: 1em;
   width: 80%;
   max-width: 38em;
-  background-color: #fff;
-  border: 1px solid black;
 }
 
 .content {
