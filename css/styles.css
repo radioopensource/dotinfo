@@ -86,12 +86,6 @@ audio::-webkit-media-controls-enclosure {
 ol {
   margin: 0;
   list-style-type: lower-alpha;
-  -webkit-column-count: 2; /* Chrome, Safari, Opera */
-  -moz-column-count: 2; /* Firefox */
-  column-count: 2;
-  -webkit-column-gap: 20px; /* Chrome, Safari, Opera */
-  -moz-column-gap: 20px; /* Firefox */
-  column-gap: 20px;
 }
 
 ol li:not(:last-child) {
