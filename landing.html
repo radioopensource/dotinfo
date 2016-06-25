@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="UTF-8"/>
+    <title>publicradio.info</title>
+    <meta name="description"                content="Publicradio.info is a homepage for listening to noncommercial news, culture, and art. The web app offers a variety of newscasts, internet radio stations, and podcasts."/>
+    <meta name="keywords"                   content="podcast, radio, playlists"/>
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport"                   content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Bookmark Favicons for Apple & Android Devices
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+
+    <!-- Fonts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/style-resp.css" />
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+</head>
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<body>
+
+    <header>
+        <!-- Loading popover -->
+        <div class="loading">
+            <div class="text">LOADING...</div>
+        </div>
+        <div class="banner">
+            <div class="text"></div>
+        </div>
+        <!-- Audioplayer -->
+        <audio controls class="audio-player">
+            <source src="" type="audio/mpeg" controls="controls">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Header Text -->
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns">
+                    <h2 class="title" id="title-animate">publicradio.info</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Newscasts -->
+    <section class="container section newscasts">
+        <h4 class="black"># Newscasts</h4>
+        <div class="row">
+            <div class="one-third column"></div>
+            <div class="one-third column"></div>
+            <div class="one-third column"></div>
+        </div>
+    </section>
+
+    <!-- Internet Radio -->
+    <section class="container section internet-radio">
+        <h4 class="black"># Internet Radio</h4>
+        <div class="row">
+            <div class="one-third column"></div>
+            <div class="one-third column"></div>
+            <div class="one-third column"></div>
+        </div>
+    </section>
+
+    <!-- Podcasts -->
+    <section class="container section podcasts">
+        <h4 class="black"># Podcasts</h4>
+        <div class="row">
+            <div class="one-third column"></div>
+            <div class="one-third column"></div>
+            <div class="one-third column"></div>
+        </div>
+    </section>
+    <!-- Request -->
+    <form class="container section">
+        <h4 class="black"># Make A Request</h4>
+        <p>Got a podcast or radio show you want to hear on this website? Drop us a line below.</p>
+        <div class="row">
+            <div class="six columns">
+                <label for="request-selection">What you'd like to hear</label>
+                <input class="u-full-width" type="text" placeholder="Name of the program" id="request-selection">
+            </div>
+            <div class="six columns">
+                <label for="request-url">Where we can find it</label>
+                <input class="u-full-width" type="text" placeholder="Podcast url or RSS feed" id="request-url">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <label for="request-name">Your name <span class="light">(optional)</span></label>
+                <input class="u-full-width" type="text" placeholder="Nikola Tesla" id="request-name">
+            </div>
+            <div class="six columns">
+                <label for="request-email">Your email <span class="light">(optional)</span></label>
+                <input class="u-full-width" type="email" placeholder="nik@publicradio.info" id="request-email">
+            </div>
+        </div>
+        <label class="example-send-yourself-copy">
+            <input type="checkbox">
+            <span class="label-body">Send a copy to yourself</span>
+        </label>
+        <input class="button-primary" type="submit" value="Submit">
+    </form>
+
+    <!-- About -->
+    <section class="container section">
+        <h4 class="black"># About</h4>
+        <div class="about-copy">
+            <p>Publicradio.info is a homepage for listening to noncommercial news, culture, and arts. Subscribe to our podcast picks <a href="http://itunes.apple.com/us/podcast/playlist/id1055233656?mt=2" target="_blank">iTunes</a> <a href="http://www.publicradio.info/feed.xml" target="_blank">RSS</a>.</p>
+
+            <p>Listeners here: <span class="visitor-count">?</span></p>
+
+            <p>Design and graphics <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">licensed under CC</a> software issued under <a href="http://github.com/radioopensource/dotinfo/blob/gh-pages/license.md" target="_blank">MIT License</a>.</p>
+            
+            <p>Our website is published by <a href="http://www.radioopensource.org" target="_blank">Open Source Media</a> and made by volunteers. Content edited by Conor Gillies, Annie McEwen, Audrey Mardavich, and Ellie McDowall.</p> 
+            
+            <p>Development by Alex Silva, Liz Lovero, Rosie Busiakiewicz, Eve Asher, Chris Kalafarski, and Kathy Tu.</p>
+            
+            <p>Support local and public media! <a href="http://www.npr.org/stations/" target="_blank">Find your nearest NPR (U.S.) station.</a></p>
+        </div>
+        <div class="row">
+            <div class="twelve column">
+                <a href="mailto:contact@publicradio.info" class="button">Say hello</a>
+                <a href="https://github.com/radioopensource/dotinfo" target="_blank">Github</a>
+                <a href="https://twitter.com/" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container">
+        <div class="row">
+            <div class="twelve column">
+                <a href="mailto:contact@publicradio.info" class="button">Say hello</a>
+                <a href="https://github.com/radioopensource/dotinfo" target="_blank">Github</a>
+                <a href="https://twitter.com/" target="_blank">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
