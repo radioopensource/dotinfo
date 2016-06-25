@@ -9,6 +9,129 @@ Tags: publicradio.info, Responsive, Website, Internet Radio
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
+@font-face {
+font-family: "ZXX";
+font-weight: 200;
+src: url("../fonts/ZXX-False.otf") format("opentype");
+}
+
+@font-face {
+font-family: "ZXX";
+font-weight: 300;
+src: url("../fonts/ZXX-Noise.otf") format("opentype");
+}
+
+@font-face {
+font-family: "ZXX";
+font-weight: 400;
+src: url("../fonts/ZXX-Sans.otf") format("opentype");
+}
+
+@font-face {
+font-family: "ZXX";
+font-weight: 500;
+src: url("../fonts/ZXX-Camo.otf") format("opentype");
+}
+
+@font-face {
+font-family: "ZXX";
+font-weight: 600;
+src: url("../fonts/ZXX-Xed.otf") format("opentype");
+}
+
+@font-face {
+font-family: "ZXX";
+font-weight: 700;
+src: url("../fonts/ZXX-Bold.otf") format("opentype");
+}
+
+html {
+  color: #424242;
+  background-color: #F4F4F4;
+}
+
+body {
+  font-family: 'Space Mono', monospace;
+}
+
+.black {
+  color: #121212;
+}
+
+/* Header
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+audio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+}
+
+audio::-webkit-media-controls-enclosure {
+    max-width: 100%;
+}
+
+.title {
+  font-family: "ZXX";
+  font-weight: 400;
+  margin-top: 2em;
+  text-align: center;
+}
+
+@keyframes fontcraze {
+  0% {
+    font-weight: 500;
+  }
+  20% {
+    font-weight: 600;
+  }
+  40% {
+    font-weight: 700;
+  }
+  60% {
+    font-weight: 200;
+  }
+  80% {
+    font-weight: 300;
+  }
+  100% {
+    font-weight: 400;
+  }
+}
+
+#title-animate:hover {
+   animation: fontcraze 5s infinite;
+}
+
+div.loading, div.banner {
+    background-color: black;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    font-family: monospace;
+    padding: 1em;
+    font-size: 6vmin;
+    text-align: center;
+    color: #00FF00;
+    display: none;
+}
+
+/* Internet, Newscast, Podcast
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.section {
+  margin: 2rem auto;
+  padding: 4rem 3rem 4rem;
+  background-color: #FFFFFF;
+  border: 1px solid #bababa;
+}
+
+/* Request Form
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+/* About 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -27,17 +150,23 @@ Note: CSS is built mobile-first with sizes and devices indicated along with brea
 
 /* Larger than phablet (also point when grid becomes active) - Bigger than 550 */
 @media (min-width: 550px) {
-
+  section {
+    padding: 12rem 0 11rem;
+  }
 }
 
 /* Larger than tablet - Bigger than 750 */
 @media (min-width: 750px) {
-
+  section {
+    padding: 14rem 0 15rem;
+  }
 }
 
 /* Larger than desktop - Bigger than 1000 */
 @media (min-width: 1000px) {
-
+  section {
+    padding: 20rem 0 19rem;
+  }
 }
 
 /* Larger than Desktop HD */
