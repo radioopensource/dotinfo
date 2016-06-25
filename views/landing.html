@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="UTF-8"/>
+    <title>publicradio.info</title>
+    <meta name="description"                content="Publicradio.info is a homepage for listening to noncommercial news, culture, and art. The web app offers a variety of newscasts, internet radio stations, and podcasts."/>
+    <meta name="keywords"                   content="podcast, radio, playlists"/>
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport"                   content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Bookmark Favicons for Apple Devices
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/images/swellist/apple-touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/swellist/apple-touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/swellist/apple-touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/swellist/apple-touch-icon-ipad-retina.png">
+
+    <!-- Fonts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <!-- <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'> -->
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/skeleton.css" />
+    <link rel="stylesheet" href="/css/style-resp.css" />
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+</head>
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<body>
+
+    <header class="home-header">
+        <div class="container nav-container">
+            <div class="row nav">
+                <div class="one-third column navbar-left">
+                  {{#if showPricing}}
+                    <a class="nav-item" href="/pricing">
+                        <div class="nav-price">Pricing</div>
+                    </a>
+                  {{/if}}
+                </div>
+                <div class="one-third column navbar-logo">
+                    <a class="swellist-logo" href="http://swellist.com/swellist">Swellist</a>
+                </div>
+                <div class="one-third column navbar-right">
+                    <a class="nav-item" href="/dashboard#/login">
+                        <div>Sign In</div>
+                    </a>
+                    <a class="nav-item" href="/dashboard#/signup">
+                        <div class="signup">Sign Up</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="heroImage" >
+        <div class="hero adventurousImg">
+            <div class="container section hero-container">
+                <div class="row">
+                    <div class="one-half column">
+                        <h1>Cultivate Your</br><span id="hero-adventure">Adventurous</span> Side</h1>
+                        <h4 class="hero-heading">Make the most out of your personal time with Swellist</h4>
+                        <a class="button button-primary" href="/dashboard#/signup">Get Started</a>
+                    </div>
+                    <div class="one-half column phones">
+                        <img id="iphone" class="phone" src="http://static.swellist.com/images/hero-assets/adventurous-iphone-2x.png">
+                        <img id="android" class="phone" src="http://static.swellist.com/images/hero-assets/adventurous-android-2x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero athleticImg">
+            <div class="section container hero-container">
+                <div class="row">
+                    <div class="one-half column">
+                        <h1>Cultivate Your</br><span id="hero-athlete">Athletic</span> Side</h1>
+                        <h4 class="hero-heading">Make the most out of your personal time with Swellist</h4>
+                        <a class="button button-primary" href="/dashboard#/signup">Get Started</a>
+                    </div>
+                    <div class="one-half column phones">
+                        <img id="iphone" class="phone" src="http://static.swellist.com/images/hero-assets/athletic-iphone-2x.png">
+                        <img id="android" class="phone" src="http://static.swellist.com/images/hero-assets/athletic-android-2x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero romanticImg">
+            <div class="section container hero-container">
+                <div class="row">
+                    <div class="one-half column">
+                        <h1>Cultivate Your</br><span id="hero-romance">Romantic</span> Side</h1>
+                        <h4 class="hero-heading">Make the most out of your personal time with Swellist</h4>
+                        <a class="button button-primary" href="/dashboard#/signup">Get Started</a>
+                    </div>
+                    <div class="one-half column phones">
+                       <img id="iphone" class="phone" src="http://static.swellist.com/images/hero-assets/romantic-iphone-2x.png">
+                    <img id="android" class="phone" src="http://static.swellist.com/images/hero-assets/romantic-android-2x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero thoughtfulImg">
+            <div class="section container hero-container">
+                <div class="row">
+                    <div class="one-half column">
+                        <h1>Cultivate Your</br><span id="hero-thought">Social</span> Side</h1>
+                        <h4 class="hero-heading">Make the most out of your personal time with Swellist</h4>
+                        <a class="button button-primary" href="/dashboard#/signup">Get Started</a>
+                    </div>
+                    <div class="one-half column phones">
+                        <img id="iphone" class="phone" src="http://static.swellist.com/images/hero-assets/social-iphone@2x.png">
+                        <img id="android" class="phone" src="http://static.swellist.com/images/hero-assets/thoughtful-android-2x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero playfulImg">
+            <div class="container section hero-container">
+                <div class="row">
+                    <div class="one-half column">
+                        <h1>Cultivate Your</br><span id="hero-playful">Playful</span> Side</h1>
+                        <h4 class="hero-heading">Make the most out of your personal time with Swellist</h4>
+                        <a class="button button-primary" href="/dashboard#/signup">Get Started</a>
+                    </div>
+                    <div class="one-half column phones">
+                        <img id="iphone" class="phone" src="http://static.swellist.com/images/hero-assets/playful-iphone-2x.png">
+                        <img id="android" class="phone" src="http://static.swellist.com/images/hero-assets/Playful-android-2x.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu-wrapper" id="menu-wrapper">
+        <header id="site-header" class="site-header">
+            <nav>
+                <ul>
+                    <li>
+                        <a href="/swellist" class="nav-logo">Swellist</a>
+                    </li>
+                    <li>
+                        <a href="#intro" class="nav-vert-item">Intro</a>
+                    </li>
+                    <li>
+                        <a href="#scrollable-phone" class="nav-vert-item" >Your Feed</a>
+                    </li>
+                    <li>
+                        <a href="#step-by-step" class="nav-vert-item" >How it Works</a>
+                    </li>
+                    <li>
+                        <a href="#carousel" class="nav-vert-item" >Testimonials</a>
+                    </li>
+                    <a href="/dashboard#/signup">
+                        <li class="signup">Get Started</li>
+                    </a>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <div id="intro" class="container white-background">
+        <h2 class="intro-head">GET MORE OUT OF YOUR FREE TIME</h2>
+        <p>Swellist is for busy people. We know how difficult it is to have the time or energy to live a fully balanced life outside of work. So Swellist helps you get just a little more out of your free time. By learning about you and your want-to-dos, we act as your personal concierge doing the research to provide you with the best plan of action. All you have to do is sign up, let us know how to help, and start getting more out of your free time.</p>
+    </div>
+
+    <div id="scrollable-phone" class="gray-background">
+        <h2>Personalized tips for all your want-to-dos</h2>
+        <div class="web-how-we-do">
+            <div class="how-we-do">
+                <div class="to-do-list-group">
+                    <div class="user-icon">
+                        <img src="/images/swellist/kristine_long.png" class="kristine-long">
+                    </div>
+                    <div class="sample-list">
+                        <h2>Kristine's Want-to-dos</h2>
+                        <ul class="sample-list-list">
+                            <li>"Stay in better touch with family"</li>
+                            <li>"Travel to Reykjavik"</li>
+                            <li>"Weeknight date ideas"</li>
+                            <li>"Do more yoga"</li>
+                            <li>"Find freelance gigs"</li>
+                            <li>"Cook more healthy dinners at home"</li>
+                            <li>"Make time for non-work friends"</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="phone-fixed">
+                    <div  class="phone-holder">
+                        <div class="phone-scroll">
+                            <div id="phonezone" class="phone-inner">
+                                <div class='phone-overlay'>
+                                    <img src="/images/swellist/arrow-1.png"></img>
+                                    <h6>SCROLL TO SEE FEED</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-how-we-do">
+            <div class="owl-carousel" id="mobile-how">
+                <div class="item">
+                    <h3 class="subtitle">"Travel to Reykjavik"</h3>
+                    <img src="/images/swellist/reykjavik.png" alt="example-reykjavik">
+                </div>
+                <div class="item">
+                    <h3 class="subtitle">"Do more yoga"</h3>
+                    <img src="/images/swellist/yogamat.png" alt="example-yogamat">
+                </div>
+                <div class="item">
+                    <h3 class="subtitle">"Cook more healthy dinners at home"</h3>
+                    <img src="/images/swellist/grocery.png" alt="example-grocery">
+                </div>
+                <div class="item">
+                    <h3 class="subtitle">"Weeknight date ideas"</h3>
+                    <img src="/images/swellist/movie.png" alt="example-movie">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="step-by-step" class="container white-background">
+        <h2>How It Works</h2>
+        <div class="row step-by-step-list">
+            <div class="one-third column">
+                <h5 class="step-title-mobile">1. Sign up and tell us about yourself</h5>
+                <center><img src="http://static.swellist.com/images/landing-howitworks-Step1@1x.png" alt="howitworks4" class="step1 slideUp"></center>
+                <h6 class="step-title-web">1. Sign up and tell us about yourself</h6>
+                <p class="subtitle-step">Tell us a little about yourself so we can pinpoint how to help.</p>
+            </div>
+            <div class="one-third column">
+                <h5 class="step-title-mobile">2. Share all of your want-to-dos</h5>
+                <center><img src="http://static.swellist.com/images/landing-howitworks-Step2@1x.png" alt="howitworks6" class="step2 slideUp"></center>
+                <h6 class="step-title-web">2. Share all of your want-to-dos</h6>
+                <p class="subtitle-step">Let Swellist know what you’d like to work on by using our notepad or sharing an existing one</p>
+            </div>
+            <div class="one-third column">
+                <h5 class="step-title-mobile" >3. We help you research and plan</h5>
+                <center></center><img src="http://static.swellist.com/images/landing-howitworks-Step3@1x.png" alt="howitworks5" class="step3 slideUp"></center>
+                <h6 class="step-title-web">3. We help you research and plan</h6>
+                <p class="subtitle-step">Get more out of your day using Swellist’s personalized suggestions<p>
+            </div>
+        </div>
+            <a href="/how">
+                <button>Learn More</button>
+            </a>
+    </div>
+    <div id="carousel" class="gray-background last-div">
+        <h2>Folks Love Swellist</h2>
+            <div class="owl-carousel" id="testimonial">
+                <div class="item">
+                    <img src="/images/swellist/testimonial1.png"  srcset="/images/swellist/testimonial1.png 1x, images/swellist/testimonial1@2x.png 2x"/>
+                    <h6>Milan L, NYC</h6>
+                    <p>“Swellist just makes life easier. I love the tips I get for the stuff I have on my notepad. It’s like my own personal Yelp or “Best of” list, but for MY life, not just restaurants."</p>
+                </div>
+                <div class="item">
+                    <img src="/images/swellist/testimonial2.png"  srcset="/images/swellist/testimonial2.png 1x, /images/swellist/testimonial2@2x.png 2x"/>
+                    <h6>Alecia R, Los Angeles</h6>
+                    <p>“I work at a really stressful job and so I wanted a good creative outlet to balance everything out. Swellist helped me find a super awesome glass blowing class in my neighborhood that I’ve started going to every Wednesday.”</p>
+                </div>
+                <div class="item">
+                    <img src="/images/swellist/testimonial3.png"  srcset="/images/swellist/testimonial3.png 1x, images/swellist/testimonial3@2x.png 2x"/>
+                    <h6>David F, Los Angeles</h6>
+                    <p>"I tell my friends that it is one of the most helpful apps that I have. It has really improved the quality of my day activities. I get everything from delicious recipes to weekend plan suggestions from Swellist."</p>
+                </div>
+                <div class="item">
+                    <img src="/images/swellist/testimonial7.png"/>
+                    <h6>Marie-Anne G, Boston</h6>
+                    <p>"I needed to plan a baby shower for my best friend, I wanted it to be unique but had no idea where to start. Swellist ended up suggesting some really great venues that I didn’t even see myself when I was Googling."</p>
+                </div>
+                <div class="item">
+                    <img src="/images/swellist/testimonial5.png" srcset="/images/swellist/testimonial5.png 1x, /images/swellist/testimonial5@2x.png 2x"/>
+                    <h6>Roger W, Austin</h6>
+                    <p>"Swellist is really great at coming up with cool suggestions. I told Swellist that I am love live music but was tired of going to the usual spots. Swellist directed me toward some really great open mics around the city."</p>
+                </div>
+            </div>
+    </div>
+    <footer>
+        <div class="download-button">
+            <a href="/swellist" class="swellist-logo">Swellist</a>
+            <a href="/dashboard#/signup">
+                <button class="button button-primary">Get Started</button>
+            </a>
+        </div>
+        <ul id="footer-nav" class="footer-nav">
+            <a href="mailto:support@swellist.com">
+                <li>Contact Support</li>
+            </a>
+            <a href="/terms">
+                <li>Terms and Privacy</li>
+            </a>
+            <a href="/faqs">
+                <li>FAQ</li>
+            </a>
+            <a href="/how">
+                <li>Learn More</li>
+            </a>
+            {{#if showPricing}}
+            <a href="/pricing">
+                <li>Pricing</li>
+            </a>
+            {{/if}}
+            <a href="http://blog.swellist.com/">
+                <li>Blog</li>
+            </a>
+            <a href="/dashboard#/login">
+                <li class="signin">Sign In</li>
+            </a>
+        </ul>
+        <ul id="social-media" class="social-media">
+            <a href="https://twitter.com/TrySwellist">
+                <li class="twitter">Twitter</li>
+            </a>
+            <a href="https://www.facebook.com/swellist">
+                <li class="facebook">Facebook</li>
+            </a>
+            <a href="https://www.pinterest.com/swellistapp/">
+                <li class="pinterest">Pinterest</li>
+            </a>
+        </ul>
+    </footer>
+
+</body>

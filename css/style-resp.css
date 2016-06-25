@@ -1,0 +1,46 @@
+/*
+Website Name: Public Radio dot Info
+Description: Homepage for listening to noncommercial news, culture, and art.
+Author: Liz Lovero (https://github.com/lizlove)
+URI: http://www.publicradio.info
+Tags: publicradio.info, Responsive, Website, Internet Radio
+*/
+
+/* Typography
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* Footer
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+
+/* Media Queries
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*
+Note: CSS is built mobile-first with sizes and devices indicated along with breakpoint
+*/
+
+/* Larger than mobile */
+@media (min-width: 400px) {
+
+}
+
+/* Larger than phablet (also point when grid becomes active) - Bigger than 550 */
+@media (min-width: 550px) {
+
+}
+
+/* Larger than tablet - Bigger than 750 */
+@media (min-width: 750px) {
+
+}
+
+/* Larger than desktop - Bigger than 1000 */
+@media (min-width: 1000px) {
+
+}
+
+/* Larger than Desktop HD */
+@media (min-width: 1200px) {
+  
+}
