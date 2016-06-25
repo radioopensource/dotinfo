@@ -133,6 +133,18 @@ div.loading, div.banner {
   background-color: #FFFFFF;
   border: 1px solid #bababa;
 }
+.break {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem 3rem 1rem;
+}
+
+.globe-sm {
+  max-width: 39px;
+}
+
 
 /* Newscast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
