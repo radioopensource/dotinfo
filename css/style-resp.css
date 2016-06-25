@@ -160,6 +160,9 @@ div.loading, div.banner {
 .internet-ul {
   list-style-type: none; 
 }
+/*.internet-ul > li:hover {
+  background-color: red;
+}*/
 .internet-links > a {
   font-size: 1.2rem;
 }
