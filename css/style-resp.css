@@ -58,6 +58,13 @@ body {
   color: #121212;
 }
 
+.section {
+  margin: 2rem auto;
+  padding: 4rem 3rem 4rem;
+  background-color: #FFFFFF;
+  border: 1px solid #bababa;
+}
+
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 audio {
@@ -118,7 +125,7 @@ div.loading, div.banner {
     display: none;
 }
 
-/* Internet, Newscast, Podcast
+/* All Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
   margin: 2rem auto;
@@ -126,6 +133,30 @@ div.loading, div.banner {
   background-color: #FFFFFF;
   border: 1px solid #bababa;
 }
+
+/* Newscast
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.news-ul {
+  list-style-type: none; 
+}
+.last-update {
+  font-size: 1.2rem;
+}
+
+/* Internet Radio
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.internet-ul {
+  list-style-type: none; 
+}
+.internet-links > a {
+  font-size: 1.2rem;
+}
+.station-title {
+  margin-bottom: 1rem;
+}
+
+/* Podcast
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Request Form
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -135,7 +166,16 @@ div.loading, div.banner {
 
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 3rem 4rem;
+}
+.globe {
+  margin-bottom: 4rem;
+}
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */

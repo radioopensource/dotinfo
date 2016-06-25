@@ -1,3 +1,605 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="UTF-8"/>
+    <title>publicradio.info</title>
+    <meta name="description"                content="Publicradio.info is a homepage for listening to noncommercial news, culture, and art. The web app offers a variety of newscasts, internet radio stations, and podcasts."/>
+    <meta name="keywords"                   content="podcast, radio, playlists"/>
+
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport"                   content="width=device-width, initial-scale=1.0"/>
+
+    <!-- Bookmark Favicons for Apple & Android Devices
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="assets/icons/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+
+    <!-- Fonts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/skeleton.css" />
+    <link rel="stylesheet" href="css/style-resp.css" />
+
+    <!-- Scripts
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+
+</head>
+
+<!-- Primary Page Layout
+–––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<body>
+
+    <header>
+        <!-- Loading popover -->
+        <div class="loading">
+            <div class="text">LOADING...</div>
+        </div>
+        <div class="banner">
+            <div class="text"></div>
+        </div>
+        <!-- Audioplayer -->
+        <audio controls class="audio-player">
+            <source src="" type="audio/mpeg" controls="controls">
+            Your browser does not support the audio element.
+        </audio>
+        <!-- Header Text -->
+        <div class="container">
+            <div class="row">
+                <div class="twelve columns">
+                    <h2 class="title" id="title-animate">publicradio.info</h2>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Newscasts -->
+    <section class="container section" id="newscasts">
+        <h4 class="black"># Newscasts</h4>
+        <div class="row">
+            <div class="one-third column">
+                <ul class="news-ul">
+                    <li class="bbc-headlines spin">
+                        <h5 class="station-title">BBC Headlines</h5>
+                        [2:00] updated hourly
+                        <div class="last-update">
+                            <a class="listen" href="http://wsdownload.bbc.co.uk/worldservice/css/96mp3/latest/bbcnewssummary.mp3">Listen</a> | Last update: <span class="last-update-time">?</span>
+                        </div>
+                    </li>
+                    <li class="npr spin">
+                        <h5 class="station-title">NPR News Summary</h5> 
+                        [5:00], updated hourly
+                        <div class="last-update">
+                            <a class="listen" href="">Listen</a> |
+                            Last update: <span class="last-update-time">?</span>
+                        </div>
+                    </li>
+                    <li class="pri spin">
+                        <h5 class="station-title">PRI's The World</h5> 
+                        [48:00], updated weekdays
+                        <div class="last-update">
+                            <a class="listen" href="">Listen</a> |
+                            Last update: <span class="last-update-time">?</span>
+                        </div>
+                    </li>  
+                </ul>
+            </div>
+            <div class="one-third column">
+                <ul class="news-ul">
+                    <li class="bbc-global spin">
+                        <h5 class="station-title">BBC Global News</h5>
+                        [30:00], updated twice daily (once on weekends)
+                        <div class="last-update">
+                            <a class="listen" href="">Listen</a> |
+                            Last update: <span class="last-update-time">?</span>
+                        </div>
+                    </li>
+      
+                    <li class=" spin">
+                        <h5 class="station-title">Marketplace</h5>
+                        [30:00], updated weekdays
+                        <div class="last-update">
+                            <a class="listen" href="">Listen</a> |
+                            Last update: <span class="last-update-time">?</span>
+                        </div>                    
+                    </li>
+                    <li class=" spin">
+                        <h5 class="station-title">Democracy Now!</h5>
+                        [59:00], updated weekdays
+                        <div class="last-update">
+                            <a class="listen" href="">Listen</a> |
+                            Last update: <span class="last-update-time">?</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="one-third column">
+                <ul class="news-ul">
+                    <li class=" spin">
+                        <h5 class="station-title">PBS NewsHour</h5>
+                        [59:00], updated daily
+                        <div class="last-update">
+                            <a class="listen" href="">Listen</a> |
+                            Last update: <span class="last-update-time">?</span>
+                        </div>
+                    </li>
+                    <li class=" spin">
+                        <h5 class="station-title">BBC Africa Today</h5>
+                        [25:00], updated daily
+                        <div class="last-update">
+                            <a class="listen" href="">Listen</a> |
+                            Last update: <span class="last-update-time">?</span>
+                        </div>
+                    </li>
+                </ul> 
+            </div>
+        </div>
+    </section>
+
+    <!-- Internet Radio -->
+    <section class="container section" id="internet-radio">
+        <h4 class="black"># Internet Radio</h4>
+        <div class="row">
+            <div class="one-third column">
+                <ul class="internet-ul">
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <div class="internet-links">
+                            <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                            <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                            <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <div class="internet-links">
+                            <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                            <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                            <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <div class="internet-links">
+                            <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                            <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                            <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <div class="internet-links">
+                            <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                            <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                            <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <div class="internet-links">
+                            <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                            <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                            <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="one-third column">
+                <ul class="internet-ul">
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <div class="internet-links">
+                            <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                            <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                            <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <div class="internet-links">
+                            <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                            <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                            <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <div class="internet-links">
+                            <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                            <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                            <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <div class="internet-links">
+                            <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                            <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                            <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <div class="internet-links">
+                            <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                            <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                            <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="one-third column">
+                <ul class="internet-ul">
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                        <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                        <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a> 
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                        <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                        <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a> 
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                        <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                        <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a> 
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                        <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                        <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a> 
+                    </li>
+                    <li>
+                        <h5 class="station-title">WMBR</h5>
+                        <div class="description">Music and public affairs out of MIT in Cambridge.</div>
+                        <a class="listen radio" href="http://wmbr.org/WMBR_live_128.m3u">Listen</a> | 
+                        <a href="http://wmbr.org/" target="_blank">Website</a>  | 
+                        <a href="https://wmbr.org/fundraising.php" target="_blank">Donate</a> 
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcasts -->
+    <section class="container section" id="podcasts">
+        <h4 class="black"># Podcasts</h4>
+        <div class="row">
+            <div class="one-third column"></div>
+            <div class="one-third column"></div>
+            <div class="one-third column"></div>
+        </div>
+    </section>
+    <!-- Request -->
+    <form class="container section" id="request">
+        <h4 class="black"># Make A Request</h4>
+        <p>Got a podcast or radio show you want to hear on this website? Drop us a line below.</p>
+        <div class="row">
+            <div class="six columns">
+                <label for="request-selection">What you'd like to hear</label>
+                <input class="u-full-width" type="text" placeholder="Name of the program" id="request-selection">
+            </div>
+            <div class="six columns">
+                <label for="request-url">Where we can find it</label>
+                <input class="u-full-width" type="text" placeholder="Podcast url or RSS feed" id="request-url">
+            </div>
+        </div>
+        <div class="row">
+            <div class="six columns">
+                <label for="request-name">Your name <span class="light">(optional)</span></label>
+                <input class="u-full-width" type="text" placeholder="Nikola Tesla" id="request-name">
+            </div>
+            <div class="six columns">
+                <label for="request-email">Your email <span class="light">(optional)</span></label>
+                <input class="u-full-width" type="email" placeholder="nik@publicradio.info" id="request-email">
+            </div>
+        </div>
+        <label class="example-send-yourself-copy">
+            <input type="checkbox">
+            <span class="label-body">Send a copy to yourself</span>
+        </label>
+        <input class="button-primary" type="submit" value="Submit">
+    </form>
+
+    <!-- About -->
+    <section class="container section">
+        <h4 class="black"># About</h4>
+        <div class="about-copy">
+            <p>Publicradio.info is a homepage for listening to noncommercial news, culture, and arts. Subscribe to our podcast picks <a href="http://itunes.apple.com/us/podcast/playlist/id1055233656?mt=2" target="_blank">iTunes</a> <a href="http://www.publicradio.info/feed.xml" target="_blank">RSS</a>.</p>
+
+            <p>Listeners here: <span class="visitor-count">?</span></p>
+
+            <p>Design and graphics <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">licensed under CC</a> software issued under <a href="http://github.com/radioopensource/dotinfo/blob/gh-pages/license.md" target="_blank">MIT License</a>.</p>
+            
+            <p>Our website is published by <a href="http://www.radioopensource.org" target="_blank">Open Source Media</a> and made by volunteers. Content edited by Conor Gillies, Annie McEwen, Audrey Mardavich, and Ellie McDowall.</p> 
+            
+            <p>Development by Alex Silva, Liz Lovero, Rosie Busiakiewicz, Eve Asher, Chris Kalafarski, and Kathy Tu.</p>
+
+            <p>Support local and public media! <a href="http://www.npr.org/stations/" target="_blank">Find your nearest NPR (U.S.) station.</a></p>
+        </div>
+        <div class="social-media">
+            <a href="https://github.com/radioopensource/dotinfo" target="_blank">Github</a>
+            </br>
+            <a href="https://twitter.com/" target="_blank">Twitter</a> 
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="container">
+        <img class="globe" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/G%C3%A9ode_V_3_1_duale.gif">
+        <a href="mailto:contact@publicradio.info" class="button">Say hello</a>
+        <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script>     
+            var 
+              audioPlayer = $('audio')[0],
+              audioSource = $('audio').find('source'),
+              servicesURL = 'http://www.publicradioservices.info',
+              // servicesURL = 'http://localhost:3000',
+              newsModule = $('#news');
+
+            // load default audio
+            loadAudio(newsModule.find('.bbc-headlines .listen').attr('href'));
+            // set default audio last update time
+            newsModule.find('.bbc-headlines .last-update-time').text(formatDateTime(getBBCHeadlinesLastUpdate()))
+            newsModule.find('.bbc-headlines').removeClass('spin');
+
+            // "loading" messaging
+            setInterval(function() { $('.loading .text').toggleClass('black') }, 400); // 1/2 second     
+            audioPlayer.oncanplay = function () {
+              $('.loading').hide();
+            }
+
+            $('.listen').on('click', playAudioHandler);
+
+            function playAudioHandler (e) {
+              e.preventDefault();
+
+              if ($(e.target).parent().hasClass('spin')) {
+                return;
+              }
+
+              var clickedAudio = e.target.href; 
+
+              if (clickedSameAudio(clickedAudio)) {
+                if (audioPlayer.paused) {
+                  audioPlayer.play();
+                } else {
+                  audioPlayer.pause();  
+                }
+                return;
+              }
+
+              if ($(e.target).hasClass('radio')) {
+                $('.loading').show();
+              }
+
+              playAudio(clickedAudio);
+            }
+
+            function playAudio (audioUrl) {
+              loadAudio(audioUrl);
+              audioPlayer.oncanplaythrough = audioPlayer.play();
+            }
+
+            function loadAudio (audioUrl) {
+              audioSource.attr('src', audioUrl);
+              audioPlayer.pause();
+              audioPlayer.load();
+            }
+
+            function clickedSameAudio (currentAudioSrc) {
+              return !audioPlayer.ended && (0 < audioPlayer.currentTime)
+              && currentAudioSrc === audioSource.attr('src');
+            }
+
+            window.addEventListener('keydown', onKeyDown, false);
+
+            function onKeyDown (e) {
+              switch (e.keyCode) {
+                case 32: //spacebar                    
+
+                  if ($('textarea, input').is(':focus')) {
+                    return;
+                  }
+
+                  e.preventDefault();
+                  if (audioPlayer.paused) {            
+                      audioPlayer.play();
+                  } else {
+                      audioPlayer.pause();
+                  } 
+                  break;
+                case 37: //back arrow
+                  audioPlayer.currentTime -= 15
+                  break;
+                case 39: //forward arrow
+                  audioPlayer.currentTime += 15
+                  break;
+                case 27: //esc key
+                  $('.banner').hide();
+                  break;
+              }
+              return false;
+            }
+
+            $.ajax({
+              url: servicesURL + '/news',
+              type: 'GET',
+              dataType: 'JSON',
+              success: function (data) {
+                refreshNewsFor(data.news);
+              }
+            });
+
+            function refreshNewsFor (news) {
+              Object.keys(news).forEach( function(newsType) { 
+                var newsTypeSection = newsModule.find('.' + newsType);
+                newsTypeSection.find('.listen').attr('href', news[newsType].url);
+                newsTypeSection.find('.last-update-time').text(formatDateTime(news[newsType].pubDate))
+                newsTypeSection.removeClass('spin');
+              })
+            }
+
+            function formatDateTime (rawDateTimeString) {
+              function getFormattedTime (fourDigitTime) {
+                  var hours24 = parseInt(fourDigitTime.substring(0, 2),10);
+                  var hours = ((hours24 + 11) % 12) + 1;
+                  var amPm = hours24 > 11 ? 'pm' : 'am';
+                  var minutes = fourDigitTime.substring(3, 5);
+
+                  return hours + ':' + minutes + amPm;
+              }
+
+              var dateTimeTokens = new Date(rawDateTimeString).toString().split(' ');
+              var formattedDateTime =
+                dateTimeTokens[1] + 
+                " " + dateTimeTokens[2] +   
+                ", " + getFormattedTime(dateTimeTokens[4]) + 
+                " " + dateTimeTokens[6].replace(/[{()}]/g, '');
+
+              return formattedDateTime;
+            };  
+
+            function getBBCHeadlinesLastUpdate () {
+              var 
+                minsToChangeTo = 35,
+                now = new Date(),
+                nowMins = now.getMinutes();
+
+              now.setMinutes(minsToChangeTo);
+              var changeToLastHour = (nowMins - minsToChangeTo < 0);
+              if (changeToLastHour) { now.setHours(now.getHours()-1); }
+
+              return now.toString();
+            }
+
+            $('.submit').on('click', submitRequest);
+
+            function submitRequest () {
+              $('.submit').attr('disabled','disabled');
+              showMessage('Submitting request...');
+
+              $.ajax({
+                  url: servicesURL + '/requests',
+                  type: 'POST',
+                  dataType: 'JSON',
+                  data: { info : $('#info').val(), url : $('#url').val(), requestor : $('#requestor').val() },
+                  xhrFields: {
+                    withCredentials: true
+                  }
+              }).fail(function(response) {
+                showMessage(mapErrorCodesToMessages(response.responseJSON.errors));
+              }).done(function() {
+                showMessage('   THANKS!   ');
+                $('input').val('');
+              }).always(function() {
+                $('.submit').removeAttr('disabled');
+              })
+            }
+
+            function showMessage (message) {
+              $('.banner').show().find('.text').html(message);
+              setTimeout(function() {  $('.banner').hide(); }, 5000);
+            }
+
+            // message banner dismissal
+            $(document).on('click', function (e) { 
+              if ($('.banner').has(e.target).length === 0) {
+                $('.banner').hide();
+              }
+            });
+
+            function mapErrorCodesToMessages (codes) {
+              var messages = [];
+
+              if (codes.info) {
+                if (codes.info === 'not-present') {
+                  messages.push('Comment is required.')
+                }
+                if (codes.info === 'too-long') {
+                  messages.push('Comment can\'t exceed 200 characters.');
+                }
+              }
+              if (codes.url) {
+                if (codes.url === 'not-valid') {
+                  messages.push('That url doesn\'t exist! :(');
+                }
+              }
+
+              return messages.reduce(function(a, b) { return a + '</br>' + b; });
+            }
+
+            function areCookiesEnabled () {
+              var cookieEnabled = (navigator.cookieEnabled) ? true : false;
+              if (typeof navigator.cookieEnabled == "undefined" && !cookieEnabled) { 
+                  document.cookie = 'testcookie';
+                  cookieEnabled = (document.cookie.indexOf("testcookie") != -1) ? true : false;
+              }
+              return cookieEnabled;
+            }
+
+            function getVisitorCount () {
+              if (areCookiesEnabled()) {
+                $.ajax({
+                  url: servicesURL + '/visitor-count',
+                  type: 'GET',
+                  dataType: 'JSON',
+                  xhrFields: {
+                    withCredentials: true
+                  },
+                  success: function (data) {
+                    $('.visitor-count').text(data.count);
+                  }
+                });
+              }
+            }
+
+            getVisitorCount();
+            setInterval(getVisitorCount, 60000); // 1 minute
+
+            window.onload = function () {
+              var podToAutoplay = parseInt(window.location.search.replace('?pod=', ''));
+              if (!Number.isNaN(podToAutoplay)) {
+                playAudio($('.listen').get(podToAutoplay).href)
+              }
+            };
+       </script>
+    </footer>
+
+</body>
