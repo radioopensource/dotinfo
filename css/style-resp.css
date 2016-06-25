@@ -152,7 +152,7 @@ div.loading, div.banner {
   font-size: 1.2rem;
 }
 .station-title {
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 /* Podcast
