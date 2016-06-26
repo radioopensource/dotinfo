@@ -2,7 +2,7 @@
   description: Music and public affairs out of MIT in Cambridge.
   url: http://wmbr.org/
   donateurl: https://wmbr.org/fundraising.php
-  streamurl: http://wmbr.org/WMBR_live_128.m3u
+  streamurl: http://headphones.mit.edu:8000/hi
 
 - title: Berlin Community Radio
   description: Electronic music and lots more.
