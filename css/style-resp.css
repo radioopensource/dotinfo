@@ -218,8 +218,12 @@ footer {
   flex-direction: column;
   padding: 4rem 3rem 4rem;
 }
+
+.extra-margin {
+  margin-bottom: 4em;
+}
 .globe {
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 /* Media Queries
