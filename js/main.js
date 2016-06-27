@@ -1,8 +1,8 @@
 var 
   audioPlayer = $('audio')[0],
   audioSource = $('audio').find('source'),
-  // servicesURL = 'http://www.publicradioservices.info',
-  servicesURL = 'http://localhost:3000',
+  servicesURL = 'http://www.publicradioservices.info',
+  // servicesURL = 'http://localhost:3000',
   newsModule = $('#newscasts');
 
 // load default audio
