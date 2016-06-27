@@ -55,9 +55,7 @@ function addPodcastHtmlToNode(node, data) {
     '<li data-url="' + url +'">' +
       '<h5 class="station-title">' + showTitle + '</h5>' +
       '<div class="description">' + episodeTitle + '</div>' +
-      '<div class="last-update">' +
-          'Last update: ' + formatDateTime(pubDate, false) +
-      '</div>' +
+      '<div class="last-update">' + formatDateTime(pubDate, false) + '</div>' +
       '<div class="internet-links">' +      
           '<a href=' + url + ' target="_blank">Website</a>  | ' + 
           '<a href=' + rssUrl + ' target="_blank">RSS</a>' +
