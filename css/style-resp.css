@@ -140,16 +140,35 @@ div.loading, div.banner {
   flex-direction: column;
   padding: 1rem 3rem 1rem;
 }
-
 .globe-sm {
   max-width: 39px;
 }
+.spin {
+  opacity: 0.2;
+  pointer-events: none;
+}
+.spin .last-update-time {
+    position: absolute;
+    -webkit-animation:spin 2s linear infinite;
+    -moz-animation:spin 2s linear infinite;
+    animation:spin 2s linear infinite;
+}
+@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 
 /* Newscast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .news-ul {
   list-style-type: none; 
+}
+.news-ul > li:hover {
+  background-color: #F4F4F4;
+  cursor: pointer;
+}
+.news-ul > li:active {
+  background-color: #dcd8d8;
 }
 .last-update {
   font-size: 1.2rem;
@@ -161,7 +180,8 @@ div.loading, div.banner {
   list-style-type: none; 
 }
 .internet-ul > li:hover {
-  background-color: #f9f9f9;
+  background-color: #F4F4F4;
+  cursor: pointer;
 }
 .internet-links > a {
   font-size: 1.2rem;
@@ -172,6 +192,16 @@ div.loading, div.banner {
 
 /* Podcast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.podcast-list{
+  list-style-type: none; 
+}
+.podcast-list > li:hover {
+  background-color: #f9f9f9;
+  cursor: pointer;
+}
+.podcast-list > li:active {
+  background-color: #dcd8d8;
+}
 
 /* Request Form
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
