@@ -8,7 +8,7 @@ var
 // load default audio
 loadAudio(newsModule.find('.bbc-headlines').data('url'));
 // set default audio last update time
-newsModule.find('.bbc-headlines .last-update-time').text(formatDateTime(getBBCHeadlinesLastUpdate()))
+newsModule.find('.bbc-headlines .last-update-time').text(formatDateTime(getBBCHeadlinesLastUpdate()), true)
 newsModule.find('.bbc-headlines').removeClass('spin');
 
 // "loading" messaging
@@ -26,7 +26,7 @@ function addHtmlToNode(node, data) {
       '<h5 class="station-title">' + title + '</h5>' +
       '<div class="description">' + description + '</div>' +
       '<div class="internet-links">' +      
-          '<a href=' + url + ' target="_blank">Website</a>  | ' + 
+          '<a href=' + url + ' target="_blank">Website</a> | ' + 
           '<a href=' + donateurl + ' target="_blank">Donate</a>' +
       '</div>' +
     '</li>';
@@ -50,13 +50,13 @@ $('.news-ul li, .internet-ul li').on('click', function (e) {
 
 function addPodcastHtmlToNode(node, data) {
   var totalHtml = '';
-  data.forEach(function ({resourceTitle, rssUrl, streamurl, title, url, pubDate}) { 
+  data.forEach(function ({showTitle, rssUrl, streamurl, episodeTitle, url, pubDate}) { 
     var html = 
     '<li data-url="' + url +'">' +
-      '<h5 class="station-title">' + resourceTitle + '</h5>' +
-      '<div class="description">' + title + '</div>' +
+      '<h5 class="station-title">' + showTitle + '</h5>' +
+      '<div class="description">' + episodeTitle + '</div>' +
       '<div class="last-update">' +
-          'Last update: ' + formatDateTime(pubDate) +
+          'Last update: ' + formatDateTime(pubDate, false) +
       '</div>' +
       '<div class="internet-links">' +      
           '<a href=' + url + ' target="_blank">Website</a>  | ' + 
@@ -173,15 +173,15 @@ $.ajax({
 function refreshNewsFor (news) {
   Object.keys(news).forEach( function(newsType) { 
     var newsTypeSection = newsModule.find('li.' + newsType);
-    newsTypeSection[0].setAttribute('data-url', news[newsType].url)
-    newsTypeSection.find('.last-update-time').text(formatDateTime(news[newsType].pubDate))
+    newsTypeSection[0].setAttribute('data-url', news[newsType].url);
+    newsTypeSection.find('.last-update-time').text(formatDateTime(news[newsType].pubDate, true));
     newsTypeSection.removeClass('spin');
   })
 }
 
-function formatDateTime (rawDateTimeString) {
+function formatDateTime (rawDateTimeString, includeTimeFlag) {
   function getFormattedTime (fourDigitTime) {
-      var hours24 = parseInt(fourDigitTime.substring(0, 2),10);
+      var hours24 = parseInt(fourDigitTime.substring(0, 2), 10);
       var hours = ((hours24 + 11) % 12) + 1;
       var amPm = hours24 > 11 ? 'pm' : 'am';
       var minutes = fourDigitTime.substring(3, 5);
@@ -190,9 +190,13 @@ function formatDateTime (rawDateTimeString) {
   }
 
   var dateTimeTokens = new Date(rawDateTimeString).toString().split(' ');
-  var formattedDateTime =
-    dateTimeTokens[1] + 
-    " " + dateTimeTokens[2] +   
+  var formattedDateTime = dateTimeTokens[1] + " " + dateTimeTokens[2];
+
+  if (includeTimeFlag === false) {
+    return formattedDateTime;
+  }
+
+  formattedDateTime = formattedDateTime +   
     ", " + getFormattedTime(dateTimeTokens[4]) + 
     " " + dateTimeTokens[6].replace(/[{()}]/g, '');
 
