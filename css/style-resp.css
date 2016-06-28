@@ -47,7 +47,7 @@ src: url("../fonts/ZXX-Bold.otf") format("opentype");
 
 html {
   color: #424242;
-  background-color: #fff5e5;
+  background-color: #fff5ed;
 }
 
 body {
@@ -61,7 +61,7 @@ body {
 .section {
   margin: 2rem auto;
   padding: 4rem 3rem 4rem;
-  background-color: #FFFFFF;
+  background-color: #fff7f0;
   border: 1px solid #bababa;
 }
 
@@ -130,7 +130,7 @@ div.loading, div.banner {
 .section {
   margin: 2rem auto;
   padding: 4rem 3rem 4rem;
-  background-color: #FFFFFF;
+  background-color: #fff7f0;
   border: 1px solid #bababa;
 }
 .break {
