@@ -1,9 +1,9 @@
 /*
-Website Name: Public Radio dot Info
+Website Name: publicradio.info
 Description: Homepage for listening to noncommercial news, culture, and art.
-Author: Liz Lovero (https://github.com/lizlove)
+Design: Liz Lovero (https://github.com/lizlove)
 URI: http://www.publicradio.info
-Tags: publicradio.info, Responsive, Website, Internet Radio
+Tags: publicradio.info, public radio, podcast, news, responsive, website, internet radio
 */
 
 /* Typography
@@ -47,7 +47,7 @@ src: url("../fonts/ZXX-Bold.otf") format("opentype");
 
 html {
   color: #424242;
-  background-color: #F4F4F4;
+  background-color: #fff5e5;
 }
 
 body {
