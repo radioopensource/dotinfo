@@ -160,8 +160,7 @@ p {
 a {
   color: blue; }
 a:hover {
-  color: darkblue;
-  background-color:yellow }
+  color: darkblue; }
 
 
 /* Buttons
