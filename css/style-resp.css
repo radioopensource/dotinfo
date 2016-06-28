@@ -165,11 +165,11 @@ div.loading, div.banner {
   list-style-type: none; 
 }
 .news-ul > li:hover {
-  background-color: yellow;
+  background-color: #FFE2A0;
   cursor: pointer;
 }
 .news-ul > li:active {
-  background-color: #dcd8d8;
+  background-color: #FFE2A0;
 }
 .last-update {
   font-size: 1.2rem;
@@ -181,9 +181,13 @@ div.loading, div.banner {
   list-style-type: none; 
 }
 .internet-ul > li:hover {
-  background-color: yellow;
+  background-color: #FFE2A0;
   cursor: pointer;
 }
+.internet-ul > li:active {
+  background-color: #FFE2A0;
+}
+
 .internet-links > a {
   font-size: 1.2rem;
 }
@@ -197,11 +201,11 @@ div.loading, div.banner {
   list-style-type: none; 
 }
 .podcast-list > li:hover {
-  background-color: yellow;
+  background-color: #FFE2A0;
   cursor: pointer;
 }
 .podcast-list > li:active {
-  background-color: #dcd8d8;
+  background-color: #FFE2A0;
 }
 
 /* Request Form
