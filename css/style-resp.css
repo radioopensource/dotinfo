@@ -164,7 +164,7 @@ div.loading, div.banner {
   list-style-type: none; 
 }
 .news-ul > li:hover {
-  background-color: #F4F4F4;
+  background-color: yellow;
   cursor: pointer;
 }
 .news-ul > li:active {
@@ -180,7 +180,7 @@ div.loading, div.banner {
   list-style-type: none; 
 }
 .internet-ul > li:hover {
-  background-color: #F4F4F4;
+  background-color: yellow;
   cursor: pointer;
 }
 .internet-links > a {
@@ -196,7 +196,7 @@ div.loading, div.banner {
   list-style-type: none; 
 }
 .podcast-list > li:hover {
-  background-color: #f9f9f9;
+  background-color: yellow;
   cursor: pointer;
 }
 .podcast-list > li:active {
