@@ -169,7 +169,7 @@ div.loading, div.banner {
   cursor: pointer;
 }
 .news-ul > li:active {
-  background-color: #FFE2A0;
+  background-color: #FFCB54;
 }
 .last-update {
   font-size: 1.2rem;
@@ -185,7 +185,7 @@ div.loading, div.banner {
   cursor: pointer;
 }
 .internet-ul > li:active {
-  background-color: #FFE2A0;
+  background-color: #FFCB54;
 }
 
 .internet-links > a {
@@ -205,7 +205,7 @@ div.loading, div.banner {
   cursor: pointer;
 }
 .podcast-list > li:active {
-  background-color: #FFE2A0;
+  background-color: #FFCB54;
 }
 
 /* Request Form
