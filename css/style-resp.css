@@ -61,7 +61,7 @@ body {
 .section {
   margin: 2rem auto;
   padding: 4rem 3rem 4rem;
-  background-color: #fff7f0;
+  background-color: #fffef5;
   border: 1px solid #bababa;
 }
 
@@ -130,7 +130,7 @@ div.loading, div.banner {
 .section {
   margin: 2rem auto;
   padding: 4rem 3rem 4rem;
-  background-color: #fff7f0;
+  background-color: #fffef5;
   border: 1px solid #bababa;
 }
 .break {
