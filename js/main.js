@@ -72,9 +72,14 @@ function addHtmlToNode(node, data) {
 }
 
 var internetRadioColumns = $('.internet-ul');
-addHtmlToNode(internetRadioColumns[0], streams.slice(0, 5));
-addHtmlToNode(internetRadioColumns[1], streams.slice(5, 10));
-addHtmlToNode(internetRadioColumns[2], streams.slice(10, 15));
+var sortedStreams = streams.sort(function(a, b) { 
+  if (a.title <  b.title) return -1;
+  if (a.title > b.title) return 1; 
+  return 0;
+});
+addHtmlToNode(internetRadioColumns[0], sortedStreams.slice(0, 5));
+addHtmlToNode(internetRadioColumns[1], sortedStreams.slice(5, 10));
+addHtmlToNode(internetRadioColumns[2], sortedStreams.slice(10));
 
 $('.internet-ul li').on('click', function (e) { 
   if (e.target.tagName !== 'A') {
@@ -90,10 +95,11 @@ function addPodcastHtmlToNode(node, data) {
     var html = 
     '<li data-url="' + el.url +'">' +
       '<h5 class="station-title">' + el.showTitle + '</h5>' +
-      '<div class="description">' + el.episodeTitle + '</div>' +
-      '<div class="last-update">' + formatDateTime(el.pubDate, false) + '</div>' +
+      '<div class="description">' + el.episodeTitle + ' ' +
+        '<span class="last-update">(' + formatDateTime(el.pubDate, false) + ')</span>' + 
+      '</div>' +
       '<div class="internet-links">' +      
-          '<a href=' + el.url + ' target="_blank">Website</a>  | ' + 
+          '<a href=' + el.showUrl + ' target="_blank">Website</a>  | ' + 
           '<a href=' + el.rssUrl + ' target="_blank">RSS</a>' +
       '</div>' +
     '</li>';
@@ -112,9 +118,16 @@ $.ajax({
       podcasts.push(data.podcasts[key]);
     });
     var podcastColumns = $('.podcast-list');
-    addPodcastHtmlToNode(podcastColumns[0], podcasts.slice(0, 5));
-    addPodcastHtmlToNode(podcastColumns[1], podcasts.slice(5, 10));
-    addPodcastHtmlToNode(podcastColumns[2], podcasts.slice(10, 15));
+    var sortedPodcasts = podcasts.sort(function(a, b) { 
+      var date1 = new Date(a.pubDate);
+      var date2 = new Date(b.pubDate);
+      if (date1 <  date2) return 1;
+      if (date1 > date2) return -1; 
+      return 0;
+    });
+    addPodcastHtmlToNode(podcastColumns[0], sortedPodcasts.slice(0, 5));
+    addPodcastHtmlToNode(podcastColumns[1], sortedPodcasts.slice(5, 10));
+    addPodcastHtmlToNode(podcastColumns[2], sortedPodcasts.slice(10, 15));
 
     $('.podcast-list li').on('click', function (e) { 
       if (e.target.tagName !== 'A') {

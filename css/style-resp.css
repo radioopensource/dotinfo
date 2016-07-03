@@ -207,8 +207,8 @@ div.loading, div.banner {
 .podcast-list > li:active {
   background-color: #FFCB54;
 }
-.hoover {
-  width: 10rem;
+.placeholder-img {
+  width: 11rem;
 }
 
 /* Request Form
