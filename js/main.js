@@ -195,11 +195,11 @@ $(document).on('click', function (e) {
 function mapErrorCodesToMessages (codes) {
   var messages = [];
 
-  if (codes.info) {
-    if (codes.info === 'not-present') {
+  if (codes.name) {
+    if (codes.name === 'not-present') {
       messages.push('Program name is required.')
     }
-    if (codes.info === 'too-long') {
+    if (codes.name === 'too-long') {
       messages.push('Program name can\'t exceed 200 characters.');
     }
   }
