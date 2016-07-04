@@ -146,28 +146,38 @@ window.onload = function () {
 
 // REQUESTS
 
-$('.submit').on('click', submitRequest);
+$('.button-primary').on('click', submitRequest);
 
-function submitRequest () {
-  $('.submit').attr('disabled','disabled');
+function submitRequest (e) {
+  e.preventDefault();
+  $('.button-primary').attr('disabled','disabled');
   showMessage('Submitting request...');
 
   $.ajax({
       url: servicesURL + '/requests',
       type: 'POST',
       dataType: 'JSON',
-      data: { info : $('#info').val(), url : $('#url').val(), requestor : $('#requestor').val() },
+      data: { 
+        name : $('#request-name').val(), 
+        url : $('#request-url').val(), 
+        requestor : $('#request-requestor').val(),
+        email : $('#request-email').val()
+      },
       xhrFields: {
         withCredentials: true
       }
   }).fail(function(response) {
     showMessage(mapErrorCodesToMessages(response.responseJSON.errors));
+
   }).done(function() {
     showMessage('   THANKS!   ');
     $('input').val('');
+
   }).always(function() {
-    $('.submit').removeAttr('disabled');
-  })
+    $('.button-primary').removeAttr('disabled');
+  });
+
+  return false;
 }
 
 function showMessage (message) {
@@ -187,10 +197,10 @@ function mapErrorCodesToMessages (codes) {
 
   if (codes.info) {
     if (codes.info === 'not-present') {
-      messages.push('Comment is required.')
+      messages.push('Program name is required.')
     }
     if (codes.info === 'too-long') {
-      messages.push('Comment can\'t exceed 200 characters.');
+      messages.push('Program name can\'t exceed 200 characters.');
     }
   }
   if (codes.url) {
