@@ -171,7 +171,7 @@ function submitRequest (e) {
 
   }).done(function() {
     showMessage('   THANKS!   ');
-    $('input').val('');
+    $("input:not(.button-primary)").val('');
 
   }).always(function() {
     $('.button-primary').removeAttr('disabled');
