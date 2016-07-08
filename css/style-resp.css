@@ -174,7 +174,7 @@ div.loading, div.banner {
 }
 .newsline {
   text-decoration: underline;
-  -webkit-text-decoration-color:
+  -webkit-text-decoration-color: red;
   text-decoration-color: red;
 }
 
@@ -196,9 +196,9 @@ div.loading, div.banner {
 .station-title {
   margin-bottom: 0;
 }
-.newsline {
+.radioline {
   text-decoration: underline;
-  -webkit-text-decoration-color:
+  -webkit-text-decoration-color: blue;
   text-decoration-color: blue;
 }
 
@@ -219,7 +219,7 @@ div.loading, div.banner {
 }
 .podcastline {
   text-decoration: underline;
-  -webkit-text-decoration-color:
+  -webkit-text-decoration-color: purple;
   text-decoration-color: purple;
 }
 
@@ -227,7 +227,7 @@ div.loading, div.banner {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .requestline {
   text-decoration: underline;
-  -webkit-text-decoration-color:
+  -webkit-text-decoration-color: orange;
   text-decoration-color: orange;
 }
 
@@ -235,7 +235,7 @@ div.loading, div.banner {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .aboutline {
   text-decoration: underline;
-  -webkit-text-decoration-color:
+  -webkit-text-decoration-color: teal;
   text-decoration-color: teal;
 }
 
