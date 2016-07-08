@@ -47,11 +47,11 @@ src: url("../fonts/ZXX-Bold.otf") format("opentype");
 
 html {
   color: #424242;
-  background-color: #fff5ed;
+  background-color: #FFFAFA;
 }
 
 body {
-  font-family: 'Space Mono', monospace;
+  font-family: sans-serif;
 }
 
 .black {
@@ -61,7 +61,6 @@ body {
 .section {
   margin: 2rem auto;
   padding: 4rem 3rem 4rem;
-  background-color: #fffef5;
   border: 1px solid #bababa;
 }
 
@@ -131,7 +130,6 @@ div.loading, div.banner {
 .section {
   margin: 2rem auto;
   padding: 4rem 3rem 4rem;
-  background-color: #fffef5;
   border: 1px solid #bababa;
 }
 .break {
@@ -174,6 +172,11 @@ div.loading, div.banner {
 .last-update {
   font-size: 1.2rem;
 }
+.newsline {
+  text-decoration: underline;
+  -webkit-text-decoration-color:
+  text-decoration-color: red;
+}
 
 /* Internet Radio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -187,12 +190,16 @@ div.loading, div.banner {
 .internet-ul > li:active {
   background-color: #FFCB54;
 }
-
 .internet-links > a {
   font-size: 1.2rem;
 }
 .station-title {
   margin-bottom: 0;
+}
+.newsline {
+  text-decoration: underline;
+  -webkit-text-decoration-color:
+  text-decoration-color: blue;
 }
 
 /* Podcast
@@ -210,12 +217,27 @@ div.loading, div.banner {
 .placeholder-img {
   width: 11rem;
 }
+.podcastline {
+  text-decoration: underline;
+  -webkit-text-decoration-color:
+  text-decoration-color: purple;
+}
 
 /* Request Form
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.requestline {
+  text-decoration: underline;
+  -webkit-text-decoration-color:
+  text-decoration-color: orange;
+}
 
 /* About 
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.aboutline {
+  text-decoration: underline;
+  -webkit-text-decoration-color:
+  text-decoration-color: teal;
+}
 
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
