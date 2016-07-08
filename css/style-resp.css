@@ -163,11 +163,11 @@ div.loading, div.banner {
   list-style-type: none; 
 }
 .news-ul > li:hover {
-  background-color: #FFE2A0;
+  background-color: #FFFF99;
   cursor: pointer;
 }
 .news-ul > li:active {
-  background-color: #FFCB54;
+  background-color: #ffee99;
 }
 .last-update {
   font-size: 1.2rem;
@@ -184,11 +184,11 @@ div.loading, div.banner {
   list-style-type: none; 
 }
 .internet-ul > li:hover {
-  background-color: #FFE2A0;
+  background-color: #FFFF99;
   cursor: pointer;
 }
 .internet-ul > li:active {
-  background-color: #FFCB54;
+  background-color: #ffee99;
 }
 .internet-links > a {
   font-size: 1.2rem;
@@ -208,11 +208,11 @@ div.loading, div.banner {
   list-style-type: none; 
 }
 .podcast-list > li:hover {
-  background-color: #FFE2A0;
+  background-color: #FFFF99;
   cursor: pointer;
 }
 .podcast-list > li:active {
-  background-color: #FFCB54;
+  background-color: #ffee99;
 }
 .placeholder-img {
   width: 11rem;
