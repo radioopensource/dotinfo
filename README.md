@@ -6,7 +6,7 @@ Publicradio.info is a [web app](http://www.publicradio.info) and [RSS feed](http
 `left key:` skip back 15 seconds
 `right key:` skip forward 15 seconds
 
-# Podcasts
+# Services
 Our aggregating service lives here: [public-radio-services](https://github.com/ags2121/public-radio-services)
 
 # License
