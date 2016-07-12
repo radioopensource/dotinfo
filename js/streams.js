@@ -77,5 +77,10 @@ var streams = [ { title: 'WMBR',
     description: 'The Original FM specializing in jazz, classical, and roots music.',
     url: 'https://www.wkcr.org',
     donateurl: 'https://giving.columbia.edu/giveonline/?schoolstyle=411',
-    streamurl: 'http://wkcr.streamguys1.com:80/live' }
+    streamurl: 'http://wkcr.streamguys1.com:80/live' },
+  { title: 'Bondfire Radio',
+    description: 'Real Radio for Real People.',
+    url: 'http://bondfireradio.com/',
+    donateurl: 'https://www.patreon.com/bondfireradio',
+    streamurl: 'https://streaming.radio.co/sd2fdc24b0/listen' }
 ]
