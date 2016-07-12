@@ -38,13 +38,17 @@
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
+    <!-- Font
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href='https://fonts.googleapis.com/css?family=Tinos:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+
 </head>
 
 <!-- Primary Page Layout
 –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 <body>
 
-    <header>
+    <header id="header">
         <!-- Loading popover -->
         <div class="loading">
             <div class="text">LOADING...</div>
@@ -58,11 +62,11 @@
             Your browser does not support the audio element.
         </audio>
         <!-- Header Text -->
-        <div class="container">
+        <div class="container navbar">
             <div class="row">
-                <div class="twelve columns">
-                    <h2 class="title" id="title-animate">publicradio.info</h2>
-                </div>
+                <nav class="twelve columns">
+                    <h4><a class="title" href="#header" id="title-animate">publicradio.info</a></h4> <div><a href="#newscasts">news</a> | <a href="#internet-radio">radio</a> | <a href="#podcasts">podcasts</a></div>
+                </nav>
             </div>
         </div>
     </header>
@@ -207,7 +211,7 @@
         </label> -->
         <input class="button-primary" type="submit" value="Submit"/>
     </div>
-    
+
 
     <!-- About -->
     <section class="container section">

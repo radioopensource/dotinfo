@@ -47,7 +47,7 @@ src: url("../fonts/ZXX-Bold.otf") format("opentype");
 
 html {
   color: #424242;
-  background-color: #FFFAFA;
+  background-color: #FFF;
 }
 
 body {
@@ -73,36 +73,38 @@ audio::-webkit-media-controls-enclosure {
 }
 
 .title {
-  font-family: "ZXX";
-  font-weight: 400;
-  margin: 1em auto 1em auto;
-  text-align: left;
-  font-size: 3rem;
+  color: #424242;
+  text-decoration: none;
 }
 
 @keyframes fontcraze {
   0% {
-    font-weight: 500;
+    font-weight: 400;
+    font-style: italic;
   }
   20% {
-    font-weight: 600;
+    font-weight: 700;
+    font-style: normal;
   }
   40% {
     font-weight: 700;
+    font-style: italic;
   }
   60% {
-    font-weight: 200;
+    font-weight: 400;
+    font-style: italic;
   }
   80% {
-    font-weight: 300;
+    font-weight: 400;
   }
   100% {
-    font-weight: 400;
+    font-weight: 700;
+    font-style: normal;
   }
 }
 
 #title-animate:hover {
-   animation: fontcraze 5s infinite;
+   /*animation: fontcraze 2s infinite;*/
 }
 
 div.loading, div.banner {
@@ -119,19 +121,31 @@ div.loading, div.banner {
     display: none;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 2;
+  padding-top: 1.5rem;
+}
+div.navbar nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+div.subnav a{
+  line-height: 48.6;
+}
 /* All Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
   margin: 1rem auto;
   padding: 3rem 3rem 3rem;
 }
-.break {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 1rem 3rem 1rem;
-}
+
 .globe-sm {
   max-width: 39px;
 }
@@ -157,8 +171,7 @@ ul {
 /* Newscast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 section#newscasts{
-  margin-top: 0;
-  padding-top: 0;
+  margin-top: 4rem;
 }
 .news-ul {
   list-style-type: none;
@@ -265,10 +278,7 @@ Note: CSS is built mobile-first with sizes and devices indicated along with brea
 
 /* Larger than mobile */
 @media (min-width: 400px) {
-  .title {
-    font-size: 3.6rem;
-    text-align: center;
-  }
+
 }
 
 /* Larger than phablet (also point when grid becomes active) - Bigger than 550 */
