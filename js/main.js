@@ -77,9 +77,8 @@ var sortedStreams = streams.sort(function(a, b) {
   if (a.title > b.title) return 1; 
   return 0;
 });
-addHtmlToNode(internetRadioColumns[0], sortedStreams.slice(0, 5));
-addHtmlToNode(internetRadioColumns[1], sortedStreams.slice(5, 10));
-addHtmlToNode(internetRadioColumns[2], sortedStreams.slice(10));
+
+renderBalancedColumns(internetRadioColumns, sortedStreams, addHtmlToNode);
 
 $('.internet-ul li').on('click', function (e) { 
   if (e.target.tagName !== 'A') {
@@ -125,9 +124,8 @@ $.ajax({
       if (date1 > date2) return -1; 
       return 0;
     });
-    addPodcastHtmlToNode(podcastColumns[0], sortedPodcasts.slice(0, 5));
-    addPodcastHtmlToNode(podcastColumns[1], sortedPodcasts.slice(5, 10));
-    addPodcastHtmlToNode(podcastColumns[2], sortedPodcasts.slice(10, 15));
+  
+    renderBalancedColumns(podcastColumns, sortedPodcasts, addPodcastHtmlToNode);
 
     $('.podcast-list li').on('click', function (e) { 
       if (e.target.tagName !== 'A') {
@@ -243,6 +241,16 @@ getVisitorCount();
 setInterval(getVisitorCount, 60000); // 1 minute
 
 // GENERAL
+
+function renderBalancedColumns(UIcolumns, media, renderFunction) {
+  var columnSize = Math.ceil(media.length / 3)
+  for (var i = 0; i < 3; i++) {
+    renderFunction(
+      UIcolumns[i], 
+      media.slice(i*columnSize, (i+1)*columnSize, media.length)
+    );
+  }
+}
 
 // "loading" messaging
 setInterval(function() { $('.loading .text').toggleClass('black') }, 400); // 0.5 second     
