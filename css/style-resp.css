@@ -130,7 +130,6 @@ div.loading, div.banner {
 .section {
   margin: 2rem auto;
   padding: 4rem 3rem 4rem;
-  border: 1px solid #bababa;
 }
 .break {
   display: flex;
@@ -164,7 +163,7 @@ ul {
 /* Newscast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .news-ul {
-  list-style-type: none; 
+  list-style-type: none;
 }
 .news-ul > li:hover {
   background-color: #FFFF99;
@@ -185,7 +184,7 @@ ul {
 /* Internet Radio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .internet-ul {
-  list-style-type: none; 
+  list-style-type: none;
 }
 .internet-ul > li:hover {
   background-color: #FFFF99;
@@ -209,7 +208,7 @@ ul {
 /* Podcast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .podcast-list{
-  list-style-type: none; 
+  list-style-type: none;
 }
 .podcast-list > li:hover {
   background-color: #FFFF99;
@@ -235,7 +234,7 @@ ul {
   text-decoration-color: orange;
 }
 
-/* About 
+/* About
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .aboutline {
   text-decoration: underline;
@@ -296,5 +295,5 @@ Note: CSS is built mobile-first with sizes and devices indicated along with brea
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {
-  
+
 }
