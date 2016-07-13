@@ -73,8 +73,9 @@ audio::-webkit-media-controls-enclosure {
 }
 
 .title {
-  color: #424242;
-  text-decoration: none;
+    color: black;
+    text-decoration: none;
+    font-weight: 500;
 }
 
 @keyframes fontcraze {
