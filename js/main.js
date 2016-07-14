@@ -62,8 +62,8 @@ function addHtmlToNode(node, data) {
       '<h5 class="station-title">' + el.title + '</h5>' +
       '<div class="description">' + el.description + '</div>' +
       '<div class="internet-links">' +      
-          '<a href=' + el.url + ' target="_blank">Website</a> | ' + 
-          '<a href=' + el.donateurl + ' target="_blank">Donate</a>' +
+          '<a href=' + el.url + ' target="_blank">Website</a>' + 
+          (el.donateurl !== null ? ' | <a href=' + el.donateurl + ' target="_blank">Donate</a>' : '') +
       '</div>' +
     '</li>';
     totalHtml += html;
