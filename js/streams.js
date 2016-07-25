@@ -83,7 +83,7 @@ var streams = [ { title: 'WMBR',
     url: 'http://bondfireradio.com/',
     donateurl: 'https://www.patreon.com/bondfireradio',
     streamurl: 'https://streaming.radio.co/sd2fdc24b0/listen' },
-  { title: 'RAO (Radio Africa Online)'
+  { title: 'RAO (Radio Africa Online)',
     description: 'Spinning African and Caribbean music online since 2002.',
     url: 'http://soukous.org/',
     donateurl: 'http://soukous.org/donate.htm',
