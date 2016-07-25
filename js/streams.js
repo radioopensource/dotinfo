@@ -82,5 +82,11 @@ var streams = [ { title: 'WMBR',
     description: 'Brooklyn\'s real radio for real people.',
     url: 'http://bondfireradio.com/',
     donateurl: 'https://www.patreon.com/bondfireradio',
-    streamurl: 'https://streaming.radio.co/sd2fdc24b0/listen' }
+    streamurl: 'https://streaming.radio.co/sd2fdc24b0/listen' },
+  { title: 'RAO (Radio Africa Online)'
+    description: 'Spinning African and Caribbean music online since 2002.',
+    url: 'http://soukous.org/',
+    donateurl: 'http://soukous.org/donate.htm',
+    streamurl: 'http://nyc04.egihosting.com:4658/;'
+  }
 ]
