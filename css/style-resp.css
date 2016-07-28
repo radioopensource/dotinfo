@@ -177,6 +177,38 @@ section:before {
   visibility: hidden;
 }
 
+li {
+  border-style: outset;
+  padding: 5px;
+  border-width: 4px;
+}
+
+li:active {
+  border-style: inset;
+  background-color: #ffee99;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #FFFF99;
+}
+
+li.now-playing {
+  border-style: inset; 
+  background-color: #ccff99;
+}
+
+li.now-playing:hover {
+  background-color: #ccff99;
+}
+
+.anchor {
+   display:block;
+   height:63px; /* this is the height of your header */
+   margin-top:-63px; /* this is again negative value of the height of your header */
+   visibility:hidden;
+}
+
 /* Newscast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 section#newscasts{
@@ -184,13 +216,6 @@ section#newscasts{
 }
 .news-ul {
   list-style-type: none;
-}
-.news-ul > li:hover {
-  background-color: #FFFF99;
-  cursor: pointer;
-}
-.news-ul > li:active {
-  background-color: #ffee99;
 }
 .last-update {
   font-size: 1.2rem;
@@ -205,13 +230,6 @@ section#newscasts{
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .internet-ul {
   list-style-type: none;
-}
-.internet-ul > li:hover {
-  background-color: #FFFF99;
-  cursor: pointer;
-}
-.internet-ul > li:active {
-  background-color: #ffee99;
 }
 .internet-links > a {
   font-size: 1.2rem;
@@ -229,13 +247,6 @@ section#newscasts{
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .podcast-list{
   list-style-type: none;
-}
-.podcast-list > li:hover {
-  background-color: #FFFF99;
-  cursor: pointer;
-}
-.podcast-list > li:active {
-  background-color: #ffee99;
 }
 .placeholder-img {
   width: 11rem;

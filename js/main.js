@@ -267,10 +267,14 @@ function playAudioHandler (e) {
 
   var clickedAudio = e.currentTarget.getAttribute('data-url');
 
+  $('li').removeClass('now-playing');
+  $(e.currentTarget).addClass('now-playing');
+
   if (clickedSameAudio(clickedAudio)) {
     if (audioPlayer.paused) {
       audioPlayer.play();
     } else {
+      $('li').removeClass('now-playing');
       audioPlayer.pause();  
     }
     return;
@@ -310,9 +314,13 @@ function onKeyDown (e) {
       }
 
       e.preventDefault();
-      if (audioPlayer.paused) {            
+
+      if (audioPlayer.paused) {           
+          var url = $(audioPlayer).find('source').attr('src');
+          $('li[data-url="' + url + '"]').addClass('now-playing');
           audioPlayer.play();
       } else {
+          $('li.now-playing').removeClass('now-playing');
           audioPlayer.pause();
       } 
       break;
