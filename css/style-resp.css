@@ -301,6 +301,9 @@ Note: CSS is built mobile-first with sizes and devices indicated along with brea
   .title {
     font-size: 2.5rem;
   }
+  section.newscasts {
+    margin-top: 5rem;
+  }
 }
 
 /* Smaller than phablet (also point when grid becomes inactive) - Smaller than 550 */
