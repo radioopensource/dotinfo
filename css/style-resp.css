@@ -303,7 +303,7 @@ Note: CSS is built mobile-first with sizes and devices indicated along with brea
 /* Make title smaller when less than 364px */
 @media (max-width: 364px) {
   .title {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
   }
 }
 
