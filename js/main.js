@@ -5,28 +5,6 @@ var
   audioPlayer = $('audio')[0],
   audioSource = $('audio').find('source');
 
-// Remove all hover styling if using touch device
-var touch = window.ontouchstart
-            || (navigator.MaxTouchPoints > 0)
-            || (navigator.msMaxTouchPoints > 0);
-
-if (touch) { // remove all :hover stylesheets
-    try { // prevent exception on browsers not supporting DOM styleSheets properly
-        for (var si in document.styleSheets) {
-            var styleSheet = document.styleSheets[si];
-            if (!styleSheet.rules) continue;
-
-            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-                if (!styleSheet.rules[ri].selectorText) continue;
-
-                if (styleSheet.rules[ri].selectorText.match(':hover')) {
-                    styleSheet.deleteRule(ri);
-                }
-            }
-        }
-    } catch (ex) {}
-}  
-
 // NEWSCASTS
 var newsModule = $('section.newscasts');
 
@@ -264,6 +242,19 @@ setInterval(getVisitorCount, 60000); // 1 minute
 
 // GENERAL
 
+/*
+  Adds hover styling. 
+  We need to do this via JS in order to bypass styling on touch devices
+*/
+$('li').each(function () {
+  $(this).on('touchstart mouseenter', function (e) {
+    e.currentTarget.classList.add('hover');
+  });
+  $(this).on('mouseleave touchmove click', function (e) {
+    e.currentTarget.classList.remove('hover');
+  });
+})
+
 function renderBalancedColumns(UIcolumns, media, renderFunction) {
   var columnSize = Math.ceil(media.length / 3)
   for (var i = 0; i < 3; i++) {
@@ -301,14 +292,10 @@ function playAudioHandler (e) {
 
   var clickedAudio = e.currentTarget.getAttribute('data-url');
 
-  // $('li').removeClass('now-playing');
-  // $(e.currentTarget).addClass('now-playing');
-
   if (clickedSameAudio(clickedAudio)) {
     if (audioPlayer.paused) {
       audioPlayer.play();
-    } else {
-      // $('li').removeClass('now-playing');
+    } else {    
       audioPlayer.pause();  
     }
     return;
@@ -350,11 +337,8 @@ function onKeyDown (e) {
       e.preventDefault();
 
       if (audioPlayer.paused) {           
-          // var url = $(audioPlayer).find('source').attr('src');
-          // $('li[data-url="' + url + '"]').addClass('now-playing');
           audioPlayer.play();
       } else {
-          // $('li.now-playing').removeClass('now-playing');
           audioPlayer.pause();
       } 
       break;

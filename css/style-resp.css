@@ -195,6 +195,9 @@ li:active {
 
 li:hover {
   cursor: pointer;
+}
+
+li.hover {
   background-color: #FFFF99;
 }
 
