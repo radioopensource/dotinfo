@@ -211,7 +211,7 @@ li.now-playing {
 
 /* Newscast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-section#newscasts{
+section.newscasts{
   margin-top: 7.5rem;
 }
 .news-ul {
