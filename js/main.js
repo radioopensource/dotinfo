@@ -52,7 +52,6 @@ $('.news-ul li').on('click', function (e) {
   }
 });
 
-
 // INTERNET RADIO
 function addHtmlToNode(node, data) {
   var totalHtml = '';
@@ -246,11 +245,25 @@ setInterval(getVisitorCount, 60000); // 1 minute
   Adds hover styling. 
   We need to do this via JS in order to bypass styling on touch devices
 */
+var start;
+var longpress = 1000;
 $('li').each(function () {
-  $(this).on('touchstart mouseenter', function (e) {
+
+  $(this).on('touchstart mouseenter', function (e) {  
+    start = new Date().getTime();
+    $('li').removeClass('hover');
     e.currentTarget.classList.add('hover');
   });
-  $(this).on('mouseleave touchmove click', function (e) {
+
+  $(this).on('touchend', function (e) {
+    // if long press, trigger click (on touch devices)
+    if ( new Date().getTime() >= ( start + longpress )  ) {
+       $(e.currentTarget).trigger('click');
+    }
+  });
+
+  $(this).on('mouseleave touchmove click taphold', function (e) {
+    start = 0;
     e.currentTarget.classList.remove('hover');
   });
 })
