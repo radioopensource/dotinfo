@@ -5,30 +5,30 @@ var
   audioPlayer = $('audio')[0],
   audioSource = $('audio').find('source');
 
-// // Remove all hover styling if using touch device
-// var touch = window.ontouchstart
-//             || (navigator.MaxTouchPoints > 0)
-//             || (navigator.msMaxTouchPoints > 0);
+// Remove all hover styling if using touch device
+var touch = window.ontouchstart
+            || (navigator.MaxTouchPoints > 0)
+            || (navigator.msMaxTouchPoints > 0);
 
-// if (touch) { // remove all :hover stylesheets
-//     try { // prevent exception on browsers not supporting DOM styleSheets properly
-//         for (var si in document.styleSheets) {
-//             var styleSheet = document.styleSheets[si];
-//             if (!styleSheet.rules) continue;
+if (touch) { // remove all :hover stylesheets
+    try { // prevent exception on browsers not supporting DOM styleSheets properly
+        for (var si in document.styleSheets) {
+            var styleSheet = document.styleSheets[si];
+            if (!styleSheet.rules) continue;
 
-//             for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
-//                 if (!styleSheet.rules[ri].selectorText) continue;
+            for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                if (!styleSheet.rules[ri].selectorText) continue;
 
-//                 if (styleSheet.rules[ri].selectorText.match(':hover')) {
-//                     styleSheet.deleteRule(ri);
-//                 }
-//             }
-//         }
-//     } catch (ex) {}
-// }  
+                if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                    styleSheet.deleteRule(ri);
+                }
+            }
+        }
+    } catch (ex) {}
+}  
 
 // NEWSCASTS
-var newsModule = $('#newscasts');
+var newsModule = $('section.newscasts');
 
 // load BBC Headlines as default audio
 loadAudio(newsModule.find('.bbc-headlines').data('url'));
