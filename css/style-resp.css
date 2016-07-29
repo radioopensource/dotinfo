@@ -78,10 +78,6 @@ audio::-webkit-media-controls-enclosure {
     font-weight: 500;
 }
 
-.title:hover {
-  color: inherit;
-}
-
 @keyframes fontcraze {
   0% {
     font-weight: 400;
