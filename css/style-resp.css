@@ -134,6 +134,7 @@ div.loading, div.banner {
   background-color: #fff;
   z-index: 2;
   padding-top: 1.5rem;
+  -webkit-transform: translateZ(0);
 }
 div.navbar nav {
   display: flex;
