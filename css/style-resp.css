@@ -78,6 +78,10 @@ audio::-webkit-media-controls-enclosure {
     font-weight: 500;
 }
 
+.title:hover {
+  color: inherit;
+}
+
 @keyframes fontcraze {
   0% {
     font-weight: 400;
@@ -185,7 +189,7 @@ li {
 
 li:active {
   border-style: inset;
-  background-color: #ffee99;
+  background-color: #ffee99 !important;
 }
 
 li:hover {
@@ -195,11 +199,7 @@ li:hover {
 
 li.now-playing {
   border-style: inset; 
-  background-color: #ccff99;
-}
-
-li.now-playing:hover {
-  background-color: #ccff99;
+  background-color: #FFFF99;
 }
 
 .anchor {
@@ -295,6 +295,20 @@ footer {
 /*
 Note: CSS is built mobile-first with sizes and devices indicated along with breakpoint
 */
+
+/* Make title smaller when less than 364px */
+@media (max-width: 364px) {
+  .title {
+    font-size: 2.4rem;
+  }
+}
+
+/* Smaller than phablet (also point when grid becomes inactive) - Smaller than 550 */
+@media (max-width: 550px) {
+  section {
+    padding: 2rem 2rem 2rem !important;
+  }
+}
 
 /* Larger than mobile */
 @media (min-width: 400px) {

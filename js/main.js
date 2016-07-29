@@ -258,6 +258,18 @@ audioPlayer.oncanplay = function () {
   $('.loading').hide();
 }
 
+// adds styling for currently playing audio
+audioPlayer.onplay = function () {
+  $('li').removeClass('now-playing');
+  var url = $(audioPlayer).find('source').attr('src');
+  $('li[data-url="' + url + '"]').addClass('now-playing');
+}
+
+// removes styling for currently playing audio
+audioPlayer.onpause = function () {
+  $('li').removeClass('now-playing');
+}
+
 function playAudioHandler (e) {
   e.preventDefault();
 
@@ -267,14 +279,14 @@ function playAudioHandler (e) {
 
   var clickedAudio = e.currentTarget.getAttribute('data-url');
 
-  $('li').removeClass('now-playing');
-  $(e.currentTarget).addClass('now-playing');
+  // $('li').removeClass('now-playing');
+  // $(e.currentTarget).addClass('now-playing');
 
   if (clickedSameAudio(clickedAudio)) {
     if (audioPlayer.paused) {
       audioPlayer.play();
     } else {
-      $('li').removeClass('now-playing');
+      // $('li').removeClass('now-playing');
       audioPlayer.pause();  
     }
     return;
@@ -316,11 +328,11 @@ function onKeyDown (e) {
       e.preventDefault();
 
       if (audioPlayer.paused) {           
-          var url = $(audioPlayer).find('source').attr('src');
-          $('li[data-url="' + url + '"]').addClass('now-playing');
+          // var url = $(audioPlayer).find('source').attr('src');
+          // $('li[data-url="' + url + '"]').addClass('now-playing');
           audioPlayer.play();
       } else {
-          $('li.now-playing').removeClass('now-playing');
+          // $('li.now-playing').removeClass('now-playing');
           audioPlayer.pause();
       } 
       break;
