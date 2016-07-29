@@ -246,7 +246,7 @@ setInterval(getVisitorCount, 60000); // 1 minute
   We need to do this via JS in order to bypass styling on touch devices
 */
 var start;
-var longpress = 1000;
+var longpress = 400;
 $('li').each(function () {
 
   $(this).on('touchstart mouseenter', function (e) {  
