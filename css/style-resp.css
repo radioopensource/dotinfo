@@ -108,18 +108,17 @@ audio::-webkit-media-controls-enclosure {
    /*animation: fontcraze 2s infinite;*/
 }
 
-div.loading, div.banner {
-    background-color: black;
+div.banner {
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    font-family: monospace;
     padding: 1em;
-    font-size: 6vmin;
-    text-align: center;
-    color: #00FF00;
+    font-size: 3rem;
+    text-align: left;
+    color: #33C3F0;
     display: none;
+    z-index: 1;
 }
 
 .navbar {
