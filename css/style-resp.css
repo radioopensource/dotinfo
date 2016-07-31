@@ -108,17 +108,16 @@ audio::-webkit-media-controls-enclosure {
    /*animation: fontcraze 2s infinite;*/
 }
 
-div.banner {
-    position: fixed;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    padding: 1em;
-    font-size: 3rem;
-    text-align: left;
-    color: #33C3F0;
-    display: none;
-    z-index: 1;
+.banner {
+    color: red;
+    position: absolute;
+    margin-left: 1rem;
+    visibility: hidden;
+    margin-top: 0.5rem;
+}
+
+.show {
+  visibility: inherit;
 }
 
 .navbar {

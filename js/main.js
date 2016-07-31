@@ -148,7 +148,7 @@ $('.button-primary').on('click', submitRequest);
 function submitRequest (e) {
   e.preventDefault();
   $('.button-primary').attr('disabled','disabled');
-  showMessage('Submitting request...');
+  // showMessage('Submitting request...');
 
   $.ajax({
       url: servicesURL + '/requests',
@@ -167,7 +167,7 @@ function submitRequest (e) {
     showMessage(mapErrorCodesToMessages(response.responseJSON.errors));
 
   }).done(function() {
-    showMessage('   THANKS!   ');
+    showMessage('THANKS!');
     $("input:not(.button-primary)").val('');
 
   }).always(function() {
@@ -177,15 +177,17 @@ function submitRequest (e) {
   return false;
 }
 
+var timeout;
 function showMessage (message) {
-  $('.banner').show().find('.text').html(message);
-  setTimeout(function() {  $('.banner').hide(); }, 5000);
+  $('.banner').addClass('show').html(message);
+  clearTimeout(timeout);
+  timeout = window.setTimeout(function() {  $('.banner').removeClass('show'); }, 3500);
 }
 
 // message banner dismissal
 $(document).on('click', function (e) { 
   if ($('.banner').has(e.target).length === 0) {
-    $('.banner').hide();
+    $('.banner').removeClass('show');
   }
 });
 
@@ -351,7 +353,7 @@ function onKeyDown (e) {
       audioPlayer.currentTime += 15
       break;
     case 27: // esc key
-      $('.banner').hide();
+      $('.banner').removeClass('show');
       break;
   }
   return false;
