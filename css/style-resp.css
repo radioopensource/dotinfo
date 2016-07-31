@@ -210,7 +210,8 @@ li.now-playing {
 /* Newscast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 section.newscasts{
-  margin-top: 7.5rem;
+  /*margin-top: 7.5rem;*/
+  margin-top: 76px;
 }
 .news-ul {
   list-style-type: none;
