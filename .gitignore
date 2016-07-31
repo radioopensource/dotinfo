@@ -3,3 +3,4 @@ _site
 vendor/bundle
 .bundle
 .DS_Store
+pg

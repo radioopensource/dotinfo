@@ -111,7 +111,7 @@ audio::-webkit-media-controls-enclosure {
 div.banner {
     position: fixed;
     left: 50%;
-    top: 50%;
+    top: 30%;
     transform: translate(-50%, -50%);
     padding: 1em;
     font-size: 3rem;
