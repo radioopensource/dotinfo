@@ -117,13 +117,7 @@ var streams = [
     description: 'Seattle\'s alternative and indie rock station.',
     url: 'kexp.org',
     donateurl: 'https://www.kexp.org/donate',
-    streamurl: 'http://live-aacplus-64.kexp.org/kexp64.aac' },
-
-  { title: '88Nine Radio Milwaukee',
-    description: 'Where Milwaukee discovers new music.',
-    url: 'http://radiomilwaukee.org',
-    donateurl: 'http://radiomilwaukee.org/support-us/',
-    streamurl: 'http://radiomilwaukee.streamguys.net/live' },        
+    streamurl: 'http://live-aacplus-64.kexp.org/kexp64.aac' },     
 
   { title: 'RAO (Radio Africa Online)',
     description: 'Spinning African and Caribbean music online since 2002.',
