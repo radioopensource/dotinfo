@@ -120,7 +120,7 @@ var streams = [
     streamurl: 'http://live-aacplus-64.kexp.org/kexp64.aac' },
 
   { title: '88Nine Radio Milwaukee',
-    description: 'Where Milwaukee discovers new music',
+    description: 'Where Milwaukee discovers new music.',
     url: 'http://radiomilwaukee.org',
     donateurl: 'http://radiomilwaukee.org/support-us/',
     streamurl: 'http://radiomilwaukee.streamguys.net/live' },        
