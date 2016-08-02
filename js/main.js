@@ -260,7 +260,7 @@ $('li').each(function () {
 })
 
 function renderBalancedColumns(UIcolumns, media, renderFunction) {
-  var columnSize = Math.ceil(media.length / 3)
+  var columnSize = Math.floor(media.length / 3)
   for (var i = 0; i < 3; i++) {
     renderFunction(
       UIcolumns[i], 
