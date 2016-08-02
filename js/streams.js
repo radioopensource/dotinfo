@@ -102,7 +102,7 @@ var streams = [
     streamurl: 'http://live.str3am.com:2430/' },    
 
   { title: 'FIP',
-    description: 'Radio musicale eclectique',
+    description: 'Radio musicale eclectique.',
     url: 'http://www.fipradio.fr/',
     donateurl: 'https://donate.nprstations.org/kalw',
     streamurl: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3' },        
