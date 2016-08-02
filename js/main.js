@@ -264,7 +264,7 @@ function renderBalancedColumns(UIcolumns, media, renderFunction) {
   for (var i = 0; i < 3; i++) {
     renderFunction(
       UIcolumns[i], 
-      media.slice(i*columnSize, (i+1)*columnSize, media.length)
+      media.slice(i*columnSize, i == 2 ? media.length : (i+1)*columnSize)
     );
   }
 }
