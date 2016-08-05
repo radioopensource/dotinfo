@@ -12,7 +12,7 @@ var streams = [
     streamurl: 'http://berlincommunityradio.out.airtime.pro:8000/berlincommunityradio_a' },
 
   { title: 'WFMU',
-    description: 'New York\'s weirdest and best freeform station.',
+    description: 'New York\'s legendary freeform station.',
     url: 'https://wfmu.org/',
     donateurl: 'https://wfmu.org/marathon-2016/',
     streamurl: 'http://stream0.wfmu.org/freeform-128k' },
@@ -108,7 +108,7 @@ var streams = [
     streamurl: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3' },        
 
   { title: 'Sveriges Radio P2',
-    description: 'Classical and jazz from Sweden\'s second radio channel.',
+    description: 'Classical and jazz from Sweden.',
     url: 'https://sverigesradio.se/p2',
     donateurl: null,
     streamurl: 'https://http-live.sr.se/p2musik-mp3-192' },
@@ -119,7 +119,7 @@ var streams = [
     donateurl: 'https://www.kexp.org/donate',
     streamurl: 'http://live-aacplus-64.kexp.org/kexp64.aac' },     
 
-  { title: 'RAO (Radio Africa Online)',
+  { title: 'Radio Africa Online',
     description: 'Spinning African and Caribbean music online since 2002.',
     url: 'http://soukous.org/',
     donateurl: 'http://soukous.org/donate.htm',
