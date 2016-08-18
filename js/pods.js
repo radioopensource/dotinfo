@@ -1,0 +1,21 @@
+var podDescriptions = {
+   reveal: ""
+   nypl: ""
+   in-our-time: ""
+   open-source: ""
+   radiolab: ""
+   radiotonic: ""
+   factmag: ""
+   homebrave: ""
+   rumble: ""
+   ideas: ""
+   unfictional: ""
+   organist: ""
+   shortcuts: ""
+   seriously: ""
+   bodegaboys: ""
+   snapjudgement: ""
+   worldinwords: ""
+   chapos-traphouse: ""
+}
+ 

@@ -36,7 +36,7 @@ var streams = [
     streamurl: 'http://stream.weru.org/weru-high.mp3' },
 
   { title: 'WXYC',
-    description: 'Student radio from Chapel Hill, North Carolina.',
+    description: 'Student radio from Chapel Hill, NC.',
     url: 'http://www.wxyc.org/',
     donateurl: 'http://www.wxyc.org/merch',
     streamurl: 'http://audio-mp3.ibiblio.org:8000/wxyc.mp3' },
@@ -78,13 +78,13 @@ var streams = [
     streamurl: 'http://sc1.spacialnet.com:32660/;wnur.mp3' },
 
   { title: 'Wave Farm Radio',
-    description: 'Transmission art out of Hudson, New York.',
+    description: 'Transmission art out of Hudson, NY.',
     url: 'https://wavefarm.org/',
     donateurl: 'https://wavefarm.org/wgxc/donate',
     streamurl: 'http://comm.free103point9.org:8000/transmissionarts.mp3' },
 
   { title: 'WKCR',
-    description: 'The Original FM specializing in jazz, classical, and roots music.',
+    description: 'The "Original FM", NYC\'s traditional and art music station since 1941.',
     url: 'https://www.wkcr.org',
     donateurl: 'https://giving.columbia.edu/giveonline/?schoolstyle=411',
     streamurl: 'http://wkcr.streamguys1.com:80/live' },
@@ -117,7 +117,13 @@ var streams = [
     description: 'Seattle\'s alternative and indie rock station.',
     url: 'kexp.org',
     donateurl: 'https://www.kexp.org/donate',
-    streamurl: 'http://live-aacplus-64.kexp.org/kexp64.aac' },     
+    streamurl: 'http://live-aacplus-64.kexp.org/kexp64.aac' },
+
+  { title: 'Dublab',
+    description: 'LA\'s finest non-profit freeform station.',
+    url: 'http://dublab.com/',
+    donateurl: 'http://dublab.com/donate/',
+    streamurl: 'http://8653.live.streamtheworld.com/SAM04AAC221_SC' },
 
   { title: 'Radio Africa Online',
     description: 'Spinning African and Caribbean music online since 2002.',
