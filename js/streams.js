@@ -123,7 +123,7 @@ var streams = [
     description: 'LA\'s finest non-profit freeform station.',
     url: 'http://dublab.com/',
     donateurl: 'http://dublab.com/donate/',
-    streamurl: 'http://8653.live.streamtheworld.com/SAM04AAC221_SC' },
+    streamurl: 'http://6713.live.streamtheworld.com/SAM04AAC221_SC' },
 
   { title: 'Radio Africa Online',
     description: 'Spinning African and Caribbean music online since 2002.',
