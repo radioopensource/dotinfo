@@ -93,9 +93,10 @@ function addPodcastHtmlToNode(node, data) {
     var html = 
     '<li data-url="' + el.url +'">' +
       '<h5 class="station-title">' + el.showTitle + '</h5>' +
-      '<div class="description">' + el.episodeTitle + ' ' +
-        '<span class="last-update">(' + formatDateTime(el.pubDate, false) + ')</span>' + 
+      '<div class="description">' + el.showDescription + ' ' +
+        
       '</div>' +
+      '<div class="last-update">' + el.episodeTitle + ' (' + formatDateTime(el.pubDate, false) + ')</div>' + 
       '<div class="internet-links">' +      
           '<a href=' + el.showUrl + ' target="_blank">Website</a>  | ' + 
           '<a href=' + el.rssUrl + ' target="_blank">RSS</a>' +
@@ -106,6 +107,7 @@ function addPodcastHtmlToNode(node, data) {
   $(node).html(totalHtml);
 }
 
+_this = this;
 $.ajax({
   url: servicesURL + '/podcasts',
   type: 'GET',
@@ -113,7 +115,9 @@ $.ajax({
   success: function (data) {
     var podcasts = [];
     Object.keys(data.podcasts).forEach(function (key) { 
-      podcasts.push(data.podcasts[key]);
+      podcast = data.podcasts[key];
+      podcast['showDescription'] = _this.podDescriptions[key] !== undefined ? _this.podDescriptions[key] : "A good podcast.";
+      podcasts.push(podcast);
     });
     var podcastColumns = $('.podcast-list');
     var sortedPodcasts = podcasts.sort(function(a, b) { 

@@ -131,4 +131,4 @@ var streams = [
     donateurl: 'http://soukous.org/donate.htm',
     streamurl: 'http://nyc04.egihosting.com:4658/;'
   }
-]
+];
