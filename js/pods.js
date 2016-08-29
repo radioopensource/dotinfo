@@ -13,9 +13,9 @@ var podDescriptions = {
    "organist": "Experimental stories from The Believer and KCRW.",
    "shortcuts": "Small themed stories from BBC Radio 4.",
    "seriously": "Quirky documentaries from BBC Radio 4.",
-   "bodegaboys": "Hilarious takes on pop culture from Red Bull Studios.",
-   "snapjudgement": "Beat-backed stories from WNYC.",
+   "bodegaboys": "Funny takes on pop culture from Red Bull Studios.",
+   "snapjudgement": "Stories with a beat from WNYC.",
    "worldinwords": "Explorations of language from WGBH.",
    "chapos-traphouse": "Irreverent left-wing comedy.",
-   "desert-island-discs" : "Guests choose records they would take to a desert island."
+   "desert-island-discs" : "Interviews about music for all time from BBC Radio 4."
 };
