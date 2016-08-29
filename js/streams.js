@@ -1,6 +1,6 @@
 var streams = [ 
   { title: 'WMBR',
-    description: 'Music and public affairs out of MIT in Cambridge.',
+    description: 'Music and public affairs out of MIT.',
     url: 'http://wmbr.org/',
     donateurl: 'https://wmbr.org/fundraising.php',
     streamurl: 'http://headphones.mit.edu:8000/hi' },
@@ -30,7 +30,7 @@ var streams = [
     streamurl: 'http://54.77.136.103:8000/resonance' },
 
   { title: 'WERU',
-    description: 'Midcoast Maine\'s voice of many voices.',
+    description: 'Small community station serving Midcoast Maine.',
     url: 'https://weru.org/',
     donateurl: 'https://weru.org/donate',
     streamurl: 'http://stream.weru.org/weru-high.mp3' },
@@ -60,7 +60,7 @@ var streams = [
     streamurl: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_6music_mf_p' },
 
   { title: 'Terry Radio',
-    description: 'Electronic and experimental sounds.',
+    description: 'Electronic sounds on the web.',
     url: 'http://www.terryradio.biz/',
     donateurl: null,
     streamurl: 'http://terryradio.dtdns.net:8000/terry1' },
@@ -84,13 +84,13 @@ var streams = [
     streamurl: 'http://comm.free103point9.org:8000/transmissionarts.mp3' },
 
   { title: 'WKCR',
-    description: 'The "Original FM", NYC\'s traditional and art music station since 1941.',
+    description: 'NYC\'s traditional and art music station.',
     url: 'https://www.wkcr.org',
     donateurl: 'https://giving.columbia.edu/giveonline/?schoolstyle=411',
     streamurl: 'http://wkcr.streamguys1.com:80/live' },
 
   { title: 'Bondfire Radio',
-    description: 'Brooklyn\'s real radio for real people.',
+    description: 'Brooklyn hip-hop and more.',
     url: 'http://bondfireradio.com/',
     donateurl: 'https://www.patreon.com/bondfireradio',
     streamurl: 'https://streaming.radio.co/sd2fdc24b0/listen' },
@@ -104,7 +104,7 @@ var streams = [
   { title: 'FIP',
     description: 'Radio musicale eclectique.',
     url: 'http://www.fipradio.fr/',
-    donateurl: 'https://donate.nprstations.org/kalw',
+    donateurl: null,
     streamurl: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3' },        
 
   { title: 'Sveriges Radio P2',
@@ -114,19 +114,19 @@ var streams = [
     streamurl: 'https://http-live.sr.se/p2musik-mp3-192' },
 
   { title: 'KEXP',
-    description: 'Seattle\'s alternative and indie rock station.',
+    description: 'Seattle\'s alternative rock station.',
     url: 'kexp.org',
     donateurl: 'https://www.kexp.org/donate',
     streamurl: 'http://live-aacplus-64.kexp.org/kexp64.aac' },
 
   { title: 'Dublab',
-    description: 'LA\'s finest non-profit freeform station.',
+    description: 'Arty non-profit music station in LA.',
     url: 'http://dublab.com/',
     donateurl: 'http://dublab.com/donate/',
     streamurl: 'http://www.dublab.com/streams/dubstream' },
 
   { title: 'Radio Africa Online',
-    description: 'Spinning African and Caribbean music online since 2002.',
+    description: 'African and Caribbean music.',
     url: 'http://soukous.org/',
     donateurl: 'http://soukous.org/donate.htm',
     streamurl: 'http://nyc04.egihosting.com:4658/;'
