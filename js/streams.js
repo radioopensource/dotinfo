@@ -150,7 +150,7 @@ var streams = [
   },
 
   { title: "Red Light Radio",
-    description: "DJ sets live from Amsterdam",
+    description: "DJ sets live from Amsterdam.",
     url: "http://redlightradio.net/",
     donateurl: null,
     streamurl: "http://www.michielgardner.nl:8000/redlightradio"
