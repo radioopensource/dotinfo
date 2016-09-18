@@ -17,5 +17,6 @@ var podDescriptions = {
    "snapjudgement": "Stories with a beat from WNYC.",
    "worldinwords": "Explorations of language from WGBH.",
    "chapos-traphouse": "Irreverent left-wing comedy.",
-   "desert-island-discs" : "Interviews about music for all time from BBC Radio 4."
+   "desert-island-discs" : "Interviews about music for all time from BBC Radio 4.",
+   "guardian": "The Guardian’s Long Read articles in audio form."
 };

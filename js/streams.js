@@ -69,66 +69,90 @@ var streams = [
     description: 'Folk and more out of UMass Boston.',
     url: 'http://www.wumb.org/home/index.php',
     donateurl: 'http://www.wumb.org/members/donate/',
-    streamurl: 'http://wumb.streamguys1.com/wumb919fast' },
+    streamurl: 'http://wumb.streamguys1.com/wumb919fast' 
+  },
 
   { title: 'WNUR',
     description: 'Chicago\'s sound experiment.',
     url: 'https://www.wnur.org/',
     donateurl: 'http://wewill.northwestern.edu/supportwnur',
-    streamurl: 'http://sc1.spacialnet.com:32660/;wnur.mp3' },
+    streamurl: 'http://sc1.spacialnet.com:32660/;wnur.mp3' 
+  },
 
   { title: 'Wave Farm Radio',
     description: 'Transmission art out of Hudson, NY.',
     url: 'https://wavefarm.org/',
     donateurl: 'https://wavefarm.org/wgxc/donate',
-    streamurl: 'http://comm.free103point9.org:8000/transmissionarts.mp3' },
+    streamurl: 'http://comm.free103point9.org:8000/transmissionarts.mp3' 
+  },
 
   { title: 'WKCR',
     description: 'NYC\'s traditional and art music station.',
     url: 'https://www.wkcr.org',
     donateurl: 'https://giving.columbia.edu/giveonline/?schoolstyle=411',
-    streamurl: 'http://wkcr.streamguys1.com:80/live' },
+    streamurl: 'http://wkcr.streamguys1.com:80/live' 
+  },
 
   { title: 'Bondfire Radio',
     description: 'Brooklyn hip-hop and more.',
     url: 'http://bondfireradio.com/',
     donateurl: 'https://www.patreon.com/bondfireradio',
-    streamurl: 'https://streaming.radio.co/sd2fdc24b0/listen' },
+    streamurl: 'https://streaming.radio.co/sd2fdc24b0/listen' 
+  },
 
   { title: 'KALW',
     description: 'San Francisco\'s local public radio.',
     url: 'http://kalw.org/',
     donateurl: 'https://donate.nprstations.org/kalw',
-    streamurl: 'http://live.str3am.com:2430/' },    
+    streamurl: 'http://live.str3am.com:2430/' 
+  },    
 
   { title: 'FIP',
     description: 'Radio musicale eclectique.',
     url: 'http://www.fipradio.fr/',
     donateurl: null,
-    streamurl: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3' },        
+    streamurl: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3' 
+  },        
 
   { title: 'Sveriges Radio P2',
     description: 'Classical and jazz from Sweden.',
     url: 'https://sverigesradio.se/p2',
     donateurl: null,
-    streamurl: 'https://http-live.sr.se/p2musik-mp3-192' },
+    streamurl: 'https://http-live.sr.se/p2musik-mp3-192' 
+  },
 
   { title: 'KEXP',
     description: 'Seattle\'s alternative rock station.',
     url: 'kexp.org',
     donateurl: 'https://www.kexp.org/donate',
-    streamurl: 'http://live-aacplus-64.kexp.org/kexp64.aac' },
+    streamurl: 'http://live-aacplus-64.kexp.org/kexp64.aac' 
+  },
 
   { title: 'Dublab',
     description: 'Arty non-profit music station in LA.',
     url: 'http://dublab.com/',
     donateurl: 'http://dublab.com/donate/',
-    streamurl: 'http://www.dublab.com/streams/dubstream' },
+    streamurl: 'http://www.dublab.com/streams/dubstream' 
+  },
 
   { title: 'Radio Africa Online',
     description: 'African and Caribbean music.',
     url: 'http://soukous.org/',
     donateurl: 'http://soukous.org/donate.htm',
-    streamurl: 'http://nyc04.egihosting.com:4658/;'
+    streamurl: 'http://nyc04.egihosting.com:4658/;'    
+  },
+
+  { title: 'Worldwide FM',
+    description: 'International music from Gilles Peterson and fellow London DJs.',
+    url: 'http://worldwidefm.net/',
+    donateurl: null,
+    streamurl: 'http://worldwidefm.out.airtime.pro:8000/worldwidefm_a'
+  },
+
+  { title: "Red Light Radio",
+    description: "DJ sets live from Amsterdam",
+    url: "http://redlightradio.net/",
+    donateurl: null,
+    streamurl: "http://www.michielgardner.nl:8000/redlightradio"
   }
 ];
