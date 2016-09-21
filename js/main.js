@@ -5,7 +5,9 @@ var
   audioPlayer = $('audio')[0],
   audioSource = $('audio').find('source');
 
-// NEWSCASTS
+/*
+  NEWSCASTS
+*/
 var newsModule = $('section.newscasts');
 
 // load BBC Headlines as default audio
@@ -13,7 +15,7 @@ loadAudio(newsModule.find('.bbc-headlines').data('url'));
 
 // set BBC Headlines last update time
 newsModule.find('.bbc-headlines .last-update-time').text(formatDateTime(getBBCHeadlinesLastUpdate()), true);
-newsModule.find('.bbc-headlines').removeClass('spin');
+newsModule.find('.bbc-headlines').removeClass('disabled');
 
 function getBBCHeadlinesLastUpdate () {
   var 
@@ -42,17 +44,16 @@ function refreshNewsFor (news) {
     var newsTypeSection = newsModule.find('li.' + newsType);
     newsTypeSection[0].setAttribute('data-url', news[newsType].url);
     newsTypeSection.find('.last-update-time').text(formatDateTime(news[newsType].pubDate, true));
-    newsTypeSection.removeClass('spin');
+    newsTypeSection.removeClass('disabled');
   })
 }
 
-$('.news-ul li').on('click', function (e) { 
-  if (e.target.tagName !== 'A') {
-    playAudioHandler(e);
-  }
-});
+addEventHandlers(document.querySelectorAll('.news-ul li'));
 
-// INTERNET RADIO
+/*
+  INTERNET RADIO
+*/
+
 function addHtmlToNode(node, data) {
   var totalHtml = '';
   data.forEach(function (el) { 
@@ -79,19 +80,17 @@ var sortedStreams = streams.sort(function(a, b) {
 
 renderBalancedColumns(internetRadioColumns, sortedStreams, addHtmlToNode);
 
-$('.internet-ul li').on('click', function (e) { 
-  if (e.target.tagName !== 'A') {
-    playAudioHandler(e);
-  }
-});
+addEventHandlers(document.querySelectorAll('.internet-ul li'));
 
-// PODCASTS
+/*
+  PODCASTS
+*/
 
 function addPodcastHtmlToNode(node, data) {
   var totalHtml = '';
   data.forEach(function (el) { 
     var html = 
-    '<li data-url="' + el.url +'">' +
+    '<li data-url="' + el.url + '" class="' + (el.url === null ? 'disabled' : '') + '"">' +
       '<h5 class="station-title">' + el.showTitle + '</h5>' +
       '<div class="description">' + el.showDescription + ' ' +
         
@@ -119,6 +118,7 @@ $.ajax({
       podcast['showDescription'] = _this.podDescriptions[key] !== undefined ? _this.podDescriptions[key] : "A good podcast.";
       podcasts.push(podcast);
     });
+
     var podcastColumns = $('.podcast-list');
     var sortedPodcasts = podcasts.sort(function(a, b) { 
       var date1 = new Date(a.pubDate);
@@ -130,29 +130,19 @@ $.ajax({
   
     renderBalancedColumns(podcastColumns, sortedPodcasts, addPodcastHtmlToNode);
 
-    $('.podcast-list li').on('click', function (e) { 
-      if (e.target.tagName !== 'A') {
-        playAudioHandler(e);
-      }
-    });
+    addEventHandlers(document.querySelectorAll('.podcast-list li'));
   }
 });
 
-window.onload = function () {
-  var podToAutoplay = parseInt(window.location.search.replace('?pod=', ''));
-  if (!Number.isNaN(podToAutoplay)) {
-    playAudio($('.listen').get(podToAutoplay).href)
-  }
-};
-
-// REQUESTS
+/* 
+  REQUESTS
+*/
 
 $('.button-primary').on('click', submitRequest);
 
 function submitRequest (e) {
   e.preventDefault();
   $('.button-primary').attr('disabled','disabled');
-  // showMessage('Submitting request...');
 
   $.ajax({
       url: servicesURL + '/requests',
@@ -215,7 +205,9 @@ function mapErrorCodesToMessages (codes) {
   return messages.reduce(function(a, b) { return a + '</br>' + b; });
 }
 
-// ABOUT
+/*
+  ABOUT
+*/
 
 function getVisitorCount () {
   if (areCookiesEnabled()) {
@@ -245,24 +237,9 @@ function areCookiesEnabled () {
 getVisitorCount();
 setInterval(getVisitorCount, 60000); // 1 minute
 
-// GENERAL
-
 /*
-  Adds hover styling. 
-  We need to do this via JS in order to bypass styling on touch devices
-*/
-$('li').each(function () {
-
-  $(this).on('touchstart mouseenter', function (e) {    
-    $('li').removeClass('hover');
-    e.currentTarget.classList.add('hover');
-  });
-
-  $(this).on('mouseleave touchmove click taphold', function (e) {
-    e.currentTarget.classList.remove('hover');
-  });
-})
-
+ Event handlers and utility functions
+ */
 function renderBalancedColumns(UIcolumns, media, renderFunction) {
   var columnSize = Math.round(media.length / 3)
   for (var i = 0; i < 3; i++) {
@@ -273,20 +250,43 @@ function renderBalancedColumns(UIcolumns, media, renderFunction) {
   }
 }
 
-// "loading" messaging
-setInterval(function() { $('.loading .text').toggleClass('black') }, 400); // 0.5 second     
-audioPlayer.oncanplay = function () {
-  $('.loading').hide();
+function addEventHandlers(elements) {
+  elements.forEach(function (el) {
+    $el = $(el);
+    addHoverStyling($el);
+    addPlayAudioHandler($el);
+  });
 }
 
-// adds styling for currently playing audio
+function addPlayAudioHandler($el) {
+  $el.on('click', function (e) { 
+    if (e.target.tagName !== 'A') { // because of the child 'A' tags
+      playAudioHandler(e);
+    }
+  });
+}
+
+// Adds hover styling. 
+// We need to do this via JS in order to bypass styling on touch devices
+function addHoverStyling($el) {
+    $el.on('touchstart mouseenter', function (e) {    
+      $('li').removeClass('hover');
+      e.currentTarget.classList.add('hover');
+    });
+
+    $el.on('mouseleave touchmove click taphold', function (e) {
+      e.currentTarget.classList.remove('hover');
+    });
+}
+
+// Adds styling for currently playing audio (when audio player clicked)
 audioPlayer.onplay = function () {
   $('li').removeClass('now-playing');
   var url = $(audioPlayer).find('source').attr('src');
   $('li[data-url="' + url + '"]').addClass('now-playing');
 }
 
-// removes styling for currently playing audio
+// Removes styling for currently playing audio (when audio player clicked)
 audioPlayer.onpause = function () {
   $('li').removeClass('now-playing');
 }
@@ -294,7 +294,7 @@ audioPlayer.onpause = function () {
 function playAudioHandler (e) {
   e.preventDefault();
 
-  if ($(e.target).parent().hasClass('spin')) {
+  if ($(e.target).parent().hasClass('disabled')) {
     return;
   }
 

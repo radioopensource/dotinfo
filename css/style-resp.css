@@ -149,20 +149,20 @@ div.subnav a{
 .globe-sm {
   max-width: 39px;
 }
-.spin {
+.disabled {
   opacity: 0.2;
   pointer-events: none;
 }
-.spin .last-update-time {
+.disabled .last-update-time {
     position: absolute;
     -webkit-animation:spin 2s linear infinite;
     -moz-animation:spin 2s linear infinite;
     animation:spin 2s linear infinite;
 }
 
-@-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@-moz-keyframes disabled { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes disabled { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes disabled { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 ul {
   margin-bottom: 0;
