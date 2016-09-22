@@ -251,11 +251,11 @@ function renderBalancedColumns(UIcolumns, media, renderFunction) {
 }
 
 function addEventHandlers(elements) {
-  elements.forEach(function (el) {
-    $el = $(el);
+  for (var i = elements.length - 1; i >= 0; i--) {
+    $el = $(elements[i]);
     addHoverStyling($el);
     addPlayAudioHandler($el);
-  });
+  }
 }
 
 function addPlayAudioHandler($el) {
