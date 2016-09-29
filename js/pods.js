@@ -18,5 +18,5 @@ var podDescriptions = {
    "worldinwords": "Explorations of language from WGBH.",
    "chapos-traphouse": "Irreverent left-wing comedy.",
    "desert-island-discs" : "Interviews about music for all time from BBC Radio 4.",
-   "guardian": "The Guardian’s Long Read articles in audio form."
+   "guardian": "Longform articles from The Guardian."
 };
