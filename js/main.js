@@ -1,7 +1,7 @@
 // GLOBAL VARS
 var 
-  // servicesURL = 'http://www.publicradioservices.info',
-  servicesURL = 'http://localhost:3000',
+  servicesURL = 'http://www.publicradioservices.info',
+  // servicesURL = 'http://localhost:3000',
   audioPlayer = $('audio')[0],
   audioSource = $('audio').find('source');
 
