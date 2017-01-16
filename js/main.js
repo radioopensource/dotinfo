@@ -1,7 +1,7 @@
 // GLOBAL VARS
 var 
-  servicesURL = 'http://www.publicradioservices.info',
-  // servicesURL = 'http://localhost:3000',
+  // servicesURL = 'http://www.publicradioservices.info',
+  servicesURL = 'http://localhost:3000',
   audioPlayer = $('audio')[0],
   audioSource = $('audio').find('source');
 
@@ -59,12 +59,22 @@ function addHtmlToNode(node, data) {
   data.forEach(function (el) { 
     var html = 
     '<li data-url="' + el.streamurl +'">' +
-      '<h5 class="station-title">' + el.title + '</h5>' +
-      '<div class="description">' + el.description + '</div>' +
-      '<div class="internet-links">' +      
-          '<a href=' + el.url + ' target="_blank">Website</a>' + 
-          (el.donateurl !== null ? ' | <a href=' + el.donateurl + ' target="_blank">Donate</a>' : '') +
+      '<div class="error-message">' +
+        '<div>' +
+          'RADIO UNAVAILABLE' +
+        '</div>' +  
+        '<div>' +
+          'Some streams are not working in Chrome' +
+        '</div>' +
       '</div>' +
+      '<div class="content">' +
+        '<h5 class="station-title">' + el.title + '</h5>' +
+        '<div class="description">' + el.description + '</div>' +
+        '<div class="internet-links">' +      
+            '<a href=' + el.url + ' target="_blank">Website</a>' + 
+            (el.donateurl !== null ? ' | <a href=' + el.donateurl + ' target="_blank">Donate</a>' : '') +
+        '</div>' +
+      '</div>'
     '</li>';
     totalHtml += html;
   });
@@ -127,8 +137,14 @@ $.ajax({
       if (date1 > date2) return -1; 
       return 0;
     });
+
+    var twoMonthsAgo = new Date();
+    twoMonthsAgo.setMonth(twoMonthsAgo.getMonth()-2);
+    filteredPodcasts = sortedPodcasts.filter(function(el) {
+      return new Date(el.pubDate) >= twoMonthsAgo;
+    });
   
-    renderBalancedColumns(podcastColumns, sortedPodcasts, addPodcastHtmlToNode);
+    renderBalancedColumns(podcastColumns, filteredPodcasts, addPodcastHtmlToNode);
 
     addEventHandlers(document.querySelectorAll('.podcast-list li'));
   }
@@ -385,4 +401,13 @@ function formatDateTime (rawDateTimeString, includeTimeFlag) {
     " " + dateTimeTokens[6].replace(/[{()}]/g, '');
 
   return formattedDateTime;
-};  
+}; 
+
+// Adds error messages superimposed above media
+
+document.getElementsByTagName('source')[0].addEventListener('error', function (e) { 
+  erroringUrl = e.currentTarget.src;
+  erroringPanel = $('li[data-url="'+ erroringUrl + '"]');
+  erroringPanel.find('.error-message').show();
+  erroringPanel.find('.content').addClass('disabled');
+}); 

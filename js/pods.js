@@ -18,5 +18,10 @@ var podDescriptions = {
    "worldinwords": "Explorations of language from WGBH.",
    "chapos-traphouse": "Irreverent left-wing comedy.",
    "desert-island-discs" : "Interviews about music for all time from BBC Radio 4.",
-   "guardian": "Longform articles from The Guardian."
+   "guardian": "Longform articles from The Guardian.",
+   "grey-wolf-feed": "Delicious bonus content from Crapo Fash House.",
+   "ben-dixon-show": "Progressive political analysis.",
+   "eternal-now": "WFMU DJ Andy Ortmann explores obscure music.",
+   "london-review": "Readings and discussions from the LRB.",
+   "honky-tonk": "Twangs of all stripes. From WFMU."
 };
