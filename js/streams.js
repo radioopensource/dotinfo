@@ -63,7 +63,7 @@ streamurl: 'http://terryradio.dtdns.net:8000/terry1' },
 description: 'Transmission art out of Hudson, NY.',
 url: 'https://wavefarm.org/',
 donateurl: 'https://wavefarm.org/wgxc/donate',
-streamurl: 'http://comm.free103point9.org:8000/transmissionarts.mp3' 
+streamurl: 'http://audio.wavefarm.org:8000/wgxc.mp3'
 },
 
 { title: 'WKCR',

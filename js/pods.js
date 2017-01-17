@@ -23,5 +23,8 @@ var podDescriptions = {
    "ben-dixon-show": "Progressive political analysis.",
    "eternal-now": "WFMU DJ Andy Ortmann explores obscure music.",
    "london-review": "Readings and discussions from the LRB.",
-   "honky-tonk": "Twangs of all stripes. From WFMU."
+   "honky-tonk": "Twangs of all stripes. From WFMU.",
+   "resident-advisor": "Music mixes from top producers.",
+   "mouth-time": "Satirical women's lifestyle podcast from Reductress.",
+   "call-chelsea-peretti": "Bizarre call-in comedy show."
 };
