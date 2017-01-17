@@ -153,12 +153,6 @@ streamurl: "http://wamu.org/streams/live/1/live.m3u",
 websiteurl: "http://wamu.org/",
 url: "http://wamu.org/support/donate/"},
 
-{title: "WAMU",
-description: "NPR in Washington, D.C.",
-streamurl: "http://wamu.org/streams/live/1/live.m3u",
-websiteurl: "http://wamu.org/",
-url: "http://wamu.org/support/donate/"},
-
 {title: "Lumpen Radio",
 description: "Art radio in Chicago.",
 streamurl: "http://50.7.99.155:7416/;",
