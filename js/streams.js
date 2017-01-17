@@ -91,7 +91,7 @@ streamurl: 'http://live.str3am.com:2430/'
 description: 'Radio musicale eclectique.',
 url: 'http://www.fipradio.fr/',
 donateurl: null,
-streamurl: 'http://audio.scdn.arkena.com/11016/fip-midfi128.mp3' 
+streamurl: 'http://chai5she.lb.vip.cdn.dvmr.fr/fip-midfi.mp3'
 },        
 
 { title: 'Sveriges Radio P2',
