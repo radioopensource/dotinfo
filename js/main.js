@@ -64,7 +64,7 @@ function addHtmlToNode(node, data) {
           'RADIO UNAVAILABLE' +
         '</div>' +  
         '<div>' +
-          'Some streams are not working in Chrome' +
+          'Try a different browser' +
         '</div>' +
       '</div>' +
       '<div class="content">' +
