@@ -61,7 +61,7 @@ function addHtmlToNode(node, data) {
     '<li data-url="' + el.streamurl +'">' +
       '<div class="error-message">' +
         '<div>' +
-          'RADIO UNAVAILABLE' +
+          'Stream NOT WORKING in Chrome' +
         '</div>' +  
         '<div>' +
           'Try a different browser' +
