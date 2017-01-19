@@ -1,4 +1,5 @@
-var streams = [ 
+var streams = [
+
 { title: 'WMBR',
 description: 'Music and public affairs out of MIT.',
 url: 'http://wmbr.org/',
@@ -138,26 +139,38 @@ streamurl: "http://www.michielgardner.nl:8000/redlightradio"
 
 {title: "KPFA",
 description: "Berkeley's listener-supported Pacifica radio.",
-streamurl: "http://stations.pacifica.org:8000/kpfa_64",
+url: "https://kpfa.org/",
 donateurl: "https://secure.kpfa.org/support/",
-url: "https://kpfa.org/"},
+streamurl: "http://stations.pacifica.org:8000/kpfa_64"
+},
 
 {title: "Scratch Radio",
 description: "Vancouver-based station spinning dub and reggae.",
-streamurl: "http://173.192.198.244:8042/;",
-url: "http://www.scratchradio.ca/"},
+url: "http://www.scratchradio.ca/",
+donateurl: "https://www.paypal.com/ca/cgi-bin/webscr?cmd=_flow&SESSION=uPw186XZBl4ZjFz9gOFIK9LUUtrXmfGDM3D4kH-HR1GPrDZT6E_6d1u7tCq&dispatch=5885d80a13c0db1f8e263663d3faee8d333dc9aadeed3fe0b5b299d55fd35542",
+streamurl: "http://173.192.198.244:8042/;"
+},
 
 {title: "WAMU",
 description: "NPR in Washington, D.C.",
-streamurl: "http://wamu.org/streams/live/1/live.m3u",
-websiteurl: "http://wamu.org/",
-url: "http://wamu.org/support/donate/"},
+url: "http://wamu.org/",
+donateurl: "http://wamu.org/support/donate/",
+streamurl: "http://wamu.org/streams/live/1/live.m3u"
+},
 
 {title: "Lumpen Radio",
 description: "Art radio in Chicago.",
-streamurl: "http://50.7.99.155:7416/;",
-websiteurl: "http://www.lumpenradio.com/",
-url: "www.lumpenradio.com/donate.html"
+url: "http://www.lumpenradio.com/",
+donateurl: "www.lumpenradio.com/donate.html",
+streamurl: "http://50.7.99.155:7416/;"
+},
+
+{
+title: "C-SPAN",
+description: "",
+url: "https://www.c-span.org",
+donateurl: null,
+streamurl: "https://18893.live.streamtheworld.com/CSPANRADIO.mp3"
 }
 
 ];

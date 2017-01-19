@@ -27,5 +27,10 @@ var podDescriptions = {
    "resident-advisor": "Music mixes from top producers.",
    "mouth-time": "Satirical women's lifestyle podcast from Reductress.",
    "call-chelsea-peretti": "Bizarre call-in comedy show.",
-   "pro-publica": "Podcast from the finest in public interest journalism."
+   "pro-publica": "Non-profit investigative journalism.",
+   "intercept": "Jeremy Scahill discusses current affairs with fellow journalists.",
+   "between-the-ears": "BBC Radio 3's long-running experimental sound program.",
+   "the-essay": "Public intellectuals give insight into the arts.",
+   "fishko-files": "Features from WNYC culture reporter Sara Fishko.",
+   "bird-note": "Your regular dose of avian soundscapes."
 };
