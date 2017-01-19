@@ -26,5 +26,6 @@ var podDescriptions = {
    "honky-tonk": "Twangs of all stripes. From WFMU.",
    "resident-advisor": "Music mixes from top producers.",
    "mouth-time": "Satirical women's lifestyle podcast from Reductress.",
-   "call-chelsea-peretti": "Bizarre call-in comedy show."
+   "call-chelsea-peretti": "Bizarre call-in comedy show.",
+   "pro-publica": "Podcast from the finest in public interest journalism."
 };
