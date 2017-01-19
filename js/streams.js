@@ -167,7 +167,7 @@ streamurl: "http://50.7.99.155:7416/;"
 
 {
 title: "C-SPAN",
-description: "",
+description: "This is what Democracy sounds like.",
 url: "https://www.c-span.org",
 donateurl: null,
 streamurl: "https://18893.live.streamtheworld.com/CSPANRADIO.mp3"
