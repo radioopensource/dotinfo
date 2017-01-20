@@ -155,7 +155,7 @@ streamurl: "http://173.192.198.244:8042/;"
 description: "NPR in Washington, D.C.",
 url: "http://wamu.org/",
 donateurl: "http://wamu.org/support/donate/",
-streamurl: "http://wamu.org/streams/live/1/live.m3u"
+streamurl: "http://wamu-1.streamguys.com/"
 },
 
 {title: "Lumpen Radio",
