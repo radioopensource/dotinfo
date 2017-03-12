@@ -120,7 +120,7 @@ streamurl: 'http://www.dublab.com/streams/dubstream'
 description: 'African and Caribbean music.',
 url: 'http://soukous.org/',
 donateurl: 'http://soukous.org/donate.htm',
-streamurl: 'http://nyc04.egihosting.com:4658/;'    
+streamurl: 'http://136.0.17.26:8000/;?type=http&nocache=273'
 },
 
 { title: 'Worldwide FM',
