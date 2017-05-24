@@ -6,48 +6,12 @@ URI: http://www.publicradio.info
 Tags: publicradio.info, public radio, podcast, news, responsive, website, internet radio
 */
 
-/* Typography
+/* Meta
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-@font-face {
-font-family: "ZXX";
-font-weight: 200;
-src: url("../fonts/ZXX-False.otf") format("opentype");
-}
-
-@font-face {
-font-family: "ZXX";
-font-weight: 300;
-src: url("../fonts/ZXX-Noise.otf") format("opentype");
-}
-
-@font-face {
-font-family: "ZXX";
-font-weight: 400;
-src: url("../fonts/ZXX-Sans.otf") format("opentype");
-}
-
-@font-face {
-font-family: "ZXX";
-font-weight: 500;
-src: url("../fonts/ZXX-Camo.otf") format("opentype");
-}
-
-@font-face {
-font-family: "ZXX";
-font-weight: 600;
-src: url("../fonts/ZXX-Xed.otf") format("opentype");
-}
-
-@font-face {
-font-family: "ZXX";
-font-weight: 700;
-src: url("../fonts/ZXX-Bold.otf") format("opentype");
-}
 
 html {
   color: #424242;
-  background-color: #FFF;
+  background-color: springgreen;
 }
 
 body {
@@ -125,7 +89,7 @@ audio::-webkit-media-controls-enclosure {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #fff;
+  background-color: springgreen;
   z-index: 2;
   padding-top: 1.5rem;
   -webkit-transform: translateZ(0);
@@ -139,6 +103,7 @@ div.navbar nav {
 div.subnav a{
   line-height: 48.6;
 }
+
 /* All Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
@@ -265,6 +230,10 @@ section.newscasts{
   text-decoration: underline;
   -webkit-text-decoration-color: orange;
   text-decoration-color: orange;
+}
+
+input[type=text] {
+    background-color: lightgrey;
 }
 
 /* About
