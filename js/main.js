@@ -54,6 +54,17 @@ addEventHandlers(document.querySelectorAll('.news-ul li'));
   INTERNET RADIO
 */
 
+function titleComparator(a, b) {
+    var articles = ['a', 'an', 'the'],
+        re = new RegExp('^(?:(' + articles.join('|') + ') )(.*)$'), // e.g. /^(?:(foo|bar) )(.*)$/
+        replacer = function ($0, $1, $2) {
+            return $2 + ', ' + $1;
+        };
+    a = a['title'].toLowerCase().replace(re, replacer);
+    b = b['title'].toLowerCase().replace(re, replacer);
+    return a === b ? 0 : a < b ? -1 : 1;
+}
+
 function addHtmlToNode(node, data) {
   var totalHtml = '';
   data.forEach(function (el) { 
@@ -82,11 +93,7 @@ function addHtmlToNode(node, data) {
 }
 
 var internetRadioColumns = $('.internet-ul');
-var sortedStreams = streams.sort(function(a, b) { 
-  if (a.title <  b.title) return -1;
-  if (a.title > b.title) return 1; 
-  return 0;
-});
+var sortedStreams = streams.sort(titleComparator);
 
 renderBalancedColumns(internetRadioColumns, sortedStreams, addHtmlToNode);
 
