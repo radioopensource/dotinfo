@@ -171,6 +171,14 @@ description: "This is what Democracy sounds like.",
 url: "https://www.c-span.org",
 donateurl: null,
 streamurl: "https://18893.live.streamtheworld.com/CSPANRADIO.mp3"
+},
+
+{
+title: "The Lot Radio",
+description: "Spinning live 24/7 from a shipping container on an empty lot in NYC.",
+url: "www.thelotradio.com",
+donateurl: "https://www.paypal.com/donate/?token=v2aXOJj9G5mMGWA1P2coSWtfJFoExgDj_1ZnZVe1FoB7jUg1zmnjeaFJJIaFzV6gRKjWr0",
+streamurl: "http://thelot.out.airtime.pro:8000/thelot_b"
 }
 
 ];
