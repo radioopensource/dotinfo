@@ -132,8 +132,10 @@ $.ajax({
     var podcasts = [];
     Object.keys(data.podcasts).forEach(function (key) { 
       podcast = data.podcasts[key];
-      podcast['showDescription'] = _this.podDescriptions[key] !== undefined ? _this.podDescriptions[key] : "A good podcast.";
-      podcasts.push(podcast);
+      if (podcast !== null) {
+        podcast['showDescription'] = _this.podDescriptions[key] !== undefined ? _this.podDescriptions[key] : "A good podcast.";
+        podcasts.push(podcast);
+      }
     });
 
     var podcastColumns = $('.podcast-list');
