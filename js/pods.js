@@ -33,5 +33,6 @@ var podDescriptions = {
    "the-essay": "Public intellectuals give insight into the arts.",
    "fishko-files": "Features from WNYC culture reporter Sara Fishko.",
    "bird-note": "Your regular dose of avian soundscapes.",
-   "dead-pundits": "News and analysis from a left perspective."
+   "dead-pundits": "News and analysis from a left perspective.",
+   "upstream": "Stories that challenge traditional economic assumptions."
 };
