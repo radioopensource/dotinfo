@@ -32,5 +32,6 @@ var podDescriptions = {
    "between-the-ears": "BBC Radio 3's long-running experimental sound program.",
    "the-essay": "Public intellectuals give insight into the arts.",
    "fishko-files": "Features from WNYC culture reporter Sara Fishko.",
-   "bird-note": "Your regular dose of avian soundscapes."
+   "bird-note": "Your regular dose of avian soundscapes.",
+   "dead-pundits": "News and analysis from a left perspective."
 };
