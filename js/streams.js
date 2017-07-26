@@ -102,11 +102,11 @@ donateurl: null,
 streamurl: 'https://http-live.sr.se/p2musik-mp3-192' 
 },
 
-{ title: 'KEXP',
-description: 'Seattle\'s alternative rock station.',
-url: 'kexp.org',
-donateurl: 'https://www.kexp.org/donate',
-streamurl: 'http://live-aacplus-64.kexp.org/kexp64.aac' 
+{ title: 'Back2Back FM',
+description: 'When it comes to music...they\'ve always got your back!',
+url: 'http://back2backfm.net/',
+donateurl: null,
+streamurl: 'http://78.129.143.9:8052/;&type=mp3' 
 },
 
 { title: 'Dublab',
@@ -179,6 +179,14 @@ description: "Live from a shipping container on an empty lot in NYC.",
 url: "www.thelotradio.com",
 donateurl: "https://www.paypal.com/donate/?token=v2aXOJj9G5mMGWA1P2coSWtfJFoExgDj_1ZnZVe1FoB7jUg1zmnjeaFJJIaFzV6gRKjWr0",
 streamurl: "http://thelot.out.airtime.pro:8000/thelot_b"
+},
+
+{
+title: "Rinse FM",
+description: "Uncompromising and innovative music out of East London since 1994.",
+url: "http://rinse.fm/",
+donateurl: null,
+streamurl: "http://163.172.176.37:8000/rinseios"
 }
 
 ];
