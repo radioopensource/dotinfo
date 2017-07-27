@@ -78,7 +78,7 @@ streamurl: 'http://wkcr.streamguys1.com:80/live'
 description: 'Brooklyn hip-hop and more.',
 url: 'http://bondfireradio.com/',
 donateurl: 'https://www.patreon.com/bondfireradio',
-streamurl: 'https://streaming.radio.co/sd2fdc24b0/listen' 
+streamurl: 'http://edge2-b.exa.live365.net/a25175' 
 },
 
 { title: 'KALW',
