@@ -10,13 +10,6 @@ var
 */
 var newsModule = $('section.newscasts');
 
-// load BBC Headlines as default audio
-loadAudio(newsModule.find('.bbc-headlines').data('url'));
-
-// set BBC Headlines last update time
-newsModule.find('.bbc-headlines .last-update-time').text(formatDateTime(getBBCHeadlinesLastUpdate()), true);
-newsModule.find('.bbc-headlines').removeClass('disabled');
-
 function getBBCHeadlinesLastUpdate () {
   var 
     minsToChangeTo = 35,
@@ -43,9 +36,16 @@ function refreshNewsFor (news) {
   Object.keys(news).forEach( function(newsType) { 
     var newsTypeSection = newsModule.find('li.' + newsType);
     newsTypeSection[0].setAttribute('data-url', news[newsType].url);
-    newsTypeSection.find('.last-update-time').text(formatDateTime(news[newsType].pubDate, true));
+    pubDate = newsType == 'bbc-headlines' ? getBBCHeadlinesLastUpdate() : news[newsType].pubDate;
+    newsTypeSection.find('.last-update-time').text(formatDateTime(pubDate, true));
     newsTypeSection.removeClass('disabled');
-  })
+  });
+
+    // load BBC Headlines as default audio
+  loadAudio(newsModule.find('.bbc-headlines').data('url'));
+
+  // set BBC Headlines last update time
+  // newsModule.find('.bbc-headlines .last-update-time').text(formatDateTime(getBBCHeadlinesLastUpdate()), true);
 }
 
 addEventHandlers(document.querySelectorAll('.news-ul li'));
