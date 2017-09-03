@@ -13,8 +13,6 @@ The FCC, which governs publicly owned airwaves in the U.S., rules: "No public br
 
 Advertising includes: sponsored or branded content, endorsements of a business, testimonials, messages containing specific product prices or descriptions, calls to purchase, and coupon code offers.
 
-On our radio streams and podcasts you may hear: calls for donations, fundraising drives, announcements regarding public radio content or events, and/or underwriting spots.
-
-Underwriting spots—unlike ads—are short, neutral, non-promotional messages that identify private sponsors of public radio content for _an informational purpose only_. So, these messages may include basic information about a company (website, address, an identifying slogan), but should _not_ promote that company's goods or services.
+On our radio streams and podcasts you may hear: calls for donations, fundraising drives, announcements regarding public radio content or events, and/or underwriting spots. We tolerate underwriting spots, which–unlike ads—are short, neutral, non-promotional messages that identify private sponsors of public radio content for an informational purpose only. These messages may include basic information about a company (website, address, an identifying slogan), but should _not_ promote that company's goods or services.
 
 If you hear audio on our site that is in breach of our policy, please notify us!
