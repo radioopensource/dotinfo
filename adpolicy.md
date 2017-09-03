@@ -9,4 +9,6 @@
 >interest; or
 > (3) to support or oppose any candidate for political office.
 
-On our radio streams and podcasts you may hear: calls for donations, announcements regarding public radio content or events, or underwriting spots. Underwriting spots—unlike ads—are short, neutral, non-promotional messages that identify private sponsors of public radio content for an informational purpose only. These messages may include basic information about a company (website, address, an identifying slogan), but should _not_ promote that company's goods or services. For example, an underwriting message should not include: endorsements, testimonials, specific product prices or descriptions, calls to purchase, or coupon codes.
+On our radio streams and podcasts you may hear: calls for donations, fundraising drives, announcements regarding public radio content or events, and/or underwriting spots.
+
+Underwriting spots—unlike ads—are short, neutral, non-promotional messages that identify private sponsors of public radio content for an informational purpose only. These messages may include basic information about a company (website, address, an identifying slogan), but should _not_ promote that company's goods or services. For example, an underwriting message should not include: endorsements, testimonials, specific product prices or descriptions, calls to purchase, or coupon codes.
