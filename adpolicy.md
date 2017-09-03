@@ -1,8 +1,10 @@
 # General Policy on Advertising
-[PublicRadio.info](http://www.publicradio.info) strives to give users a 100% ad-free audio experience. We believe guidelines prohibiting public broadcasters from advertising on the radio should apply on the internet, too. "Advertising" is defined by the FCC (in Section 399B of the Communications Act of 1934) as:
+[PublicRadio.info](http://www.publicradio.info) strives to give users a 100% ad-free audio experience.
+
+The FCC, which governs publicly owned airwaves in the U.S., rules: "No public broadcast station may make its facilities available to any person for the broadcasting of any advertisement." We think these guidelines should apply to creators of noncommercial educational media on the internet, too. "Advertising" is defined (in [Section 399B of the Communications Act of 1934](https://www.fcc.gov/media/radio/nature-of-educational-broadcasting)) as:
 
 >any message or other programming material which is broadcast or otherwise transmitted
->in exchange for any remuneration, and which is intended—
+>in exchange for any remuneration, and which is intended —
 > (1) to promote any service, facility, or product offered by any person who is engaged in
 >such offering for profit;
 > (2) to express the views of any person with respect to any matter of public importance or
