@@ -34,5 +34,13 @@ var podDescriptions = {
    "fishko-files": "Features from WNYC culture reporter Sara Fishko.",
    "bird-note": "Your regular dose of avian soundscapes.",
    "dead-pundits": "News and analysis from a left perspective.",
-   "upstream": "Stories that challenge traditional economic assumptions."
+   "upstream": "Stories that challenge traditional economic assumptions.",
+   "bafflercasts": "Podcasts that blunt the cutting edge.",
+   "tarfu": "Matt Taibbi and Alex Pareene talk politics with guests.",
+   "moderate-rebels": "Anti-imperialism from Ben Norton and Max Blumenthal.",
+   "delete-yr-acct": "Roqayah Chamseddine and Kumars Salehi chat politics.",
+   "citations": "Nima Shirazi and Adam Johnson chat media and power.",
+   "by-any-means-necessary": "News and analysis from radical Eugene Puryear.",
+   "kt-halps": "A humorous look at news and arts from WBAI.",
+   "street-fight": "The No. 1 Anarcho-comedy Radio Show."
 };
