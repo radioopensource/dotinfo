@@ -197,6 +197,14 @@ description: "Stream 2 from the eclectic worldwide music platform.",
 url: "http://www.nts.live/",
 donateurl: "http://ntslive.tictail.com/",
 streamurl: "http://stream-relay-geo.ntslive.net/stream2?t=1504708107257"
+},
+
+{
+title: "n10.as",
+description: "Internet community radio based in Montreal, Quebec.",
+url: "http://n10.as/",
+donateurl: "https://www.paypal.com/donate/?token=dzmJur55Cc-_QzM2VCHgJIXzNHIM5TEzQFEpScODYbb8x0g-H8sJ8qGmUcMsZcbOObbPxm&country.x=CA&locale.x=CA",
+streamurl: "http://n10as.out.airtime.pro:8000/n10as_a"
 }
 
 ];
