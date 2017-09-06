@@ -54,14 +54,14 @@ addEventHandlers(document.querySelectorAll('.news-ul li'));
   INTERNET RADIO
 */
 
-function titleComparator(a, b) {
+function titleComparator(titleAttr, a, b) {
     var articles = ['a', 'an', 'the'],
         re = new RegExp('^(?:(' + articles.join('|') + ') )(.*)$'), // e.g. /^(?:(foo|bar) )(.*)$/
         replacer = function ($0, $1, $2) {
             return $2 + ', ' + $1;
         };
-    a = a['title'].toLowerCase().replace(re, replacer);
-    b = b['title'].toLowerCase().replace(re, replacer);
+    a = a[titleAttr].toLowerCase().replace(re, replacer);
+    b = b[titleAttr].toLowerCase().replace(re, replacer);
     return a === b ? 0 : a < b ? -1 : 1;
 }
 
@@ -93,7 +93,7 @@ function addHtmlToNode(node, data) {
 }
 
 var internetRadioColumns = $('.internet-ul');
-var sortedStreams = streams.sort(titleComparator);
+var sortedStreams = streams.sort(titleComparator.bind(null, 'title'));
 
 renderBalancedColumns(internetRadioColumns, sortedStreams, addHtmlToNode);
 
@@ -115,7 +115,7 @@ function addPodcastHtmlToNode(node, data) {
       '<div class="last-update">' + el.episodeTitle + ' (' + formatDateTime(el.pubDate, false) + ')</div>' + 
       '<div class="internet-links">' +      
           '<a href=' + el.showUrl + ' target="_blank">Website</a>  | ' + 
-          '<a href=' + el.rssUrl + ' target="_blank">RSS</a>' +
+          '<a href=' + el.sourceUrl + ' target="_blank">RSS</a>' +
       '</div>' +
     '</li>';
     totalHtml += html;
@@ -139,6 +139,9 @@ $.ajax({
     });
 
     var podcastColumns = $('.podcast-list');
+
+    // Sort by pub date
+    /*
     var sortedPodcasts = podcasts.sort(function(a, b) { 
       var date1 = new Date(a.pubDate);
       var date2 = new Date(b.pubDate);
@@ -146,6 +149,10 @@ $.ajax({
       if (date1 > date2) return -1; 
       return 0;
     });
+    */
+
+    // Sort alphabetically 
+    var sortedPodcasts = podcasts.sort(titleComparator.bind(null, 'showTitle'));
 
     var twoMonthsAgo = new Date();
     twoMonthsAgo.setMonth(twoMonthsAgo.getMonth()-2);

@@ -86,14 +86,7 @@ description: 'San Francisco\'s local public radio.',
 url: 'http://kalw.org/',
 donateurl: 'https://donate.nprstations.org/kalw',
 streamurl: 'http://live.str3am.com:2430/' 
-},    
-
-{ title: 'FIP',
-description: 'Radio musicale eclectique.',
-url: 'http://www.fipradio.fr/',
-donateurl: null,
-streamurl: 'http://chai5she.lb.vip.cdn.dvmr.fr/fip-midfi.mp3'
-},        
+},     
 
 { title: 'Sveriges Radio P2',
 description: 'Classical and jazz from Sweden.',
@@ -128,13 +121,6 @@ description: 'International music from Gilles Peterson and fellow London DJs.',
 url: 'http://worldwidefm.net/',
 donateurl: null,
 streamurl: 'http://worldwidefm.out.airtime.pro:8000/worldwidefm_a'
-},
-
-{ title: "Red Light Radio",
-description: "DJ sets live from Amsterdam.",
-url: "http://redlightradio.net/",
-donateurl: null,
-streamurl: "http://www.michielgardner.nl:8000/redlightradio"
 },
 
 {title: "KPFA",
@@ -187,6 +173,30 @@ description: "Uncompromising and innovative music out of East London since 1994.
 url: "http://rinse.fm/",
 donateurl: null,
 streamurl: "http://163.172.176.37:8000/rinseios"
+},
+
+{
+title: "WHBC",
+description: "Howard University’s Student Operated Radio Station for 40+ years.",
+url: "http://www.whbc963hd3.com/",
+donateurl: null,
+streamurl: "http://54.90.181.115/whurfm-whbchd3aac-ibc2?session-id=c5fe7ecb6508d2c462fb274d18ea91ab-67326e73356e366b3769396974667435&source=v6player&sbmd=1&user-id=c5fe7ecb6508d2c462fb274d18ea91ab"
+},
+
+{
+title: "NTS 1",
+description: "Stream 1 from the eclectic worldwide music platform.",
+url: "http://www.nts.live/",
+donateurl: "http://ntslive.tictail.com/",
+streamurl: "http://stream-relay-geo.ntslive.net/stream?t=1504708123417"
+},
+
+{
+title: "NTS 2",
+description: "Stream 2 from the eclectic worldwide music platform.",
+url: "http://www.nts.live/",
+donateurl: "http://ntslive.tictail.com/",
+streamurl: "http://stream-relay-geo.ntslive.net/stream2?t=1504708107257"
 }
 
 ];
