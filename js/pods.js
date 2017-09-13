@@ -42,5 +42,6 @@ var podDescriptions = {
    "citations": "Nima Shirazi and Adam Johnson chat media and power.",
    "by-any-means-necessary": "News and analysis from radical Eugene Puryear.",
    "kt-halps": "A humorous look at news and arts from WBAI.",
+   "discoursecollective": "Communist teens discuss theory and culture.",
    "street-fight": "The No. 1 Anarcho-comedy Radio Show."
 };
