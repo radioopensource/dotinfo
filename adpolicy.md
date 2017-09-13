@@ -3,7 +3,7 @@
 
 We specify<sup id="a1">[1](#f1)</sup> that advertising includes: sponsored or branded content, host endorsements of a business, customer testimonials, messages containing specific product prices or descriptions, and any calls to purchase, including coupon code offers.
 
-On our radio streams and podcasts you may hear: calls for donations, fundraising drives, announcements regarding public radio content or events, and underwriting spots. We tolerate underwriting spots, which–unlike ads—are short, neutral, non-promotional messages that identify private sponsors of public radio content for an informational purpose only. These messages may include basic information about a company (website, address, an identifying slogan), but should _not_ promote that company's goods or services.
+On our radio streams and podcasts you may hear: calls for donations, fundraising drives, announcements regarding public radio content or events, and underwriting spots. We tolerate underwriting spots, which–unlike ads—are short, neutral, non-promotional messages that identify private sponsors of public radio content for an informational purpose only. These messages may include basic information about a company (website, address, an identifying slogan), but _cannot_ promote that company's goods or services.
 
 If you hear audio on our site that is in breach of our policy, please notify us!
 
