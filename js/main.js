@@ -345,18 +345,22 @@ function playAudioHandler (e) {
     $('.loading').show();
   }
 
-  playAudio(clickedAudio);
+  playAudio(clickedAudio, $(e.currentTarget).hasClass('npr'));
 }
 
-function playAudio (audioUrl) {
-  loadAudio(audioUrl);
+function playAudio (audioUrl, doSkipAhead) {
+  loadAudio(audioUrl, doSkipAhead);
   audioPlayer.oncanplaythrough = audioPlayer.play();
 }
 
-function loadAudio (audioUrl) {
+function loadAudio (audioUrl, doSkipAhead) {
   audioSource.attr('src', audioUrl);
   audioPlayer.pause();
   audioPlayer.load();
+
+  if (doSkipAhead) {
+    audioPlayer.currentTime = 19;
+  }
 }
 
 function clickedSameAudio (currentAudioSrc) {
