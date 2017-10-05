@@ -180,7 +180,7 @@ title: "WHBC",
 description: "Howard University’s Student Operated Radio Station for 40+ years.",
 url: "http://www.whbc963hd3.com/",
 donateurl: null,
-streamurl: "http://54.90.181.115/whurfm-whbchd3aac-ibc2?session-id=c5fe7ecb6508d2c462fb274d18ea91ab-67326e73356e366b3769396974667435&source=v6player&sbmd=1&user-id=c5fe7ecb6508d2c462fb274d18ea91ab"
+streamurl: "http://whurhd3.streamon.fm:8000/WHURHD3-48k.aac"
 },
 
 {
