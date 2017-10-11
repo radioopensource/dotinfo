@@ -11,7 +11,7 @@ Tags: publicradio.info, public radio, podcast, news, responsive, website, intern
 
 html {
   color: #424242;
-  background-color: indianred;
+  background-color: #112DFF;
 }
 
 body {
@@ -73,7 +73,6 @@ audio::-webkit-media-controls-enclosure {
 }
 
 .banner {
-    color: red;
     position: absolute;
     margin-left: 1rem;
     visibility: hidden;
@@ -89,7 +88,7 @@ audio::-webkit-media-controls-enclosure {
   top: 0;
   left: 0;
   right: 0;
-  background-color: indianred;
+  background-color: #F1F2F6;
   z-index: 2;
   padding-top: 1.5rem;
   -webkit-transform: translateZ(0);
@@ -177,6 +176,7 @@ li.now-playing {
 section.newscasts{
   /*margin-top: 7.5rem;*/
   margin-top: 76px;
+  background-color: #006944;
 }
 .news-ul {
   list-style-type: none;
@@ -192,6 +192,10 @@ section.newscasts{
 
 /* Internet Radio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+section.internet-radio {
+    background-color: #FC9DC5;
+}
+
 .internet-ul {
   list-style-type: none;
 }
@@ -212,6 +216,10 @@ section.newscasts{
 
 /* Podcast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+section.podcasts {
+    background-color: #EB9A33;
+}
+
 .podcast-list {
   list-style-type: none;
 }
@@ -226,6 +234,10 @@ section.newscasts{
 
 /* Request Form
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+section.request {
+    background-color: #F1F2F6;
+}
+
 .requestline {
   text-decoration: underline;
   -webkit-text-decoration-color: orange;
@@ -238,6 +250,9 @@ input[type=text] {
 
 /* About
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+section.about {
+   background-color: #112DFF;
+}
 .aboutline {
   text-decoration: underline;
   -webkit-text-decoration-color: teal;
@@ -247,6 +262,7 @@ input[type=text] {
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 footer {
+  background-color: #112DFF;
   display: flex;
   justify-content: center;
   align-items: center;
