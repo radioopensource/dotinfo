@@ -8,292 +8,256 @@ Tags: publicradio.info, public radio, podcast, news, responsive, website, intern
 
 /* Meta
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 html {
-  color: #424242;
-  background-color: indianred;
+    color: #424242;
+    background-color: #F79EC7;
 }
-
 body {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
-
 .black {
-  color: #121212;
+    color: #121212;
+}
+h4 {
+    text-decoration: underline;
 }
 
 /* Header
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 audio {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
 }
-
 audio::-webkit-media-controls-enclosure {
     max-width: 100%;
 }
-
 .title {
     color: black;
     text-decoration: none;
     font-weight: 500;
 }
-
 @keyframes fontcraze {
-  0% {
-    font-weight: 400;
-    font-style: italic;
-  }
-  20% {
-    font-weight: 700;
-    font-style: normal;
-  }
-  40% {
-    font-weight: 700;
-    font-style: italic;
-  }
-  60% {
-    font-weight: 400;
-    font-style: italic;
-  }
-  80% {
-    font-weight: 400;
-  }
-  100% {
-    font-weight: 700;
-    font-style: normal;
-  }
+    0% {
+        font-weight: 400;
+        font-style: italic;
+    }
+    20% {
+        font-weight: 700;
+        font-style: normal;
+    }
+    40% {
+        font-weight: 700;
+        font-style: italic;
+    }
+    60% {
+        font-weight: 400;
+        font-style: italic;
+    }
+    80% {
+        font-weight: 400;
+    }
+    100% {
+        font-weight: 700;
+        font-style: normal;
+    }
 }
-
 #title-animate:hover {
-   /*animation: fontcraze 2s infinite;*/
+    animation: fontcraze 2s infinite;
 }
-
 .banner {
     position: absolute;
     margin-left: 1rem;
     visibility: hidden;
     margin-top: 0.5rem;
 }
-
 .show {
-  visibility: inherit;
+    visibility: inherit;
 }
-
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: indianred;
-  z-index: 2;
-  padding-top: 1.5rem;
-  -webkit-transform: translateZ(0);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #F79EC7;
+    z-index: 2;
+    padding-top: 1.5rem;
+    -webkit-transform: translateZ(0);
 }
 div.navbar nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
 }
-div.subnav a{
-  line-height: 48.6;
+div.subnav a {
+    line-height: 48.6;
 }
 
 /* All Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
-  margin: 1rem auto;
-  padding: 3rem 3rem 3rem;
+    margin: 1rem auto;
+    padding: 3rem 3rem 3rem;
 }
-
 .globe-sm {
-  max-width: 39px;
+    max-width: 39px;
 }
 .disabled {
-  opacity: 0.2;
-  pointer-events: none;
+    opacity: 0.2;
+    pointer-events: none;
 }
 .disabled .last-update-time {
     position: absolute;
-    -webkit-animation:spin 2s linear infinite;
-    -moz-animation:spin 2s linear infinite;
-    animation:spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+    -moz-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
 }
-
-@-moz-keyframes disabled { 100% { -moz-transform: rotate(360deg); } }
-@-webkit-keyframes disabled { 100% { -webkit-transform: rotate(360deg); } }
-@keyframes disabled { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
-
+@-moz-keyframes disabled {
+    100% {
+        -moz-transform: rotate(360deg);
+    }
+}
+@-webkit-keyframes disabled {
+    100% {
+        -webkit-transform: rotate(360deg);
+    }
+}
+@keyframes disabled {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
 ul {
-  margin-bottom: 0;
+    margin-bottom: 0;
 }
-
 section:before {
-  display: block;
-  content: " ";
-  margin-top: -100px;
-  height: 100px;
-  visibility: hidden;
+    display: block;
+    content: " ";
+    margin-top: -100px;
+    height: 100px;
+    visibility: hidden;
 }
-
 li {
-  border-style: outset;
-  padding: 5px;
-  border-width: 4px;
+    border-style: outset;
+    padding: 5px;
+    border-width: 4px;
 }
-
-li:active {
-  border-style: inset;
-  background-color: #ffee99 !important;
-}
-
+li:active,
 li:hover {
-  cursor: pointer;
+    border-style: inset;
+    background-color: #112DFF !important;
+    color: white;
 }
-
-li.hover {
-  background-color: #FFFF99;
+li:hover > div.internet-links > a {
+    color: white !important;
 }
-
+li:hover > div.content > div.internet-links > a {
+    color: white !important;
+}
 li.now-playing {
-  border-style: inset; 
-  background-color: #FFFF99;
+    border-style: inset;
+    background-color: #112DFF;
 }
-
 .anchor {
-   display:block;
-   height:63px; /* this is the height of your header */
-   margin-top:-63px; /* this is again negative value of the height of your header */
-   visibility:hidden;
+    display: block;
+    height: 63px;
+    /* this is the height of your header */
+
+    margin-top: -63px;
+    /* this is again negative value of the height of your header */
+
+    visibility: hidden;
 }
 
 /* Newscast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-section.newscasts{
-  /*margin-top: 7.5rem;*/
-  margin-top: 76px;
-  /*background-color: #006944; */
+section.newscasts {
+    margin-top: 76px;
 }
 .news-ul {
-  list-style-type: none;
+    list-style-type: none;
+}
+.news-ul > li {
+    background-color: #F2F2D2;
 }
 .last-update {
-  font-size: 1.2rem;
-}
-.newsline {
-  text-decoration: underline;
-  -webkit-text-decoration-color: red;
-  text-decoration-color: red;
+    font-size: 1.2rem;
 }
 
 /* Internet Radio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* section.internet-radio {
-    background-color: #FC9DC5;
-} */
-
-.internet-ul {
-  list-style-type: none;
+section.internet-radio {} .internet-ul {
+    list-style-type: none;
 }
 .internet-ul li {
-  position: relative;
+    position: relative;
+    background-color: #E89A1A;
 }
 .internet-links > a {
-  font-size: 1.2rem;
+    font-size: 1.2rem;
 }
 .station-title {
-  margin-bottom: 0;
-}
-.radioline {
-  text-decoration: underline;
-  -webkit-text-decoration-color: blue;
-  text-decoration-color: blue;
+    margin-bottom: 0;
 }
 
 /* Podcast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* section.podcasts {
-    background-color: #EB9A33;
-} */
-
+section.podcasts {} .podcast-list li {
+    position: relative;
+    background-color: #009E64;
+}
 .podcast-list {
-  list-style-type: none;
+    list-style-type: none;
 }
 .placeholder-img {
-  width: 11rem;
-}
-.podcastline {
-  text-decoration: underline;
-  -webkit-text-decoration-color: purple;
-  text-decoration-color: purple;
+    width: 11rem;
 }
 
 /* Request Form
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* section.request {
-    background-color: #F1F2F6;
-} */
-
-.requestline {
-  text-decoration: underline;
-  -webkit-text-decoration-color: orange;
-  text-decoration-color: orange;
-}
-
-input[type=text] {
+section.request {} input[type=text] {
     background-color: lightgrey;
 }
 
 /* About
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* section.about {
-   background-color: #112DFF;
-} */
-.aboutline {
-  text-decoration: underline;
-  -webkit-text-decoration-color: teal;
-  text-decoration-color: teal;
-}
+section.about {}
 
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  padding: 4rem 3rem 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 3rem 4rem;
 }
-
 .extra-margin {
-  margin-bottom: 4em;
+    margin-bottom: 4em;
 }
 .globe {
-  margin-bottom: 3rem;
+    margin-bottom: 3rem;
 }
-
 
 /* Common
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .error-message {
-  position: absolute;
-  z-index: 1;
-  height: 100%;
-  color: red;
-  text-shadow: 1px 1px #000;
-  font-weight: bold;
-  width: 100%;
-  display: none;
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    color: red;
+    text-shadow: 1px 1px #000;
+    font-weight: bold;
+    width: 100%;
+    display: none;
 }
-
 .error-message div {
-  text-align: center;
+    text-align: center;
 }
-
 
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -303,48 +267,43 @@ Note: CSS is built mobile-first with sizes and devices indicated along with brea
 
 /* Make title smaller when less than 364px */
 @media (max-width: 364px) {
-  .title {
-    font-size: 2.5rem;
-  }
-  section.newscasts {
-    margin-top: 5rem;
-  }
+    .title {
+        font-size: 2.5rem;
+    }
+    section.newscasts {
+        margin-top: 5rem;
+    }
 }
 
 /* Smaller than phablet (also point when grid becomes inactive) - Smaller than 550 */
 @media (max-width: 550px) {
-  section {
-    padding: 2rem 2rem 2rem !important;
-  }
+    section {
+        padding: 2rem 2rem 2rem !important;
+    }
 }
-
 /* Larger than mobile */
-@media (min-width: 400px) {
-
-}
+@media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) - Bigger than 550 */
 @media (min-width: 550px) {
-  section {
-    padding: 12rem 0 11rem;
-  }
+    section {
+        padding: 12rem 0 11rem;
+    }
 }
 
 /* Larger than tablet - Bigger than 750 */
 @media (min-width: 750px) {
-  section {
-    padding: 14rem 0 15rem;
-  }
+    section {
+        padding: 14rem 0 15rem;
+    }
 }
 
 /* Larger than desktop - Bigger than 1000 */
 @media (min-width: 1000px) {
-  section {
-    padding: 20rem 0 19rem;
-  }
+    section {
+        padding: 20rem 0 19rem;
+    }
 }
 
 /* Larger than Desktop HD */
-@media (min-width: 1200px) {
-
-}
+@media (min-width: 1200px) {}
