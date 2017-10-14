@@ -148,6 +148,7 @@ li {
 }
 li:active,
 li:hover {
+    cursor: pointer;
     border-style: inset;
     background-color: #112DFF !important;
     color: white;
@@ -160,7 +161,8 @@ li:hover > div.content > div.internet-links > a {
 }
 li.now-playing {
     border-style: inset;
-    background-color: #112DFF;
+    background-color: #112DFF !important;
+    color: white;
 }
 .anchor {
     display: block;
