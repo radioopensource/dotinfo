@@ -146,14 +146,22 @@ li {
     padding: 5px;
     border-width: 4px;
 }
-li:active,
+
 li:hover {
+    cursor: pointer;
+    border-style: outset;
+    background-color: yellow !important;
+    color: white;
+}
+li:active {
     cursor: pointer;
     border-style: inset;
     background-color: #112DFF !important;
     color: white;
 }
-li:hover > div.internet-links > a {
+
+li:hover,
+li:active > div.internet-links > a {
     color: white !important;
 }
 li:hover > div.content > div.internet-links > a {
