@@ -150,7 +150,7 @@ li {
 li:hover {
     cursor: pointer;
     border-style: outset;
-    background-color: yellow !important;
+    background-color: blue !important;
     color: white;
 }
 li:active {
@@ -164,7 +164,8 @@ li:hover,
 li:active > div.internet-links > a {
     color: white !important;
 }
-li:hover > div.content > div.internet-links > a {
+li:hover,
+li:active > div.content > div.internet-links > a {
     color: white !important;
 }
 li.now-playing {
