@@ -10,7 +10,8 @@ Tags: publicradio.info, public radio, podcast, news, responsive, website, intern
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 html {
     color: #424242;
-    background-color: #F79EC7;
+    background-color: #242424;
+    /*background-color: #F79EC7;*/
 }
 body {
     font-family: sans-serif;
@@ -81,9 +82,13 @@ audio::-webkit-media-controls-enclosure {
     top: 0;
     left: 0;
     right: 0;
-    background-color: #F79EC7;
+    /*background-color: #F79EC7;*/
+    background-color: #fff2ec;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;    
+    /*padding-top: 1.5rem;*/
     z-index: 2;
-    padding-top: 1.5rem;
     -webkit-transform: translateZ(0);
 }
 div.navbar nav {
@@ -98,8 +103,11 @@ div.subnav a {
 
 /* All Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.full-background {
+    padding: 3rem 3rem 3rem;
+}
 .section {
-    margin: 1rem auto;
+    /*margin: 1rem auto;*/
     padding: 3rem 3rem 3rem;
 }
 .globe-sm {
@@ -177,6 +185,9 @@ li.now-playing {
 
 /* Newscast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.newscasts.full-background {
+    background-color: #00ffff;
+}
 section.newscasts {
     margin-top: 76px;
 }
@@ -184,7 +195,7 @@ section.newscasts {
     list-style-type: none;
 }
 .news-ul > li {
-    background-color: #F2F2D2;
+    background-color: #ffff00;
 }
 .last-update {
     font-size: 1.2rem;
@@ -192,12 +203,15 @@ section.newscasts {
 
 /* Internet Radio
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.internet-radio.full-background {
+    background-color: #7d83ff;
+}
 section.internet-radio {} .internet-ul {
     list-style-type: none;
 }
 .internet-ul li {
     position: relative;
-    background-color: #E89A1A;
+    background-color: #83ff7d;
 }
 .internet-links > a {
     font-size: 1.2rem;
@@ -208,9 +222,12 @@ section.internet-radio {} .internet-ul {
 
 /* Podcast
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.podcasts.full-background {
+    background-color: orange;
+}
 section.podcasts {} .podcast-list li {
     position: relative;
-    background-color: #009E64;
+    background-color: lightblue;
 }
 .podcast-list {
     list-style-type: none;
@@ -221,12 +238,25 @@ section.podcasts {} .podcast-list li {
 
 /* Request Form
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.request.full-background {
+    background-color: #ff0080;
+}
 section.request {} input[type=text] {
     background-color: lightgrey;
 }
 
 /* About
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+.about .black {
+    color: PowderBlue;
+}
+.about.full-background {
+    background-color: #242424; 
+    color : PowderBlue;
+}
+.about a {
+       color: DeepSkyBlue;
+}
 section.about {}
 
 /* Footer
