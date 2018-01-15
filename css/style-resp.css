@@ -82,8 +82,7 @@ audio::-webkit-media-controls-enclosure {
     top: 0;
     left: 0;
     right: 0;
-    /*background-color: #F79EC7;*/
-    background-color: #fff2ec;
+    background-color: coral;
     padding-left: 1em;
     padding-right: 1em;
     padding-top: 1em;    
