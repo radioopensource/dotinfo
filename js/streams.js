@@ -162,7 +162,7 @@ streamurl: "https://18893.live.streamtheworld.com/CSPANRADIO.mp3"
 {
 title: "The Lot Radio",
 description: "Live from a shipping container on an empty lot in NYC.",
-url: "www.thelotradio.com",
+url: "http://thelotradio.com/",
 donateurl: "https://www.paypal.com/donate/?token=v2aXOJj9G5mMGWA1P2coSWtfJFoExgDj_1ZnZVe1FoB7jUg1zmnjeaFJJIaFzV6gRKjWr0",
 streamurl: "http://thelot.out.airtime.pro:8000/thelot_b"
 },
