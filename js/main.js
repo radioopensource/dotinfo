@@ -359,7 +359,7 @@ function loadAudio (audioUrl, doSkipAhead) {
   audioPlayer.load();
 
   if (doSkipAhead) {
-    audioPlayer.currentTime = 19;
+    //audioPlayer.currentTime = 19;
   }
 }
 
