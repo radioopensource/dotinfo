@@ -1,7 +1,7 @@
 // GLOBAL VARS
 var 
-  servicesURL = 'http://www.publicradioservices.info',
-  // servicesURL = 'http://localhost:3000',
+  // servicesURL = 'http://www.publicradioservices.info',
+  servicesURL = 'http://localhost:9000/2015-03-31/functions/function/invocations',
   audioPlayer = $('audio')[0],
   audioSource = $('audio').find('source');
 
@@ -125,8 +125,11 @@ function addPodcastHtmlToNode(node, data) {
 
 _this = this;
 $.ajax({
-  url: servicesURL + '/podcasts',
-  type: 'GET',
+  // url: servicesURL + '/podcasts',
+  url: servicesURL,
+  // type: 'GET',
+  type: 'POST',
+  data: '{}',
   dataType: 'JSON',
   success: function (data) {
     var podcasts = [];

@@ -13,3 +13,8 @@ Our aggregating services live here: [public-radio-services](https://github.com/a
 
 # License
 Software issued under the MIT License. Graphics issued under Creative Commons (CC BY-SA 4.0). No copyright claimed for selected and automated audio, which should be assumed to fall under audio creators.
+
+# Run locally
+```
+python3 -m http.server 8000
+```
