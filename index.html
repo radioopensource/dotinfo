@@ -36,11 +36,11 @@
 
     <!-- Scripts
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="js/jquery-2.1.4.min.js"></script>
 
     <!-- Font
     –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <link href='https://fonts.googleapis.com/css?family=Tinos:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Tinos:400,400italic,700,700italic&display=swap' rel='stylesheet' type='text/css'>
 
 </head>
 
@@ -50,8 +50,8 @@
 
     <header id="header">
         <!-- Audioplayer -->
-        <audio controls class="audio-player">
-            <source src="" type="audio/mpeg" controls="controls">
+        <audio controls class="audio-player" aria-label="Audio player">
+            <source src="" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
         <!-- Header Text -->
@@ -139,17 +139,17 @@
         <div class="row">
             <div class="one-third column">
                 <ul class="internet-ul">
-                    <img class="placeholder-img" src="assets/dogradio.jpg">
+                    <img class="placeholder-img" src="assets/dogradio.jpg" alt="Loading internet radio stations…" loading="lazy">
                 </ul>
             </div>
             <div class="one-third column">
                 <ul class="internet-ul">
-                    <img class="placeholder-img" src="assets/dogradio.jpg">
+                    <img class="placeholder-img" src="assets/dogradio.jpg" alt="" loading="lazy">
                 </ul>
             </div>
             <div class="one-third column">
                 <ul class="internet-ul">
-                    <img class="placeholder-img" src="assets/dogradio.jpg">
+                    <img class="placeholder-img" src="assets/dogradio.jpg" alt="" loading="lazy">
                 </ul>
             </div>
         </div>
@@ -166,17 +166,17 @@
         <div class="row">
             <div class="one-third column">
                 <ul class="podcast-list">
-                    <img class="placeholder-img" src="assets/womanradio.jpg">
+                    <img class="placeholder-img" src="assets/womanradio.jpg" alt="Loading podcasts…" loading="lazy">
                 </ul>
             </div>
             <div class="one-third column">
                 <ul class="podcast-list">
-                    <img class="placeholder-img" src="assets/womanradio.jpg">
+                    <img class="placeholder-img" src="assets/womanradio.jpg" alt="" loading="lazy">
                 </ul>
             </div>
             <div class="one-third column">
                 <ul class="podcast-list">
-                    <img class="placeholder-img" src="assets/womanradio.jpg">
+                    <img class="placeholder-img" src="assets/womanradio.jpg" alt="" loading="lazy">
                 </ul>
             </div>
         </div>
@@ -225,18 +225,18 @@
             Subscribe to our podcast picks <a href="http://itunes.apple.com/us/podcast/playlist/id1055233656?mt=2" target="_blank">iTunes</a> <a href="http://www.publicradio.info/feed.xml" target="_blank">RSS</a>.  -->
 
             <p>
-              Published by <a href="http://www.radioopensource.org" target="_blank">Open Source Media</a> and made by volunteers. Help from Conor Gillies, Alex Silva, Liz Lovero, Rosie Busiakiewicz, Cait Gillies, Parker Fishel, Annie McEwen, Audrey Mardavich, Ellie McDowall, Eve Asher, Chris Kalafarski, and Kathy Tu. Graphics <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">licensed under CC</a>, software issued under <a href="http://github.com/radioopensource/dotinfo/blob/gh-pages/license.md" target="_blank">MIT License</a>. <a href="mailto:contact@publicradio.info" target="_blank">Email</a>.
+              Published by <a href="http://www.radioopensource.org" target="_blank" rel="noopener">Open Source Media</a> and made by volunteers. Help from Conor Gillies, Alex Silva, Liz Lovero, Rosie Busiakiewicz, Cait Gillies, Parker Fishel, Annie McEwen, Audrey Mardavich, Ellie McDowall, Eve Asher, Chris Kalafarski, and Kathy Tu. Graphics <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">licensed under CC</a>, software issued under <a href="http://github.com/radioopensource/dotinfo/blob/gh-pages/license.md" target="_blank" rel="noopener">MIT License</a>. <a href="mailto:contact@publicradio.info">Email</a>.
             </p>
 
             <p>
-                Support local and public media! <a href="http://www.npr.org/stations/" target="_blank">Find your nearest NPR (U.S.) station.</a> Here is <a href="https://github.com/radioopensource/dotinfo/blob/gh-pages/adpolicy.md" "target="_blank">our ad policy.</a>
+                Support local and public media! <a href="http://www.npr.org/stations/" target="_blank" rel="noopener">Find your nearest NPR (U.S.) station.</a> Here is <a href="https://github.com/radioopensource/dotinfo/blob/gh-pages/adpolicy.md" target="_blank" rel="noopener">our ad policy.</a>
             </p>
 
             <p>Listeners here: <span class="visitor-count">?</span></p>
 
         </div>
         <div class="social-media">
-            <a href="https://github.com/radioopensource/dotinfo" target="_blank">Github</a>
+            <a href="https://github.com/radioopensource/dotinfo" target="_blank" rel="noopener">Github</a>
         </div>
     </section>
 
@@ -244,7 +244,7 @@
 
     <!-- Footer -->
     <footer class="container extra-margin">
-        <img class="globe" src="https://upload.wikimedia.org/wikipedia/commons/e/e7/G%C3%A9ode_V_3_1_duale.gif">
+        <img class="globe" src="assets/globe.gif" alt="Spinning wireframe globe" loading="lazy">
         <script src="js/pods.js"></script>
         <script src="js/streams.js"></script>
         <script src="js/main.js"></script>
