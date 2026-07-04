@@ -285,9 +285,21 @@ function renderBalancedColumns(UIcolumns, media, renderFunction) {
 function addEventHandlers(elements) {
   for (var i = elements.length - 1; i >= 0; i--) {
     $el = $(elements[i]);
+    $el.attr({ 'tabindex': 0, 'role': 'button' });
+    addKeyboardHandler($el);
     addHoverStyling($el);
     addPlayAudioHandler($el);
   }
+}
+
+// Enter activates a focused item, mirroring click.
+// (Space is reserved: it globally toggles play/pause via onKeyDown.)
+function addKeyboardHandler($el) {
+  $el.on('keydown', function (e) {
+    if (e.key === 'Enter' && !$(this).hasClass('disabled')) {
+      playAudioHandler(e);
+    }
+  });
 }
 
 function addPlayAudioHandler($el) {

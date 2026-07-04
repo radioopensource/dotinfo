@@ -122,17 +122,18 @@ div.subnav a {
     -moz-animation: spin 2s linear infinite;
     animation: spin 2s linear infinite;
 }
-@-moz-keyframes disabled {
+/* keyframes must be named `spin` — `.disabled .last-update-time` animates `spin` */
+@-moz-keyframes spin {
     100% {
         -moz-transform: rotate(360deg);
     }
 }
-@-webkit-keyframes disabled {
+@-webkit-keyframes spin {
     100% {
         -webkit-transform: rotate(360deg);
     }
 }
-@keyframes disabled {
+@keyframes spin {
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
@@ -187,6 +188,10 @@ li.now-playing {
     border-style: inset;
     background-color: #112DFF !important;
     color: white;
+}
+li:focus-visible {
+    outline: 3px dashed blue;
+    outline-offset: 2px;
 }
 .anchor {
     display: block;
@@ -355,3 +360,11 @@ Note: CSS is built mobile-first with sizes and devices indicated along with brea
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}
+
+/* Respect users who opt out of motion (CSS animations only; gifs still play) */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
