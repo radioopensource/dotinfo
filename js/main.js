@@ -1,6 +1,6 @@
 // GLOBAL VARS
-var 
-  servicesURL = 'http://www.publicradioservices.info',
+var
+  servicesURL = 'https://0r22apgetd.execute-api.us-east-1.amazonaws.com',
   // servicesURL = 'http://localhost:3000',
   audioPlayer = $('audio')[0],
   audioSource = $('audio').find('source');
@@ -9,19 +9,6 @@ var
   NEWSCASTS
 */
 var newsModule = $('section.newscasts');
-
-function getBBCHeadlinesLastUpdate () {
-  var 
-    minsToChangeTo = 35,
-    now = new Date(),
-    nowMins = now.getMinutes();
-
-  now.setMinutes(minsToChangeTo);
-  var changeToLastHour = (nowMins - minsToChangeTo < 0);
-  if (changeToLastHour) { now.setHours(now.getHours()-1); }
-
-  return now.toString();
-}
 
 $.ajax({
   url: servicesURL + '/newscasts',
@@ -36,7 +23,8 @@ function refreshNewsFor (news) {
   Object.keys(news).forEach( function(newsType) { 
     var newsTypeSection = newsModule.find('li.' + newsType);
     newsTypeSection[0].setAttribute('data-url', news[newsType].url);
-    pubDate = newsType == 'bbc-headlines' ? getBBCHeadlinesLastUpdate() : news[newsType].pubDate;
+    // v2 backend serves a real pubDate for bbc-headlines (v1's TuneIn scrape had none)
+    pubDate = news[newsType].pubDate;
     newsTypeSection.find('.last-update-time').text(formatDateTime(pubDate, true));
     newsTypeSection.removeClass('disabled');
   });
@@ -190,7 +178,7 @@ function submitRequest (e) {
         withCredentials: true
       }
   }).fail(function(response) {
-    showMessage(mapErrorCodesToMessages(response.responseJSON.errors));
+    showMessage(mapErrorCodesToMessages(response.responseJSON && response.responseJSON.errors));
 
   }).done(function() {
     showMessage('THANKS!');
@@ -219,6 +207,11 @@ $(document).on('click', function (e) {
 
 function mapErrorCodesToMessages (codes) {
   var messages = [];
+
+  // v2 backend has no /requests endpoint (yet) — fail politely, don't throw
+  if (!codes) {
+    return 'Requests are on hiatus — email us instead!';
+  }
 
   if (codes.name) {
     if (codes.name === 'not-present') {
