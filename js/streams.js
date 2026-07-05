@@ -142,6 +142,13 @@ description: "Howard University's Student Operated Radio Station for 40+ years."
 url: "http://www.whbc963hd3.com/",
 donateurl: null,
 streamurl: "https://whurhd3.streamon.fm/WHURHD3-48k.aac"
+},
+
+{title: "Scratch Radio",
+description: "Vancouver-based station spinning dub and reggae.",
+url: "http://www.scratchradio.ca/",
+donateurl: null,
+streamurl: "https://scratchradio.ca/stream"
 }
 
 ];
