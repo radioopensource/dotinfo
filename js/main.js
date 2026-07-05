@@ -355,7 +355,12 @@ function playAudioHandler (e) {
 
 function playAudio (audioUrl, doSkipAhead) {
   loadAudio(audioUrl, doSkipAhead);
-  audioPlayer.oncanplaythrough = audioPlayer.play();
+  // play() returns a promise; the old code called it inside an oncanplaythrough
+  // assignment, leaving rejections (autoplay block, load() interrupts) as console errors
+  var playing = audioPlayer.play();
+  if (playing && playing.catch) {
+    playing.catch(function () { /* interrupted by a newer load() or blocked — benign */ });
+  }
 }
 
 function loadAudio (audioUrl, doSkipAhead) {
