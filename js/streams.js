@@ -144,6 +144,12 @@ donateurl: null,
 streamurl: "https://whurhd3.streamon.fm/WHURHD3-48k.aac"
 },
 
+{ title: 'WERU',
+description: 'Small community station serving Midcoast Maine.',
+url: 'https://weru.org/',
+donateurl: 'https://weru.org/donate',
+streamurl: 'https://stream.pacificaservice.org:9000/weru_128' },
+
 {title: "Scratch Radio",
 description: "Vancouver-based station spinning dub and reggae.",
 url: "http://www.scratchradio.ca/",
