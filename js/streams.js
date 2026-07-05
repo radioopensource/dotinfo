@@ -84,6 +84,64 @@ description: "Stream 2 from the eclectic worldwide music platform.",
 url: "https://www.nts.live/",
 donateurl: "https://www.nts.live/supporters",
 streamurl: "https://stream-relay-geo.ntslive.net/stream2"
+},
+
+{title: "WAMU",
+description: "NPR in Washington, D.C.",
+url: "https://wamu.org/",
+donateurl: "https://wamu.org/support/donate/",
+streamurl: "https://wamu.cdnstream1.com/wamu.mp3"
+},
+
+{title: "KALW",
+description: "San Francisco's local public radio.",
+url: "https://kalw.org/",
+donateurl: "https://donate.nprstations.org/kalw",
+streamurl: "https://kalw-live.streamguys1.com/kalw"
+},
+
+{ title: 'Sveriges Radio P2',
+description: 'Classical and jazz from Sweden.',
+url: 'https://sverigesradio.se/p2',
+donateurl: null,
+streamurl: 'https://www.sverigesradio.se/topsy/direkt/srapi/2562.mp3'
+},
+
+{ title: 'Worldwide FM',
+description: 'International music from Gilles Peterson and fellow London DJs.',
+url: 'https://worldwidefm.net/',
+donateurl: null,
+streamurl: 'https://worldwide-fm.radiocult.fm/stream'
+},
+
+{title: "Lumpen Radio",
+description: "Art radio in Chicago.",
+url: "https://lumpenradio.com/",
+donateurl: "https://www.lumpenradio.com/donate.html",
+streamurl: "https://radio.mensajito.mx/lumpenradio"
+},
+
+{
+title: "n10.as",
+description: "Internet community radio based in Montreal, Quebec.",
+url: "http://n10.as/",
+donateurl: null,
+streamurl: "https://n10as.radiocult.fm/stream"
+},
+
+{ title: 'Radio Africa Online',
+description: 'African and Caribbean music.',
+url: 'http://soukous.org/',
+donateurl: 'http://soukous.org/donate.htm',
+streamurl: 'https://ssl.rockhost.com/proxy/radioafr?mp=/stream'
+},
+
+{
+title: "WHBC",
+description: "Howard University's Student Operated Radio Station for 40+ years.",
+url: "http://www.whbc963hd3.com/",
+donateurl: null,
+streamurl: "https://whurhd3.streamon.fm/WHURHD3-48k.aac"
 }
 
 ];
