@@ -363,9 +363,26 @@ function playAudio (audioUrl, doSkipAhead) {
   }
 }
 
+var hlsPlayer = null;
+
 function loadAudio (audioUrl, doSkipAhead) {
+  if (hlsPlayer) { hlsPlayer.destroy(); hlsPlayer = null; }
+  // source src doubles as now-playing bookkeeping, so set it on both paths
   audioSource.attr('src', audioUrl);
   audioPlayer.pause();
+
+  // HLS (.m3u8) via hls.js where MSE is needed; Safari plays it natively
+  if (/\.m3u8(\?|$)/.test(audioUrl) && window.Hls && Hls.isSupported()
+      && !audioPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+    hlsPlayer = new Hls();
+    hlsPlayer.on(Hls.Events.ERROR, function (event, data) {
+      if (data.fatal) { showStreamError(audioUrl); }
+    });
+    hlsPlayer.loadSource(audioUrl);
+    hlsPlayer.attachMedia(audioPlayer);
+    return;
+  }
+
   audioPlayer.load();
 
   if (doSkipAhead) {
@@ -435,9 +452,12 @@ function formatDateTime (rawDateTimeString, includeTimeFlag) {
 
 // Adds error messages superimposed above media
 
-document.getElementsByTagName('source')[0].addEventListener('error', function (e) { 
-  erroringUrl = e.currentTarget.src;
-  erroringPanel = $('li[data-url="'+ erroringUrl + '"]');
+function showStreamError (erroringUrl) {
+  var erroringPanel = $('li[data-url="'+ erroringUrl + '"]');
   erroringPanel.find('.error-message').show();
   erroringPanel.find('.content').addClass('disabled');
-}); 
+}
+
+document.getElementsByTagName('source')[0].addEventListener('error', function (e) {
+  showStreamError(e.currentTarget.src);
+});

@@ -144,6 +144,24 @@ donateurl: null,
 streamurl: "https://whurhd3.streamon.fm/WHURHD3-48k.aac"
 },
 
+{ title: 'BBC Radio 3',
+description: 'New and classical music.',
+url: 'https://www.bbc.co.uk/radio3',
+donateurl: null,
+streamurl: 'https://as-hls-ww-live.akamaized.net/pool_23461179/live/ww/bbc_radio_three/bbc_radio_three.isml/bbc_radio_three-audio%3d128000.norewind.m3u8'},
+
+{ title: 'BBC Radio 4',
+description: 'Documentaries and spoken word programs.',
+url: 'https://www.bbc.co.uk/radio4',
+donateurl: null,
+streamurl: 'https://as-hls-ww-live.akamaized.net/pool_55057080/live/ww/bbc_radio_fourfm/bbc_radio_fourfm.isml/bbc_radio_fourfm-audio%3d128000.norewind.m3u8' },
+
+{ title: 'BBC Radio 6',
+description: 'BBC\'s alternative music station.',
+url: 'https://www.bbc.co.uk/6music',
+donateurl: null,
+streamurl: 'https://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8' },
+
 { title: 'WERU',
 description: 'Small community station serving Midcoast Maine.',
 url: 'https://weru.org/',
