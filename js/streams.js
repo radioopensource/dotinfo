@@ -173,6 +173,12 @@ url: 'https://weru.org/',
 donateurl: 'https://weru.org/donate',
 streamurl: 'https://stream.pacificaservice.org:9000/weru_128' },
 
+{ title: 'Radio Alhara',
+description: 'Community radio from Bethlehem, Palestine.',
+url: 'https://www.radioalhara.net/',
+donateurl: null,
+streamurl: 'https://stream.radiojar.com/78cxy6wkxtzuv' },
+
 {title: "Scratch Radio",
 description: "Vancouver-based station spinning dub and reggae.",
 url: "http://www.scratchradio.ca/",
