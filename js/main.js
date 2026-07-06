@@ -208,9 +208,9 @@ $(document).on('click', function (e) {
 function mapErrorCodesToMessages (codes) {
   var messages = [];
 
-  // v2 backend has no /requests endpoint (yet) — fail politely, don't throw
+  // no error payload = network failure or rate-limit (429) — fail politely
   if (!codes) {
-    return 'Requests are on hiatus — email us instead!';
+    return 'Request failed — try again in a minute.';
   }
 
   if (codes.name) {
