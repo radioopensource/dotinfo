@@ -191,6 +191,11 @@ li.now-playing {
     background-color: #112DFF !important;
     color: white;
 }
+/* links inside the selected tile stayed skeleton-blue once the pointer left —
+   invisible on the blue now-playing background */
+li.now-playing .internet-links a {
+    color: white !important;
+}
 li:focus-visible {
     outline: 3px dashed blue;
     outline-offset: 2px;
