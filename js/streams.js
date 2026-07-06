@@ -162,6 +162,11 @@ url: 'https://www.bbc.co.uk/6music',
 donateurl: null,
 streamurl: 'https://as-hls-ww-live.akamaized.net/pool_81827798/live/ww/bbc_6music/bbc_6music.isml/bbc_6music-audio%3d320000.norewind.m3u8' },
 
+// The Lot Radio: no third-party-playable stream found (2026-07-05). Their livepeer
+// HLS is video-muxed + tokenized; redirector segments 404 and the catalyst node
+// (https://nyc-prod-catalyst-0.lp-playback.studio/hls/video+85c28sa2o8wppm58/5_0/index.m3u8)
+// never starts in WebKit native HLS. Re-add if they publish an audio mount.
+
 { title: 'WERU',
 description: 'Small community station serving Midcoast Maine.',
 url: 'https://weru.org/',

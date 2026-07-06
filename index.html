@@ -51,10 +51,11 @@
 
     <header id="header">
         <!-- Audioplayer -->
-        <audio controls class="audio-player" aria-label="Audio player">
+        <!-- video element so hls.js can play video-muxed streams (The Lot); styled as the audio bar -->
+        <video controls class="audio-player" aria-label="Audio player" playsinline>
             <source src="" type="audio/mpeg">
             Your browser does not support the audio element.
-        </audio>
+        </video>
         <!-- Header Text -->
         <div class="navbar">
             <div class="row">

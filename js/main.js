@@ -2,8 +2,8 @@
 var
   servicesURL = 'https://0r22apgetd.execute-api.us-east-1.amazonaws.com',
   // servicesURL = 'http://localhost:3000',
-  audioPlayer = $('audio')[0],
-  audioSource = $('audio').find('source');
+  audioPlayer = $('.audio-player')[0],
+  audioSource = $('.audio-player').find('source');
 
 /*
   NEWSCASTS
@@ -316,6 +316,15 @@ function addHoverStyling($el) {
     });
 }
 
+// Native live-HLS (Safari): playhead starts at 0, outside the live window —
+// jump to the live edge. Icecast/podcast streams have no seekable range, so no-op.
+audioPlayer.addEventListener('loadedmetadata', function () {
+  if (audioPlayer.duration === Infinity && audioPlayer.seekable.length) {
+    var liveEdge = audioPlayer.seekable.end(audioPlayer.seekable.length - 1);
+    if (isFinite(liveEdge) && liveEdge > 0) { audioPlayer.currentTime = liveEdge; }
+  }
+});
+
 // Adds styling for currently playing audio (when audio player clicked)
 audioPlayer.onplay = function () {
   $('li').removeClass('now-playing');
@@ -377,6 +386,18 @@ function loadAudio (audioUrl, doSkipAhead) {
     hlsPlayer = new Hls();
     hlsPlayer.on(Hls.Events.ERROR, function (event, data) {
       if (data.fatal) { showStreamError(audioUrl); }
+    });
+    // live streams: start playback once the manifest is in, and jump the
+    // playhead to the live edge when the first fragment lands (it starts at 0,
+    // which is outside a live buffer)
+    hlsPlayer.on(Hls.Events.MANIFEST_PARSED, function () {
+      var p = audioPlayer.play();
+      if (p && p.catch) { p.catch(function () {}); }
+    });
+    hlsPlayer.once(Hls.Events.FRAG_BUFFERED, function () {
+      if (audioPlayer.buffered.length && audioPlayer.currentTime < audioPlayer.buffered.start(0)) {
+        audioPlayer.currentTime = hlsPlayer.liveSyncPosition || audioPlayer.buffered.start(0);
+      }
     });
     hlsPlayer.loadSource(audioUrl);
     hlsPlayer.attachMedia(audioPlayer);
