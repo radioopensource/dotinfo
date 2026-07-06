@@ -51,11 +51,12 @@
 
     <header id="header">
         <!-- Audioplayer -->
-        <!-- video element so hls.js can play video-muxed streams (The Lot); styled as the audio bar -->
-        <video controls class="audio-player" aria-label="Audio player" playsinline>
+        <!-- audio element: Safari renders clean bar controls (its video controls
+             overlay-clutter a 54px box); all current HLS sources are audio-only -->
+        <audio controls class="audio-player" aria-label="Audio player">
             <source src="" type="audio/mpeg">
             Your browser does not support the audio element.
-        </video>
+        </audio>
         <!-- Header Text -->
         <div class="navbar">
             <div class="row">
