@@ -1,27 +1,14 @@
 // GLOBAL VARS
-var 
-  servicesURL = 'http://www.publicradioservices.info',
+var
+  servicesURL = 'https://0r22apgetd.execute-api.us-east-1.amazonaws.com',
   // servicesURL = 'http://localhost:3000',
-  audioPlayer = $('audio')[0],
-  audioSource = $('audio').find('source');
+  audioPlayer = $('.audio-player')[0],
+  audioSource = $('.audio-player').find('source');
 
 /*
   NEWSCASTS
 */
 var newsModule = $('section.newscasts');
-
-function getBBCHeadlinesLastUpdate () {
-  var 
-    minsToChangeTo = 35,
-    now = new Date(),
-    nowMins = now.getMinutes();
-
-  now.setMinutes(minsToChangeTo);
-  var changeToLastHour = (nowMins - minsToChangeTo < 0);
-  if (changeToLastHour) { now.setHours(now.getHours()-1); }
-
-  return now.toString();
-}
 
 $.ajax({
   url: servicesURL + '/newscasts',
@@ -36,7 +23,8 @@ function refreshNewsFor (news) {
   Object.keys(news).forEach( function(newsType) { 
     var newsTypeSection = newsModule.find('li.' + newsType);
     newsTypeSection[0].setAttribute('data-url', news[newsType].url);
-    pubDate = newsType == 'bbc-headlines' ? getBBCHeadlinesLastUpdate() : news[newsType].pubDate;
+    // v2 backend serves a real pubDate for bbc-headlines (v1's TuneIn scrape had none)
+    pubDate = news[newsType].pubDate;
     newsTypeSection.find('.last-update-time').text(formatDateTime(pubDate, true));
     newsTypeSection.removeClass('disabled');
   });
@@ -190,7 +178,7 @@ function submitRequest (e) {
         withCredentials: true
       }
   }).fail(function(response) {
-    showMessage(mapErrorCodesToMessages(response.responseJSON.errors));
+    showMessage(mapErrorCodesToMessages(response.responseJSON && response.responseJSON.errors));
 
   }).done(function() {
     showMessage('THANKS!');
@@ -219,6 +207,11 @@ $(document).on('click', function (e) {
 
 function mapErrorCodesToMessages (codes) {
   var messages = [];
+
+  // no error payload = network failure or rate-limit (429) — fail politely
+  if (!codes) {
+    return 'Request failed — try again in a minute.';
+  }
 
   if (codes.name) {
     if (codes.name === 'not-present') {
@@ -285,9 +278,21 @@ function renderBalancedColumns(UIcolumns, media, renderFunction) {
 function addEventHandlers(elements) {
   for (var i = elements.length - 1; i >= 0; i--) {
     $el = $(elements[i]);
+    $el.attr({ 'tabindex': 0, 'role': 'button' });
+    addKeyboardHandler($el);
     addHoverStyling($el);
     addPlayAudioHandler($el);
   }
+}
+
+// Enter activates a focused item, mirroring click.
+// (Space is reserved: it globally toggles play/pause via onKeyDown.)
+function addKeyboardHandler($el) {
+  $el.on('keydown', function (e) {
+    if (e.key === 'Enter' && !$(this).hasClass('disabled')) {
+      playAudioHandler(e);
+    }
+  });
 }
 
 function addPlayAudioHandler($el) {
@@ -310,6 +315,15 @@ function addHoverStyling($el) {
       e.currentTarget.classList.remove('hover');
     });
 }
+
+// Native live-HLS (Safari): playhead starts at 0, outside the live window —
+// jump to the live edge. Icecast/podcast streams have no seekable range, so no-op.
+audioPlayer.addEventListener('loadedmetadata', function () {
+  if (audioPlayer.duration === Infinity && audioPlayer.seekable.length) {
+    var liveEdge = audioPlayer.seekable.end(audioPlayer.seekable.length - 1);
+    if (isFinite(liveEdge) && liveEdge > 0) { audioPlayer.currentTime = liveEdge; }
+  }
+});
 
 // Adds styling for currently playing audio (when audio player clicked)
 audioPlayer.onplay = function () {
@@ -350,12 +364,46 @@ function playAudioHandler (e) {
 
 function playAudio (audioUrl, doSkipAhead) {
   loadAudio(audioUrl, doSkipAhead);
-  audioPlayer.oncanplaythrough = audioPlayer.play();
+  // play() returns a promise; the old code called it inside an oncanplaythrough
+  // assignment, leaving rejections (autoplay block, load() interrupts) as console errors
+  var playing = audioPlayer.play();
+  if (playing && playing.catch) {
+    playing.catch(function () { /* interrupted by a newer load() or blocked — benign */ });
+  }
 }
 
+var hlsPlayer = null;
+
 function loadAudio (audioUrl, doSkipAhead) {
+  if (hlsPlayer) { hlsPlayer.destroy(); hlsPlayer = null; }
+  // source src doubles as now-playing bookkeeping, so set it on both paths
   audioSource.attr('src', audioUrl);
   audioPlayer.pause();
+
+  // HLS (.m3u8) via hls.js where MSE is needed; Safari plays it natively
+  if (/\.m3u8(\?|$)/.test(audioUrl) && window.Hls && Hls.isSupported()
+      && !audioPlayer.canPlayType('application/vnd.apple.mpegurl')) {
+    hlsPlayer = new Hls();
+    hlsPlayer.on(Hls.Events.ERROR, function (event, data) {
+      if (data.fatal) { showStreamError(audioUrl); }
+    });
+    // live streams: start playback once the manifest is in, and jump the
+    // playhead to the live edge when the first fragment lands (it starts at 0,
+    // which is outside a live buffer)
+    hlsPlayer.on(Hls.Events.MANIFEST_PARSED, function () {
+      var p = audioPlayer.play();
+      if (p && p.catch) { p.catch(function () {}); }
+    });
+    hlsPlayer.once(Hls.Events.FRAG_BUFFERED, function () {
+      if (audioPlayer.buffered.length && audioPlayer.currentTime < audioPlayer.buffered.start(0)) {
+        audioPlayer.currentTime = hlsPlayer.liveSyncPosition || audioPlayer.buffered.start(0);
+      }
+    });
+    hlsPlayer.loadSource(audioUrl);
+    hlsPlayer.attachMedia(audioPlayer);
+    return;
+  }
+
   audioPlayer.load();
 
   if (doSkipAhead) {
@@ -425,9 +473,12 @@ function formatDateTime (rawDateTimeString, includeTimeFlag) {
 
 // Adds error messages superimposed above media
 
-document.getElementsByTagName('source')[0].addEventListener('error', function (e) { 
-  erroringUrl = e.currentTarget.src;
-  erroringPanel = $('li[data-url="'+ erroringUrl + '"]');
+function showStreamError (erroringUrl) {
+  var erroringPanel = $('li[data-url="'+ erroringUrl + '"]');
   erroringPanel.find('.error-message').show();
   erroringPanel.find('.content').addClass('disabled');
-}); 
+}
+
+document.getElementsByTagName('source')[0].addEventListener('error', function (e) {
+  showStreamError(e.currentTarget.src);
+});
