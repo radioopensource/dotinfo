@@ -40,6 +40,12 @@ donateurl: 'https://giving.columbia.edu/giveonline/?schoolstyle=411',
 streamurl: 'https://wkcr.streamguys1.com/live'
 },
 
+{ title: 'KBOO',
+description: 'Volunteer-powered community radio in Portland, OR.',
+url: 'https://kboo.fm/',
+donateurl: 'https://kboo.fm/donate',
+streamurl: 'https://live.kboo.fm:8443/high' },
+
 {title: "KPFA",
 description: "Berkeley's listener-supported Pacifica radio.",
 url: "https://kpfa.org/",
