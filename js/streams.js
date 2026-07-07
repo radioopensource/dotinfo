@@ -173,6 +173,12 @@ url: 'https://weru.org/',
 donateurl: 'https://weru.org/donate',
 streamurl: 'https://stream.pacificaservice.org:9000/weru_128' },
 
+{ title: 'RFI 中文',
+description: 'Radio France Internationale in Chinese.',
+url: 'https://www.rfi.fr/cn/',
+donateurl: null,
+streamurl: 'https://rfienchinois64k.ice.infomaniak.ch/rfienchinois-64.mp3' },
+
 { title: 'Radio Alhara',
 description: 'Community radio from Bethlehem, Palestine.',
 url: 'https://www.radioalhara.net/',
