@@ -380,9 +380,11 @@ Note: CSS is built mobile-first with sizes and devices indicated along with brea
 #the-chat {
     position: fixed;
     right: 0;
-    top: 90px;      /* clears the ~82px coral navbar height, measured live */
+    top: 80px;
     bottom: 60px;   /* clears the ~54px native audio bar */
     width: 250px;   /* paired with the 1460px breakpoint: (1460−960)/2 = 250 gutter → zero overlap */
     z-index: 1;     /* under navbar/audio-player (z-index:2) so it can never cover them */
+    padding-top: 10px; /* live-measured coral navbar bottom is ~82px, 10px past the box's own top:80px, so the iframe content (not the box) clears it */
+    box-sizing: border-box;
 }
 @media (max-width: 1460px) { #the-chat { display: none; } }  /* desktop only + hides when shrunk */
