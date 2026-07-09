@@ -1,4 +1,5 @@
 var podDescriptions = {
+   "trillbilly": "Futuristic Hillbilly Kitsch.",
    "reveal": "Dispatches from the Center of Investigative Reporting and PRX.",
    "in-our-time": "Panel talks about big ideas from BBC Radio 4.",
    "open-source": "Smart talk on arts and politics from WBUR.",
