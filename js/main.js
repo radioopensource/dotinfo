@@ -6,6 +6,16 @@ var
   audioSource = $('.audio-player').find('source');
 
 /*
+  LIVE CHAT
+*/
+// The "chat" nav link shows/hides the (desktop-only) Chatango strip.
+$('.chat-toggle').on('click', function (e) {
+  e.preventDefault();
+  var open = $('#the-chat').toggleClass('open').hasClass('open');
+  $(this).attr('aria-expanded', open);
+});
+
+/*
   NEWSCASTS
 */
 var newsModule = $('section.newscasts');

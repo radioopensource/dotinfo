@@ -373,3 +373,24 @@ Note: CSS is built mobile-first with sizes and devices indicated along with brea
         transition: none !important;
     }
 }
+
+/* Live chat — Chatango embed docked in the right gutter, desktop only.
+   Sits below the fixed .navbar and above the fixed .audio-player;
+   matches terryradio.biz, which hides its chat on narrow viewports.
+   Hidden by default; the nav's ".chat-toggle" link toggles ".open". */
+#the-chat {
+    display: none; /* opened on demand via the "chat" nav link (#the-chat.open) */
+    position: fixed;
+    right: 0;
+    top: 80px;
+    bottom: 60px;   /* clears the ~54px native audio bar */
+    width: 250px;   /* paired with the 1460px breakpoint: (1460−960)/2 = 250 gutter → zero overlap */
+    z-index: 1;     /* under navbar/audio-player (z-index:2) so it can never cover them */
+    padding-top: 10px; /* live-measured coral navbar bottom is ~82px, 10px past the box's own top:80px, so the iframe content (not the box) clears it */
+    box-sizing: border-box;
+}
+#the-chat.open { display: block; }
+@media (max-width: 1460px) {
+    #the-chat.open { display: none; }  /* desktop only: stays hidden even if opened then resized */
+    .chat-toggle { display: none; }    /* hide the toggle link below the breakpoint */
+}
