@@ -179,6 +179,12 @@ url: 'https://weru.org/',
 donateurl: 'https://weru.org/donate',
 streamurl: 'https://stream.pacificaservice.org:9000/weru_128' },
 
+{ title: 'WMPG',
+description: 'Community radio from the University of Southern Maine, in Portland.',
+url: 'https://www.wmpg.org/',
+donateurl: 'https://www.wmpg.org/support/',
+streamurl: 'https://stream.pacificaservice.org:9000/wmpg' },
+
 { title: 'RFI 中文',
 description: 'Radio France Internationale in Chinese.',
 url: 'https://www.rfi.fr/cn/',
